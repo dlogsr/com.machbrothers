@@ -92,6 +92,7 @@ section{
 /* splash image items */
 
 .pageSplash{
+	position:relative;
 	height: 410px;
 	background-image: url('meeples_bg_desktop.jpg');
 	background-size:cover;
@@ -184,7 +185,8 @@ section{
 	.pageSplash{
 		height: 600px;
 		background-image: url('meeples_bg_desktop.jpg');
-		background-size: cover;
+		/*background-size: cover;*/
+		background-attachment:fixed;
 		border-bottom: 2px solid black;
 	}
 
