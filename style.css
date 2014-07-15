@@ -1,3 +1,24 @@
+/*@font-face {
+    font-family: 'Raleway';
+    src: url('raleway-webfont.eot');
+    src: url('raleway-webfont.eot?#iefix') format('embedded-opentype'),
+         url('raleway-webfont.woff') format('woff'),
+         url('raleway-webfont.ttf') format('truetype'),
+         url('raleway-webfont.svg#ralewaythin') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('dosis-light.otf');
+    font-weight: bold;
+    font-style: normal;
+
+}*/
+
+
 /* mobile first */
 
 body{
@@ -26,7 +47,7 @@ section{
 .menuBar{
 	position:fixed;
 	width:100%;
-	z-index:10;
+	z-index:12;
 }
 
 .menuBar div, .menuBar header, .menuBar nav{
@@ -100,7 +121,7 @@ section{
 
 .pageSplash{
 	position:relative;
-	height: 410px;
+	height: 480px;
 	background-image: url('meeples_bg_desktop.jpg');
 	background-size:200%;
 	background-attachment:fixed;
@@ -108,6 +129,7 @@ section{
 }
 
 .pageSplash header{
+	position:relative;
 	font-family:raleway;
 	font-variant:small-caps;
 	color:#FFF;
@@ -117,8 +139,7 @@ section{
 	border-top-right-radius: 15px;
 	width:360px;
 	margin:auto;
-	padding:65px 0 1em 0;
-
+	padding:49px 0 1em 0;
 }
 
 .pageSplash header h2{
@@ -150,7 +171,6 @@ section{
 	margin:auto;
 	background-color:rgba(0,0,0,.75);
 	z-index:11;
-
 	/*temporary text*/
 	color:white;
 	text-align:center;
@@ -314,6 +334,29 @@ section{
 		z-index:12;
 		/*border-bottom: 2px solid black;*/
 		box-shadow: 0 1px 2px 1px rgba(0,0,0,.4);
+		-webkit-transition: all 0.5s ease-in;
+		-moz-transition: all 0.5s ease-in;
+		transition: all 0.5s ease-in;
+	}
+
+	.mbTranslucent{
+			background-color:rgba(229,230,231,.75);
+	/*		-webkit-transition: all 0.5s ease-in;
+			-moz-transition: all 0.5s ease-in;
+			transition: all 0.5s ease-in;*/
+	}
+
+	.menuBar *, .mbLogo, .mbLinks{
+		background-color:rgba(229,230,231,0) !important;
+/*		  text-shadow:
+		   -1px -1px 0 #E5E6E7,  
+		    1px -1px 0 #E5E6E7,
+		    -1px 1px 0 #E5E6E7,
+		     1px 1px 0 #E5E6E7;*/
+/*		-webkit-text-stroke-color:#E5E6E7;
+		text-stroke-color:#E5E6E7;
+		-webkit-text-stroke-width:2px;
+		text-stroke-width:2px;*/
 	}
 
 	.menuBar .mbHeader{
@@ -342,8 +385,9 @@ section{
 		font-size:2em;
 		border-bottom: none;
 		top:50%;
-		transform: translateY(-50%);
 		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		transform: translateY(-50%);
 	}
 
 
@@ -363,6 +407,7 @@ section{
 		background-image: url('meeples_bg_desktop.jpg');
 		background-size: cover;
 		background-attachment:fixed;
+		background-position-y:200px;
 		border-bottom: none;
 	}
 
