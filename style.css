@@ -29,6 +29,12 @@ body{
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	margin: 0;
 	background-color:#E5E6E7;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 a {
@@ -121,7 +127,7 @@ section{
 
 .pageSplash{
 	position:relative;
-	height: 480px;
+	height: 540px;
 	background-image: url('meeples_bg_desktop.jpg');
 	background-size:200%;
 	background-attachment:fixed;
@@ -130,8 +136,9 @@ section{
 
 .pageSplash header{
 	position:relative;
-	font-family:raleway;
+	font-family:Raleway;
 	font-variant:small-caps;
+	-webkit-text-stroke-width:0;
 	color:#FFF;
 	text-align:center;
 	background-color:rgba(0,0,0,.5);
@@ -147,7 +154,17 @@ section{
 }
 
 .pageSplash header h3{
+	font-family:'Dosis';
+	font-variant:normal;
 	font-size:1.5em;
+}
+
+.pageSplash header h4, .pageSplash header button{
+	margin-top:.2em;
+	font-family:'Dosis';
+	font-variant:normal;
+	font-weight:normal;
+	font-size:1rem;
 }
 
 .pageSplash .pageSplashMonkeys{
@@ -156,6 +173,7 @@ section{
 	width:100%;
 	max-width:360px;
 	height:150px;
+	margin:0 auto; left:0;	right:0;
 	background-image: url('monkeys.png');
 	background-size: 100% auto;
 	z-index:10;
@@ -286,19 +304,49 @@ section{
 
 /* signup form items */
 
+input, button{
+	display:inline-block;
+	padding:.45em;
+	font-size:1em;
+	border-radius:15px;
+	border:2px solid rgba(0,0,0,0);
+	margin:.5em;
+}
+
+button.pageSplashButton{
+	font-family:Raleway;
+	font-variant:small-caps;
+	padding:.2em .4em;
+	margin:0;
+}
+
+button.pageSplashButton .buttonSignUp{
+	display:inline-block;
+}
+
+input:focus{
+	border:2px solid black;
+	outline:none;
+}
+
+input[type=submit], button{
+	background-color:#006FB8;
+	color:#F3F4F5;
+}
+
+input[type=submit]:active, button:active{
+	background-color:#007FC8;
+}
+
+input[type=submit]:hover, button:hover{
+	border:2px solid black;
+}
+
 .signupForm fieldset{
 	font-family: 'Raleway', Georgia, Arial, Verdana;
 	text-align: center;
 }
 
-.signupForm input{
-	display:inline-block;
-	padding:.45em;
-	font-size:1em;
-	border-radius:15px;
-	border:none;
-	margin:.5em;
-}
 
 .signupForm label{
 	font-weight:bold;
@@ -306,17 +354,21 @@ section{
 }
 
 .signupForm #email{
-	max-width: 300px;
+	max-width: 280px;
 }
 
-.signupForm #submitDiv{
-	background-color:#006FB8;
-	color:#F3F4F5;
+.emailIcon{
+	position:relative;
+	top:3px;
+	margin-right:2px;
+	width:16px;
+	height:16px;
+	background-image:url('email_icon.png');
 }
 
 /* footer items */
 
-.siteFooter, .pageSpacer{
+.siteFooter{
 	position:relative;
 	height:100px;
 	background-image: url(meeples_bg_desktop.jpg);
@@ -348,15 +400,6 @@ section{
 
 	.menuBar *, .mbLogo, .mbLinks{
 		background-color:rgba(229,230,231,0) !important;
-/*		  text-shadow:
-		   -1px -1px 0 #E5E6E7,  
-		    1px -1px 0 #E5E6E7,
-		    -1px 1px 0 #E5E6E7,
-		     1px 1px 0 #E5E6E7;*/
-/*		-webkit-text-stroke-color:#E5E6E7;
-		text-stroke-color:#E5E6E7;
-		-webkit-text-stroke-width:2px;
-		text-stroke-width:2px;*/
 	}
 
 	.menuBar .mbHeader{
@@ -410,22 +453,34 @@ section{
 		background-position-y:200px;
 		border-bottom: none;
 	}
+/*
+	.emailIcon{
+		width:32px;
+		height:32px;
+		background-image:url('email_icon_large.png');
+	}*/
+
+	.emailIcon{
+		position:relative;
+		top:1px;
+	}
 
 	.pageSplash .pageSplashMonkeys{
 		position:absolute;
 		bottom:0;
 		width:100%;
-		max-width:400px;
-		height:292px;
+		max-width:300px;
+		height:219px;
 		background-image: url('monkeys.png');
 		background-size: 100% auto;
+		margin:auto; left:auto;	right:auto;
 	}
 
 	.pageSplash header{
 		background:none;
 		border:none;
 		width:auto;
-		padding:150px 0 1em 0;
+		padding:130px 0 1em 0;
 		text-shadow: 2px 2px 2px black;
 	}
 
@@ -437,9 +492,22 @@ section{
 		font-size:2.5em;
 	}
 
+	.pageSplash header h4, .pageSplash header button{
+		font-family:'Dosis';
+		font-variant:normal;
+		font-weight:normal;
+		font-size:1.25rem;
+	}
+
+/*	button.pageSplashButton{
+		margin-bottom:1em;
+	}*/
+
 	.pageSplashMedia{
 		width:480px;
 		height:360px;
+		float:right;
+		right:3em;
 	}
 
 	/* page content */

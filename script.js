@@ -6,6 +6,8 @@ $mbTranslucent = $('.mbTranslucent');
 $mbNavicon = $('.mbNavicon');
 $mbHeader = $('.mbHeader');
 $pageContent = $('.pageContent');
+$pageSplashButton = $('.pageSplashButton');
+$pageSplashMonkeys = $('.pageSplashMonkeys');
 
 var clickedLink;
 
@@ -27,7 +29,14 @@ $(document).ready(function(){
 		scrollAndStop('body');
 	});
 
-	// FUNCITON DISABLED - not in use for multi-page layout 7/12/14
+	$pageSplashButton.click(function(e){
+		e.preventDefault();
+		clickedLink = '.signUpCard';
+		console.log(clickedLink);
+		scrollAndStop(clickedLink);
+	})
+
+	// FUNCTION DISABLED - not in use for multi-page layout 7/12/14
 	// $('.mbLinkButton').click(function(e){
 	// 	e.preventDefault();
 	// 	if(!window.matchMedia("(min-width: 680px)").matches)	$('.mbLinks').slideToggle();
@@ -39,16 +48,16 @@ $(document).ready(function(){
 	if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
 });
 
-isFullScreen = window.matchMedia("(min-width: 900px)").matches;
-
 $pageContent.waypoint(function(direction){
 	if(window.matchMedia("(min-width:680px)").matches)
 	{
 		if(direction == 'down'){
 			$menuBar.addClass('mbTranslucent');
+			$pageSplashMonkeys.hide();
 		}
 		else{
 			$menuBar.add($mbLinks).add($mbLogo).removeClass('mbTranslucent');
+			$pageSplashMonkeys.show();
 		}
 	}
 
