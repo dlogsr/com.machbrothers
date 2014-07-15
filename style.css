@@ -3,7 +3,7 @@
 body{
 	font-family: 'Dosis', Georgia, Arial, Verdana;
 	-webkit-font-smoothing: subpixel-antialiased;
-	-webkit-text-stroke-width: 0.5px; 
+	-webkit-text-stroke-width: 0.25px; 
 	-moz-font-smoothing: subpixel-antialiased;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	margin: 0;
@@ -92,47 +92,139 @@ section{
 	padding: .15em 0;
 }
 
+.mbLinkButton:hover a{
+	color:#006FB8 !important;
+}
+
 /* splash image items */
 
 .pageSplash{
 	position:relative;
 	height: 410px;
 	background-image: url('meeples_bg_desktop.jpg');
-	background-size:cover;
+	background-size:200%;
+	background-attachment:fixed;
 	border-bottom: 2px solid black;
+}
+
+.pageSplash header{
+	font-family:raleway;
+	font-variant:small-caps;
+	color:#FFF;
+	text-align:center;
+	background-color:rgba(0,0,0,.5);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	width:360px;
+	margin:auto;
+	padding:65px 0 1em 0;
+
+}
+
+.pageSplash header h2{
+	font-size:2em;
+}
+
+.pageSplash header h3{
+	font-size:1.5em;
 }
 
 .pageSplash .pageSplashMonkeys{
 	position:absolute;
 	bottom:0;
 	width:100%;
-	max-width:640px;
-	height:200px;
+	max-width:360px;
+	height:150px;
 	background-image: url('monkeys.png');
 	background-size: 100% auto;
+	z-index:10;
+}
+
+/*page Splash media items */
+
+.pageSplashMedia{
+	position:relative;
+
+	width:360px;
+	height:240px;
+	margin:auto;
+	background-color:rgba(0,0,0,.75);
+	z-index:11;
+
+	/*temporary text*/
+	color:white;
+	text-align:center;
 }
 
 /* content article items */
+
+.pageContent{
+	border-bottom: black solid 2px;
+}
 
 .pageContent article{
 	padding: 1em;
 	font-size:1.5em;
 	background-color:#F3F4F5;
-	margin:1em;
+/*	margin:1em;
 	border-radius:5px;
-	box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+	box-shadow: 5px 5px 5px rgba(0,0,0,.2);*/
 }
 
 .pageContent header{
-	text-align:right;
+	text-align:center;
 }
 
 .pageContent header h2{
 	font-family: 'Raleway';
 	font-size: 1.5em;
-	color:#006FB8;
-	padding-bottom: .5em;
+	padding: 1em 0;
+	display:inline-block;
+	margin:auto;
 }
+
+.pageContent article.cardA{
+	background: #e5e6e7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e5e6e7 1%, #8fa8b7 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#e5e6e7), color-stop(100%,#8fa8b7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e5e6e7 1%,#8fa8b7 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e5e6e7 1%,#8fa8b7 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e5e6e7 1%,#8fa8b7 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e5e6e7 1%,#8fa8b7 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e6e7', endColorstr='#8fa8b7',GradientType=0 ); /* IE6-9 */
+}
+
+.pageContent article.cardB, .pageContent article.cardB h2{
+	color:#E5E6E7;
+}
+
+.pageContent article.cardB{
+	background: #006fb8; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #006fb8 0%, #004b96 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#006fb8), color-stop(100%,#004b96)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #006fb8 0%,#004b96 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #006fb8 0%,#004b96 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #006fb8 0%,#004b96 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #006fb8 0%,#004b96 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006fb8', endColorstr='#004b96',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.pageContent article.cardC{
+	background: #ff5949; /* Old browsers */
+	background: -moz-linear-gradient(45deg,  #ff5949 0%, #b73333 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ff5949), color-stop(100%,#b73333)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* IE10+ */
+	background: linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5949', endColorstr='#b73333',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.pageContent aside{
+		padding: 1em 0;
+}
+
+/* about page items */ 
 
 .machBrosBubbles{
 	margin: 1em auto 3em;
@@ -145,10 +237,9 @@ section{
 	width:30%;
 	height:150px;
 	margin: auto;
-	background-color:white;
+	background-color:#FFFFFF;
 	background-size:cover;
 	background-position:center;
-	/*box-shadow: 1px 1px 2px 1px rgba(0,0,0,.5);*/
 	border-radius:20px;
 }
 
@@ -173,23 +264,52 @@ section{
 	background-image: url('bubble_portrait_kev.jpg');
 }
 
+/* signup form items */
+
+.signupForm fieldset{
+	font-family: 'Raleway', Georgia, Arial, Verdana;
+	text-align: center;
+}
+
+.signupForm input{
+	display:inline-block;
+	padding:.45em;
+	font-size:1em;
+	border-radius:15px;
+	border:none;
+	margin:.5em;
+}
+
+.signupForm label{
+	font-weight:bold;
+	display:inline-block;
+}
+
+.signupForm #email{
+	max-width: 300px;
+}
+
+.signupForm #submitDiv{
+	background-color:#006FB8;
+	color:#F3F4F5;
+}
 
 /* footer items */
 
-.siteFooter{
+.siteFooter, .pageSpacer{
 	position:relative;
-	background-image: url(meeples_bg_desktop.jpg);
 	height:100px;
+	background-image: url(meeples_bg_desktop.jpg);
 	background-position:bottom;
+	background-attachment: fixed;
+	background-size:cover;
 }
 
 /* DESKTOP RESPONSIVE */
 
 @media only screen and (min-width: 680px){
 	.menuBar{
-		position:fixed;
 		background-color:#E5E6E7;
-		width:100%;
 		height:110px;
 		z-index:12;
 		/*border-bottom: 2px solid black;*/
@@ -234,14 +354,14 @@ section{
 	.menuBar .mbLinks li{
 		display:inline-block;
 		text-align:right;
-		padding: 0 .25em;
+		padding: 0 .5em;
 	}
 
 	/* splash page */
 	.pageSplash{
 		height: 700px;
 		background-image: url('meeples_bg_desktop.jpg');
-		/*background-size: cover;*/
+		background-size: cover;
 		background-attachment:fixed;
 		border-bottom: none;
 	}
@@ -250,21 +370,43 @@ section{
 		position:absolute;
 		bottom:0;
 		width:100%;
-		max-width:522px;
-		height:380px;
+		max-width:400px;
+		height:292px;
 		background-image: url('monkeys.png');
 		background-size: 100% auto;
+	}
+
+	.pageSplash header{
+		background:none;
+		border:none;
+		width:auto;
+		padding:150px 0 1em 0;
+		text-shadow: 2px 2px 2px black;
+	}
+
+	.pageSplash header h2{
+		font-size:3.5em;
+	}
+
+	.pageSplash header h3{
+		font-size:2.5em;
+	}
+
+	.pageSplashMedia{
+		width:480px;
+		height:360px;
 	}
 
 	/* page content */
 	.pageContent{
 		z-index:11;
 		background-color:#E5E6E7;
+		border:none;
 		box-shadow: 0 -2px 3px 1px rgba(0,0,0,.5), 0 2px 3px 1px rgba(0,0,0,.5);
 	}
 
 	.pageContent article{
-		padding: 3em 0;
+		padding: 2em 0;
 	}
 
 	.pageContent aside{
@@ -282,18 +424,6 @@ section{
 		max-width: 720px;
 		margin:auto;
 		box-shadow:none;
-	}
-
-	.pageContent article.cardA{
-		background-color:#E5E6E7;
-	}
-
-	.pageContent article.cardB{
-		background-color:#FFFFFF;
-	}
-
-	.pageContent article.cardC{
-		background-color:#E5DDE7;
 	}
 	/* PAGE CONTENT STYLE 1 END */
 
@@ -344,5 +474,11 @@ section{
 	.bpKevin{
 		background-image: url('bubble_kev.jpg');
 	}
+
+	/* newsletter items */
+	.signupForm #email{
+		max-width: 400px;
+	}
+
 
 }

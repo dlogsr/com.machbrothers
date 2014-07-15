@@ -18,13 +18,14 @@ $(document).ready(function(){
 		scrollAndStop('body');
 	});
 
-	$('.mbLinkButton').click(function(e){
-		e.preventDefault();
-		if(!window.matchMedia("(min-width: 680px)").matches)	$('.mbLinks').slideToggle();
-		clickedLink = $(this).attr('id');
-		clickedLink = '.' + clickedLink + 'Card';
-		scrollAndStop(clickedLink);
-	})
+	// FUNCITON DISABLED - not in use for multi-page layout 7/12/14
+	// $('.mbLinkButton').click(function(e){
+	// 	e.preventDefault();
+	// 	if(!window.matchMedia("(min-width: 680px)").matches)	$('.mbLinks').slideToggle();
+	// 	clickedLink = $(this).attr('id');
+	// 	clickedLink = '.' + clickedLink + 'Card';
+	// 	scrollAndStop(clickedLink);
+	// })
 
 	if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
 });
