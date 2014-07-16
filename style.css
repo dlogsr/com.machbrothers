@@ -324,7 +324,7 @@ button.pageSplashButton .buttonSignUp{
 	display:inline-block;
 }
 
-input:focus{
+input:focus, button:focus{
 	border:2px solid black;
 	outline:none;
 }
@@ -340,6 +340,7 @@ input[type=submit]:active, button:active{
 
 input[type=submit]:hover, button:hover{
 	border:2px solid black;
+	cursor:pointer;
 }
 
 .signupForm fieldset{
@@ -448,7 +449,7 @@ input[type=submit]:hover, button:hover{
 	.pageSplash{
 		height: 700px;
 		background-image: url('meeples_bg_desktop.jpg');
-		background-size: cover;
+		background-size: 200% cover;
 		background-attachment:fixed;
 		background-position-y:200px;
 		border-bottom: none;
