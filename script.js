@@ -25,8 +25,15 @@ $(document).ready(function(){
 
 	$mbLogo.click(function(e){
 		e.preventDefault();
-		if(!window.matchMedia("(min-width: 680px)").matches)	$mbLinks.slideToggle();
-		scrollAndStop('body');
+		var currentPage = (location.pathname.split('/').slice(-1)[0]);
+		if(currentPage == "index.html"){
+			if(!window.matchMedia("(min-width: 680px)").matches)	$mbLinks.slideUp();
+				scrollAndStop('body');	
+		}
+		else{
+			window.location = "index.html";
+		}
+		
 	});
 
 	$pageSplashButton.click(function(e){
