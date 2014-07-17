@@ -184,6 +184,7 @@ section {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=0 );
     /* IE6-9 */ }
   .pageContent article.cardB {
+    color: white;
     background: #006fb8;
     /* Old browsers */
     background: -moz-linear-gradient(45deg, #006fb8 1%, #004b96 100%);
