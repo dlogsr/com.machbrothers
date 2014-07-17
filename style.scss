@@ -1,3 +1,11 @@
+/* MACHBROTHERS.COM CSS FILE 		   */
+/* GENERATED FROM SCSS SOURCE FILE     */
+/* PLEASE NOTE THAT THIS FILE REQUIRES */
+/* A SASS PREPROCESSOR TO GENERATE THE */
+/* PROPER CSS FILE.					   */
+
+/* !!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!! */
+
 //SCSS variables
 
 $machblue : #006FB8;
@@ -5,6 +13,30 @@ $machgrey : #E5E6E7;
 $bd_2pxblack: 2px solid black;
 $font_primary: 'Dosis';
 $font_secondary: 'Raleway';
+
+@mixin gradient-bg($start,$end,$angle){	
+	$dir : top;
+	$dir_text : left top, left bottom;
+	$dir_text_w3c : to bottom;
+	@if $angle == 0{
+		$dir : top;
+		$dir_text : left top, left bottom;
+		$dir_text_w3c : to bottom;
+	}
+	@else if $angle == 45 {
+		$dir : 45deg;
+		$dir_text : left bottom, right top;
+		$dir_text_w3c : $dir;
+	}
+	background: $start; /* Old browsers */
+	background: -moz-linear-gradient($dir,  $start 1%, $end 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, $dir_text, color-stop(1%,$start), color-stop(100%,$end)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient($dir,  $start 1%,$end 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient($dir,  $start 1%,$end 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient($dir,  $start 1%,$end 100%); /* IE10+ */
+	background: linear-gradient($dir_text_w3c,  $start 1%,$end 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 ); /* IE6-9 */
+}
 
 
 /* mobile first */
@@ -42,69 +74,69 @@ section{
 	position:fixed;
 	width:100%;
 	z-index:12;
-}
 
-.menuBar div, .menuBar header, .menuBar nav{
-	background-color:$machgrey;
-	z-index:10;
-}
+	div, header, nav{
+		background-color:$machgrey;
+		z-index:10;
+	}
 
-.menuBar .mbHeader{
-	position:relative;
-	display:block;
-	height:41px;
-	padding:.25em;
-}
+	.mbHeader{
+		position:relative;
+		display:block;
+		height:41px;
+		padding:.25em;
+	}
 
-.menuBar .mbBacking{
-	position:absolute;
-	width:100%;
-	border-bottom: $bd_2pxblack;
-	/*border-bottom: 1px none black;*/
-	/*box-shadow: 0 2px 3px 1px rgba(0,0,0,1);*/
-}
+	.mbBacking{
+		position:absolute;
+		width:100%;
+		border-bottom: $bd_2pxblack;
+		/*border-bottom: 1px none black;*/
+		/*box-shadow: 0 2px 3px 1px rgba(0,0,0,1);*/
+	}
 
-.menuBar header .mbLogo{
-	position:absolute;
-	width:75%;
-	max-width:414px;
-	height: 41px;
-	text-align:right;
-	background-image: url('machlogo_mobile.png');
-	background-repeat: no-repeat;
-	background-position:left;
-	background-size: 100%;
-	cursor:pointer;
-	z-index:11;
-}
+	header .mbLogo{
+		position:absolute;
+		width:75%;
+		max-width:414px;
+		height: 41px;
+		text-align:right;
+		background-image: url('machlogo_mobile.png');
+		background-repeat: no-repeat;
+		background-position:left;
+		background-size: 100%;
+		cursor:pointer;
+		z-index:11;
+	}
 
-.menuBar header .mbNavicon{
-	float:right;
-	width:50px;
-	height:42px;
-	background-image: url('menu_navicon.png');
-	background-repeat: no-repeat;
-	background-position:center;
-	cursor:pointer;
-	z-index:12;
-}
+	header .mbNavicon{
+		float:right;
+		width:50px;
+		height:42px;
+		background-image: url('menu_navicon.png');
+		background-repeat: no-repeat;
+		background-position:center;
+		cursor:pointer;
+		z-index:12;
+	}
 
-.menuBar .mbLinks{
-	position:relative;
-	/*display:block;*/
-	display:none;
-	right:0;
-	font-size:2.75em;
-	font-weight:bold;
-	border-bottom: $bd_2pxblack;
-	z-index:12;
-}
+	.mbLinks{
+		position:relative;
+		/*display:block;*/
+		display:none;
+		right:0;
+		font-size:2.75em;
+		font-weight:bold;
+		border-bottom: $bd_2pxblack;
+		z-index:12;
+	}
 
-.menuBar .mbLinks li{
-	font-family: $font_secondary, Georgia, Arial, Verdana;
-	display:block;
-	text-align:center;
-	padding: .15em 0;
+	.mbLinks li{
+		font-family: $font_secondary, Georgia, Arial, Verdana;
+		display:block;
+		text-align:center;
+		padding: .15em 0;
+	}
 }
 
 .mbLinkButton:hover a{
@@ -118,7 +150,53 @@ section{
 	background-image: url('meeples_bg_desktop.jpg');
 	background-size:200%;
 	background-attachment:fixed;
+	background-position-y:40px;
 	border-bottom: $bd_2pxblack;
+
+	header{
+		position:relative;
+		font-family:Raleway;
+		font-variant:small-caps;
+		-webkit-text-stroke-width:0;
+		color:#FFF;
+		text-align:center;
+		background-color:rgba(0,0,0,.5);
+		border-top-left-radius: 15px;
+		border-top-right-radius: 15px;
+		width:360px;
+		margin:auto;
+		padding:49px 0 1em 0;
+	}
+
+	header h2{
+		font-size:2em;
+	}
+
+	header h3{
+		font-family: $font_primary;
+		font-variant:normal;
+		font-size:1.5em;
+	}
+
+	header h4, header button{
+		margin-top:.2em;
+		font-family: $font_primary;
+		font-variant: normal;
+		font-weight: normal;
+		font-size: 1rem;
+	}
+
+	.pageSplashMonkeys{
+		position:absolute;
+		bottom:0;
+		width:100%;
+		max-width:360px;
+		height:150px;
+		margin:0 auto; left:0;	right:0;
+		background-image: url('monkeys.png');
+		background-size: 100% auto;
+		z-index:10;
+	}
 }
 
 .psPrimary{
@@ -127,51 +205,6 @@ section{
 
 .psSecondary{
 	height:150px;
-}
-
-.pageSplash header{
-	position:relative;
-	font-family:Raleway;
-	font-variant:small-caps;
-	-webkit-text-stroke-width:0;
-	color:#FFF;
-	text-align:center;
-	background-color:rgba(0,0,0,.5);
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	width:360px;
-	margin:auto;
-	padding:49px 0 1em 0;
-}
-
-.pageSplash header h2{
-	font-size:2em;
-}
-
-.pageSplash header h3{
-	font-family: $font_primary;
-	font-variant:normal;
-	font-size:1.5em;
-}
-
-.pageSplash header h4, .pageSplash header button{
-	margin-top:.2em;
-	font-family: $font_primary;
-	font-variant: normal;
-	font-weight: normal;
-	font-size: 1rem;
-}
-
-.pageSplash .pageSplashMonkeys{
-	position:absolute;
-	bottom:0;
-	width:100%;
-	max-width:360px;
-	height:150px;
-	margin:0 auto; left:0;	right:0;
-	background-image: url('monkeys.png');
-	background-size: 100% auto;
-	z-index:10;
 }
 
 /*page Splash media items */
@@ -193,68 +226,40 @@ section{
 
 .pageContent{
 	border-bottom: $bd_2pxblack;
-}
 
-.pageContent article{
-	padding: 1em;
-	font-size:1.5em;
-	background-color:#F3F4F5;
-/*	margin:1em;
-	border-radius:5px;
-	box-shadow: 5px 5px 5px rgba(0,0,0,.2);*/
-}
+	article{
+		padding: 1em;
+		font-size:1.5em;
+		background-color:#F3F4F5;
+	}
 
-.pageContent header{
-	text-align:center;
-}
+	header{
+		text-align:center;
+	}
 
-.pageContent header h2{
-	font-family: $font_secondary;
-	font-size: 1.5em;
-	padding: 1em 0;
-	display:inline-block;
-	margin:auto;
-}
-
-.pageContent article.cardA{
-	background: $machgrey; /* Old browsers */
-	background: -moz-linear-gradient(top,  $machgrey 1%, #8fa8b7 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,$machgrey), color-stop(100%,#8fa8b7)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  $machgrey 1%,#8fa8b7 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  $machgrey 1%,#8fa8b7 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  $machgrey 1%,#8fa8b7 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  $machgrey 1%,#8fa8b7 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$machgrey', endColorstr='#8fa8b7',GradientType=0 ); /* IE6-9 */
-}
-
-.pageContent article.cardB, .pageContent article.cardB h2{
-	color:$machgrey;
-}
-
-.pageContent article.cardB{
-	background: $machblue; /* Old browsers */
-	background: -moz-linear-gradient(45deg,  $machblue 0%, #004b96 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,$machblue), color-stop(100%,#004b96)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(45deg,  $machblue 0%,#004b96 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(45deg,  $machblue 0%,#004b96 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(45deg,  $machblue 0%,#004b96 100%); /* IE10+ */
-	background: linear-gradient(45deg,  $machblue 0%,#004b96 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$machblue', endColorstr='#004b96',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-.pageContent article.cardC{
-	background: #ff5949; /* Old browsers */
-	background: -moz-linear-gradient(45deg,  #ff5949 0%, #b73333 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#ff5949), color-stop(100%,#b73333)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* IE10+ */
-	background: linear-gradient(45deg,  #ff5949 0%,#b73333 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5949', endColorstr='#b73333',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-.pageContent aside{
+	header h2{
+		font-family: $font_secondary;
+		font-size: 1.5em;
 		padding: 1em 0;
+		display:inline-block;
+		margin:auto;
+	}
+
+	article.cardA{
+		@include gradient-bg($machgrey,#8fa8b7,0);
+	}
+
+	article.cardB{
+		@include gradient-bg($machblue,#004b96,45);
+	}
+
+	article.cardC{
+		@include gradient-bg(#ff5949,#b73333,0);
+	}
+
+	aside{
+			padding: 1em 0;
+	}
 }
 
 /* about page items */ 
@@ -262,39 +267,40 @@ section{
 .machBrosBubbles{
 	margin: 1em auto 3em;
 	text-align:center;
-}
 
-.machBrosBubbles .bubblePic{
-	position:relative;
-	display:inline-block;
-	width:30%;
-	height:150px;
-	margin: auto;
-	background-color:#FFFFFF;
-	background-size:cover;
-	background-position:center;
-	border-radius:20px;
-}
+	.bubblePic{
+		position:relative;
+		display:inline-block;
+		width:30%;
+		height:150px;
+		margin: auto;
+		background-color:#FFFFFF;
+		background-size:cover;
+		background-position:center;
+		border-radius:20px;
 
-.machBrosBubbles .bubblePic h3{
-	font-family: $font_secondary;
-	font-size:.9em;
-	color:$machblue;
-	position:relative;
-	padding-top:.1em;
-	top:150px;
-}
+		h3{
+			font-family: $font_secondary;
+			font-size:.9em;
+			color:$machblue;
+			position:relative;
+			padding-top:.1em;
+			top:150px;
+		}
+	}
 
-.bpEdwin{
-	background-image: url('bubble_portrait_ed.jpg');
-}
+	.bpEdwin{
+		background-image: url('bubble_portrait_ed.jpg');
+	}
 
-.bpAlbert{
-	background-image: url('bubble_portrait_al.jpg');
-}
+	.bpAlbert{
+		background-image: url('bubble_portrait_al.jpg');
+	}
 
-.bpKevin{
-	background-image: url('bubble_portrait_kev.jpg');
+	.bpKevin{
+		background-image: url('bubble_portrait_kev.jpg');
+	}
+
 }
 
 /* signup form items */
@@ -341,16 +347,15 @@ input[type=submit]:hover, button:hover{
 .signupForm fieldset{
 	font-family: $font_secondary, Georgia, Arial, Verdana;
 	text-align: center;
-}
 
+	label{
+		font-weight:bold;
+		display:inline-block;
+	}
 
-.signupForm label{
-	font-weight:bold;
-	display:inline-block;
-}
-
-.signupForm #email{
-	max-width: 280px;
+	#email{
+		max-width: 280px;
+	}
 }
 
 .emailIcon{
@@ -382,9 +387,55 @@ input[type=submit]:hover, button:hover{
 		z-index:12;
 		/*border-bottom: 2px solid black;*/
 		box-shadow: 0 1px 2px 1px rgba(0,0,0,.4);
-		-webkit-transition: all 0.5s ease-in;
-		-moz-transition: all 0.5s ease-in;
-		transition: all 0.5s ease-in;
+		-webkit-transition: all 0.35s ease-in;
+		-moz-transition: all 0.35s ease-in;
+		transition: all 0.35s ease-in;
+
+		.mbHeader{
+			float:left;
+		}
+
+		.mbBacking{
+			display:none;
+		}
+
+		header .mbLogo{
+			width:228px;
+			height: 102px;
+			background-image: url('machlogo_desktop.png');
+			margin-left:.25em;
+			background-size:auto;
+		}
+
+		header .mbNavicon{
+			display:none;
+		}
+
+		.mbLinks{
+			display:block;
+			float:right;
+			font-size:2em;
+			border-bottom: none;
+			top:50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+
+
+		.mbLinks ul{
+			height:100%;
+		}
+
+		.mbLinks li{
+			display:inline-block;
+			text-align:right;
+			padding: 0 .5em;
+		}
+	}
+
+	.menuBar *, .mbLogo, .mbLinks{
+			background-color:rgba(229,230,231,0) !important;
 	}
 
 	.mbTranslucent{
@@ -394,59 +445,47 @@ input[type=submit]:hover, button:hover{
 			transition: all 0.5s ease-in;*/
 	}
 
-	.menuBar *, .mbLogo, .mbLinks{
-		background-color:rgba(229,230,231,0) !important;
-	}
-
-	.menuBar .mbHeader{
-		float:left;
-	}
-
-	.menuBar .mbBacking{
-		display:none;
-	}
-
-	.menuBar header .mbLogo{
-		width:228px;
-		height: 102px;
-		background-image: url('machlogo_desktop.png');
-		margin-left:.25em;
-		background-size:auto;
-	}
-
-	.menuBar header .mbNavicon{
-		display:none;
-	}
-
-	.menuBar .mbLinks{
-		display:block;
-		float:right;
-		font-size:2em;
-		border-bottom: none;
-		top:50%;
-		-webkit-transform: translateY(-50%);
-		-moz-transform: translateY(-50%);
-		transform: translateY(-50%);
-	}
-
-
-	.menuBar .mbLinks ul{
-		height:100%;
-	}
-
-	.menuBar .mbLinks li{
-		display:inline-block;
-		text-align:right;
-		padding: 0 .5em;
-	}
-
 	/* splash page */
 	.pageSplash{
 		background-image: url('meeples_bg_desktop.jpg');
 		background-size: 200% cover;
 		background-attachment:fixed;
-		background-position-y:200px;
+		background-position-y:100px;
 		border-bottom: none;
+
+		.pageSplashMonkeys{
+			position:absolute;
+			bottom:0;
+			width:100%;
+			max-width:300px;
+			height:219px;
+			background-image: url('monkeys.png');
+			background-size: 100% auto;
+			margin:auto; left:auto;	right:auto;
+		}
+
+		header{
+			background:none;
+			border:none;
+			width:auto;
+			padding:130px 0 1em 0;
+			text-shadow: 2px 2px 2px black;
+
+			h2{
+				font-size:3.5em;
+			}
+
+			h3{
+				font-size:2.5em;
+			}
+
+			h4, button{
+				font-family:$font_primary;
+				font-variant:normal;
+				font-weight:normal;
+				font-size:1.25rem;
+			}
+		}
 	}
 
 	.psPrimary{
@@ -462,44 +501,6 @@ input[type=submit]:hover, button:hover{
 		top:1px;
 	}
 
-	.pageSplash .pageSplashMonkeys{
-		position:absolute;
-		bottom:0;
-		width:100%;
-		max-width:300px;
-		height:219px;
-		background-image: url('monkeys.png');
-		background-size: 100% auto;
-		margin:auto; left:auto;	right:auto;
-	}
-
-	.pageSplash header{
-		background:none;
-		border:none;
-		width:auto;
-		padding:130px 0 1em 0;
-		text-shadow: 2px 2px 2px black;
-	}
-
-	.pageSplash header h2{
-		font-size:3.5em;
-	}
-
-	.pageSplash header h3{
-		font-size:2.5em;
-	}
-
-	.pageSplash header h4, .pageSplash header button{
-		font-family:$font_primary;
-		font-variant:normal;
-		font-weight:normal;
-		font-size:1.25rem;
-	}
-
-/*	button.pageSplashButton{
-		margin-bottom:1em;
-	}*/
-
 	.pageSplashMedia{
 		width:480px;
 		height:360px;
@@ -513,77 +514,54 @@ input[type=submit]:hover, button:hover{
 		background-color:$machgrey;
 		border:none;
 		box-shadow: 0 -2px 3px 1px rgba(0,0,0,.5), 0 2px 3px 1px rgba(0,0,0,.5);
+
+		article{
+			padding: 2em 0;
+		}
+
+		aside{
+			padding: 1em 0;
+		}
+
+		article{
+			margin:0;
+			border-radius:0;
+		}
+		aside, header{
+			max-width: 720px;
+			margin:auto;
+			box-shadow:none;
+		}
 	}
 
-	.pageContent article{
-		padding: 2em 0;
+	.machBrosBubbles{
+		.bubblePic{
+			width:150px;
+			height:150px;
+			margin: 1em;
+			border-radius:75px;
+			-webkit-transition: all 0.1s ease;
+			transition: all 0.1s ease;
+		}
+
+		.bubblePic:hover{
+			-webkit-transform:scale(1.1);
+			transform:scale(1.1);
+		}
+
+		.bpEdwin{
+			background-image: url('bubble_ed.jpg');
+		}
+
+		.bpAlbert{
+			background-image: url('bubble_al.jpg');
+		}
+
+		.bpKevin{
+			background-image: url('bubble_kev.jpg');
+		}
 	}
 
-	.pageContent aside{
-		padding: 1em 0;
-	}
-
-	/* PAGE CONTENT STYLE 1 START */
-	/* MULTIPLE COLOR DIVIDERS */
-
-	.pageContent article{
-		margin:0;
-		border-radius:0;
-	}
-	.pageContent aside, .pageContent header{
-		max-width: 720px;
-		margin:auto;
-		box-shadow:none;
-	}
-	/* PAGE CONTENT STYLE 1 END */
-
-
-
-	/* PAGE CONTENT STYLE 2 START */
-	/* CARD STYLE */
-/*
-	.pageContent{
-		z-index:11;
-		padding:.1em 0 .1em 0;
-	}
-
-	.pageContent article{
-		max-width:800px;
-		margin:2em auto;
-	}
-	.pageContent aside, .pageContent header{
-		max-width: 680px;
-		margin:auto;
-	}*/
-
-	/* PAGE CONTENT STYLE 2 END */
-
-	.machBrosBubbles .bubblePic{
-		width:150px;
-		height:150px;
-		margin: 1em;
-		border-radius:75px;
-		-webkit-transition: all 0.1s ease;
-		transition: all 0.1s ease;
-	}
-
-	.machBrosBubbles .bubblePic:hover{
-		-webkit-transform:scale(1.1);
-		transform:scale(1.1);
-	}
-
-
-	.bpEdwin{
-		background-image: url('bubble_ed.jpg');
-	}
-
-	.bpAlbert{
-		background-image: url('bubble_al.jpg');
-	}
-
-	.bpKevin{
-		background-image: url('bubble_kev.jpg');
-	}
 
 	/* newsletter items */
 	.signupForm #email{
