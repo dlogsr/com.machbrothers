@@ -2,8 +2,8 @@
 /* GENERATED FROM SCSS SOURCE FILE     */
 /* PLEASE NOTE THAT THIS FILE REQUIRES */
 /* A SASS PREPROCESSOR TO GENERATE THE */
-/* PROPER CSS FILE.					   */
-/* !!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!! */
+/* PROPER CSS FILE.		 			   */
+/* !!!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!!! */
 /* mobile first */
 body {
   font-family: "Dosis", Georgia, Arial, Verdana;
@@ -255,7 +255,7 @@ input, button {
   padding: .45em;
   font-size: 1em;
   border-radius: 15px;
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   margin: .5em; }
 
 button.pageSplashButton {

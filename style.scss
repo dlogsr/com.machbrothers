@@ -2,9 +2,9 @@
 /* GENERATED FROM SCSS SOURCE FILE     */
 /* PLEASE NOTE THAT THIS FILE REQUIRES */
 /* A SASS PREPROCESSOR TO GENERATE THE */
-/* PROPER CSS FILE.					   */
+/* PROPER CSS FILE.		 			   */
 
-/* !!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!! */
+/* !!!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!!! */
 
 //SCSS variables
 
@@ -15,7 +15,7 @@ $font_primary: 'Dosis';
 $font_secondary: 'Raleway';
 
 @mixin gradient-bg($start,$end,$angle){	
-	$dir : top;
+	$dir : top; 
 	$dir_text : left top, left bottom;
 	$dir_text_w3c : to bottom;
 	@if $angle == 0{

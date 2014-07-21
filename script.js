@@ -26,6 +26,7 @@ $(document).ready(function(){
 	$mbLogo.click(function(e){
 		e.preventDefault();
 		var currentPage = (location.pathname.split('/').slice(-1)[0]);
+		console.log(currentPage);
 		if(currentPage == "index.html"){
 			if(!window.matchMedia("(min-width: 680px)").matches)	$mbLinks.slideUp();
 				scrollAndStop('body');	
