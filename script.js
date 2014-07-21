@@ -27,7 +27,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		var currentPage = (location.pathname.split('/').slice(-1)[0]);
 		console.log(currentPage);
-		if(currentPage == "index.html"){
+		if(currentPage == "index.html" || currentPage == ""){
 			if(!window.matchMedia("(min-width: 680px)").matches)	$mbLinks.slideUp();
 				scrollAndStop('body');	
 		}
