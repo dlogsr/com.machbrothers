@@ -118,16 +118,16 @@ section {
     position: absolute;
     top: 20%;
     right: 10%;
-    min-width: 240px;
-    height: 150px;
+    min-width: 320px;
+    height: 200px;
     background-image: url("dragon_title_mobile.png");
     background-repeat: no-repeat; }
   .pageSplash .pageSplashDragon {
     position: absolute;
     top: 25%;
     width: 100%;
-    max-width: 320px;
-    height: 274px;
+    max-width: 480px;
+    height: 411px;
     margin: 0 auto;
     left: 0;
     right: 0;
