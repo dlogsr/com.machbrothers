@@ -6,11 +6,20 @@
 
 /* !!!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!!! */
 
-//SCSS variables
+//SCSS variables!
 
+//old colors
 $machblue : #006FB8;
 $machgrey : #E5E6E7;
+
+$machblue1: #5860AB;
+$machgreen1: #00A550;
+$machgrey1 : #9A9A9A;
+$machgrey2 : #494949;
 $bd_2pxblack: 2px solid black;
+$bd_2pxwhite: 2px solid white;
+$bd_2pxlightgrey: 2px solid #8A8A8A;
+$bd_2pxdarkgrey: 2px solid #1D1D1D;
 $font_primary: 'Dosis';
 $font_secondary: 'Raleway';
 
@@ -39,7 +48,7 @@ $font_secondary: 'Raleway';
 }
 
 
-/* mobile first */
+/* mobile first! */
 
 body{
 	font-family: $font_primary, Georgia, Arial, Verdana;
@@ -48,7 +57,7 @@ body{
 	-moz-font-smoothing: subpixel-antialiased;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	margin: 0;
-	background-color:$machgrey;
+	background-color:$machgrey1;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -59,7 +68,7 @@ body{
 
 a {
 	text-decoration: none;
-	color:black;
+	color:white;
 }
 
 section{
@@ -76,7 +85,7 @@ section{
 	z-index:12;
 
 	div, header, nav{
-		background-color:$machgrey;
+		background-color:$machgrey2;
 		z-index:10;
 	}
 
@@ -90,18 +99,17 @@ section{
 	.mbBacking{
 		position:absolute;
 		width:100%;
-		border-bottom: $bd_2pxblack;
+		// border-bottom: $bd_2pxblack;
 		/*border-bottom: 1px none black;*/
 		/*box-shadow: 0 2px 3px 1px rgba(0,0,0,1);*/
 	}
 
 	header .mbLogo{
 		position:absolute;
-		width:75%;
-		max-width:414px;
-		height: 41px;
+		width:75px;
+		height: 38px;
 		text-align:right;
-		background-image: url('machlogo_mobile.png');
+		background-image: url('machlogo_bw_mobile.png');
 		background-repeat: no-repeat;
 		background-position:left;
 		background-size: 100%;
@@ -111,11 +119,17 @@ section{
 
 	header .mbNavicon{
 		float:right;
-		width:50px;
-		height:42px;
-		background-image: url('menu_navicon.png');
-		background-repeat: no-repeat;
-		background-position:center;
+	    border-bottom: 17px double white; 
+	    border-top: 6px solid white; 
+	    content:"";
+	    height: 5px; 
+	    width:30px;
+	    margin: .5em;
+		// width:50px;
+		// height:42px;
+		// background-image: url('menu_bw_navicon.png');
+		// background-repeat: no-repeat;
+		// background-position:center;
 		cursor:pointer;
 		z-index:12;
 	}
@@ -125,9 +139,9 @@ section{
 		/*display:block;*/
 		display:none;
 		right:0;
-		font-size:2.75em;
+		font-size:2em;
 		font-weight:bold;
-		border-bottom: $bd_2pxblack;
+		// border-bottom: $bd_2pxblack;
 		z-index:12;
 	}
 
@@ -147,25 +161,23 @@ section{
 
 .pageSplash{
 	position:relative;
-	background-image: url('meeples_bg_desktop.jpg');
+	// background-image: url('meeples_bg_desktop.jpg');
+	background-color:$machgrey1;
 	background-size:200%;
 	background-attachment:fixed;
 	background-position-y:40px;
-	border-bottom: $bd_2pxblack;
+	// border-bottom: $bd_2pxblack;
 
 	header{
-		position:relative;
+		position:absolute;
+		bottom:0;
 		font-family:Raleway;
 		font-variant:small-caps;
 		-webkit-text-stroke-width:0;
 		color:#FFF;
 		text-align:center;
-		background-color:rgba(0,0,0,.5);
-		border-top-left-radius: 15px;
-		border-top-right-radius: 15px;
-		width:360px;
-		margin:auto;
-		padding:49px 0 1em 0;
+		width:100%;
+		margin:1em auto;
 	}
 
 	header h2{
@@ -184,6 +196,31 @@ section{
 		font-variant: normal;
 		font-weight: normal;
 		font-size: 1rem;
+	}
+
+	.pageSplashGameLogo{
+		position:absolute;
+		// width:240px;
+		top:20%;
+		right:10%;
+		min-width:240px;
+		// width:100%;
+		height:150px;
+		background-image: url('dragon_title_mobile.png');
+		background-repeat:no-repeat;
+	}
+
+	.pageSplashDragon{
+		position:absolute;
+		top:25%;
+		width:100%;
+		max-width:320px;
+		height:274px;
+		margin:0 auto; left:0;	right:0;
+		background-image: url('dragon_bg_mobile.png');
+		background-size: 100% auto;
+		background-repeat: no-repeat;
+		z-index:10;
 	}
 
 	.pageSplashMonkeys{
@@ -225,10 +262,10 @@ section{
 /* content article items */
 
 .pageContent{
-	border-bottom: $bd_2pxblack;
+	// border-bottom: $bd_2pxblack;
 
 	article{
-		padding: 1em;
+		padding: 0 1em 1em 1em;
 		font-size:1.5em;
 		background-color:#F3F4F5;
 	}
@@ -240,22 +277,26 @@ section{
 	header h2{
 		font-family: $font_secondary;
 		font-size: 1.5em;
-		padding: 1em 0;
+		// padding: 1em 0;
+		padding-bottom:1em;
 		display:inline-block;
 		margin:auto;
 	}
 
 	article.cardA{
-		@include gradient-bg($machgrey,#8fa8b7,0);
+		background-color:$machblue1;
+		// @include gradient-bg($machgrey,#8fa8b7,0);
 	}
 
 	article.cardB{
-		color:white;
-		@include gradient-bg($machblue,#004b96,45);
+		background-color:$machgreen1;
+		// @include gradient-bg($machblue,#004b96,45);
 	}
 
 	article.cardC{
-		@include gradient-bg(#ff5949,#b73333,0);
+		// @include gradient-bg(#ff5949,#b73333,0);
+		color:white;
+		background-color:$machgrey2;
 	}
 
 	aside{
@@ -306,7 +347,7 @@ section{
 
 /* signup form items */
 
-input, button{
+input, button, textarea{
 	display:inline-block;
 	padding:.45em;
 	font-size:1em;
@@ -315,47 +356,53 @@ input, button{
 	margin:.5em;
 }
 
-button.pageSplashButton{
-	font-family:Raleway;
-	font-variant:small-caps;
-	padding:.2em .4em;
-	margin:0;
-}
+// ******* REMOVED ELEMENT FROM HTML
+// button.pageSplashButton{
+// 	font-family:Raleway;
+// 	font-variant:small-caps;
+// 	padding:.2em .4em;
+// 	margin:0;
+// }
 
-button.pageSplashButton .buttonSignUp{
-	display:inline-block;
-}
+// button.pageSplashButton .buttonSignUp{
+// 	display:inline-block;
+// }
 
-input:focus, button:focus{
-	border: $bd_2pxblack;
-	outline:none;
-}
-
-input[type=submit], button{
-	background-color:$machblue;
-	color:#F3F4F5;
-}
-
-input[type=submit]:active, button:active{
-	background-color:#007FC8;
-}
-
-input[type=submit]:hover, button:hover{
-	border: $bd_2pxblack;
-	cursor:pointer;
-}
 
 .signupForm fieldset{
 	font-family: $font_secondary, Georgia, Arial, Verdana;
 	text-align: center;
 
-	label{
-		font-weight:bold;
+	input, button, textarea{
+		font-family: $font_secondary, Georgia, Arial, Verdana;
+		color:white;
+		background-color:$machgrey2;
 		display:inline-block;
+		border: $bd_2pxwhite;
 	}
 
-	#email{
-		max-width: 280px;
+	textarea{
+		outline:none;
+		resize:none;
+		overflow: auto;
+		height:4em;
+		font-size:.75em;
+		width:284px;
+	}
+
+	input:focus, button:focus, textarea:focus{
+		// border: $bd_2pxdarkgrey;
+		outline:none;
+	}
+
+
+	input[type=submit]:active, button:active{
+		// background-color:$machgrey1;
+	}
+
+	input[type=submit]:hover, button:hover{
+		border: $bd_2pxblack;
+		cursor:pointer;
 	}
 }
 
@@ -383,14 +430,14 @@ input[type=submit]:hover, button:hover{
 
 @media only screen and (min-width: 680px){
 	.menuBar{
-		background-color:$machgrey;
-		height:110px;
+		background-color:$machgrey2;
+		height:75px;
 		z-index:12;
 		/*border-bottom: 2px solid black;*/
-		box-shadow: 0 1px 2px 1px rgba(0,0,0,.4);
-		-webkit-transition: all 0.35s ease-in;
-		-moz-transition: all 0.35s ease-in;
-		transition: all 0.35s ease-in;
+		// box-shadow: 0 1px 2px 1px rgba(0,0,0,.4);
+		-webkit-transition: all 0.15s ease-in;
+		-moz-transition: all 0.15s ease-in;
+		transition: all 0.15s ease-in;
 
 		.mbHeader{
 			float:left;
@@ -401,9 +448,9 @@ input[type=submit]:hover, button:hover{
 		}
 
 		header .mbLogo{
-			width:228px;
-			height: 102px;
-			background-image: url('machlogo_desktop.png');
+			width:150px;
+			height: 75px;
+			background-image: url('machlogo_bw_desktop.png');
 			margin-left:.25em;
 			background-size:auto;
 		}
@@ -440,19 +487,32 @@ input[type=submit]:hover, button:hover{
 	}
 
 	.mbTranslucent{
-			background-color:rgba(229,230,231,.75);
-	/*		-webkit-transition: all 0.5s ease-in;
-			-moz-transition: all 0.5s ease-in;
-			transition: all 0.5s ease-in;*/
+			background-color:rgba(229,230,231,0);
 	}
 
 	/* splash page */
 	.pageSplash{
-		background-image: url('meeples_bg_desktop.jpg');
-		background-size: 200% cover;
-		background-attachment:fixed;
+		background-color:$machgrey1;
+		background-size: auto;
+		// background-attachment:fixed;
 		background-position-y:100px;
 		border-bottom: none;
+
+		.pageSplashGameLogo{
+			position:absolute;
+			top: 15%;
+			width:480px;
+			height:300px;
+			margin:auto; right: 2em;
+			background-image: url('dragon_title_desktop.png')
+		}
+
+		.pageSplashDragon{
+			bottom:0;
+			max-width:640px;
+			height:548px;
+			background-image: url('dragon_bg_desktop.png');
+		}
 
 		.pageSplashMonkeys{
 			position:absolute;
@@ -469,7 +529,6 @@ input[type=submit]:hover, button:hover{
 			background:none;
 			border:none;
 			width:auto;
-			padding:130px 0 1em 0;
 			text-shadow: 2px 2px 2px black;
 
 			h2{
@@ -514,10 +573,10 @@ input[type=submit]:hover, button:hover{
 		z-index:11;
 		background-color:$machgrey;
 		border:none;
-		box-shadow: 0 -2px 3px 1px rgba(0,0,0,.5), 0 2px 3px 1px rgba(0,0,0,.5);
+		// box-shadow: 0 -2px 3px 1px rgba(0,0,0,.5), 0 2px 3px 1px rgba(0,0,0,.5);
 
 		article{
-			padding: 2em 0;
+			padding: 0 0 2em 0;
 		}
 
 		aside{
@@ -565,8 +624,17 @@ input[type=submit]:hover, button:hover{
 
 
 	/* newsletter items */
-	.signupForm #email{
-		max-width: 400px;
+	.signupForm fieldset{
+		input{
+			width:42%;
+		}
+
+		textarea{
+			display:block;
+			margin:auto;
+			width:84%;
+			height:4em;
+		}
 	}
 
 

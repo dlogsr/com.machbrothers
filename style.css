@@ -4,7 +4,7 @@
 /* A SASS PREPROCESSOR TO GENERATE THE */
 /* PROPER CSS FILE.		 			   */
 /* !!!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!!! */
-/* mobile first */
+/* mobile first! */
 body {
   font-family: "Dosis", Georgia, Arial, Verdana;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -12,7 +12,7 @@ body {
   -moz-font-smoothing: subpixel-antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   margin: 0;
-  background-color: #e5e6e7;
+  background-color: #9a9a9a;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -22,7 +22,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black; }
+  color: white; }
 
 section {
   display: block;
@@ -35,7 +35,7 @@ section {
   width: 100%;
   z-index: 12; }
   .menuBar div, .menuBar header, .menuBar nav {
-    background-color: #e5e6e7;
+    background-color: #494949;
     z-index: 10; }
   .menuBar .mbHeader {
     position: relative;
@@ -45,16 +45,14 @@ section {
   .menuBar .mbBacking {
     position: absolute;
     width: 100%;
-    border-bottom: 2px solid black;
     /*border-bottom: 1px none black;*/
     /*box-shadow: 0 2px 3px 1px rgba(0,0,0,1);*/ }
   .menuBar header .mbLogo {
     position: absolute;
-    width: 75%;
-    max-width: 414px;
-    height: 41px;
+    width: 75px;
+    height: 38px;
     text-align: right;
-    background-image: url("machlogo_mobile.png");
+    background-image: url("machlogo_bw_mobile.png");
     background-repeat: no-repeat;
     background-position: left;
     background-size: 100%;
@@ -62,11 +60,12 @@ section {
     z-index: 11; }
   .menuBar header .mbNavicon {
     float: right;
-    width: 50px;
-    height: 42px;
-    background-image: url("menu_navicon.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    border-bottom: 17px double white;
+    border-top: 6px solid white;
+    content: "";
+    height: 5px;
+    width: 30px;
+    margin: .5em;
     cursor: pointer;
     z-index: 12; }
   .menuBar .mbLinks {
@@ -74,9 +73,8 @@ section {
     /*display:block;*/
     display: none;
     right: 0;
-    font-size: 2.75em;
+    font-size: 2em;
     font-weight: bold;
-    border-bottom: 2px solid black;
     z-index: 12; }
   .menuBar .mbLinks li {
     font-family: "Raleway", Georgia, Arial, Verdana;
@@ -90,24 +88,20 @@ section {
 /* splash image items */
 .pageSplash {
   position: relative;
-  background-image: url("meeples_bg_desktop.jpg");
+  background-color: #9a9a9a;
   background-size: 200%;
   background-attachment: fixed;
-  background-position-y: 40px;
-  border-bottom: 2px solid black; }
+  background-position-y: 40px; }
   .pageSplash header {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     font-family: Raleway;
     font-variant: small-caps;
     -webkit-text-stroke-width: 0;
     color: #FFF;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 360px;
-    margin: auto;
-    padding: 49px 0 1em 0; }
+    width: 100%;
+    margin: 1em auto; }
   .pageSplash header h2 {
     font-size: 2em; }
   .pageSplash header h3 {
@@ -120,6 +114,27 @@ section {
     font-variant: normal;
     font-weight: normal;
     font-size: 1rem; }
+  .pageSplash .pageSplashGameLogo {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    min-width: 240px;
+    height: 150px;
+    background-image: url("dragon_title_mobile.png");
+    background-repeat: no-repeat; }
+  .pageSplash .pageSplashDragon {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    max-width: 320px;
+    height: 274px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-image: url("dragon_bg_mobile.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 10; }
   .pageSplash .pageSplashMonkeys {
     position: absolute;
     bottom: 0;
@@ -152,74 +167,27 @@ section {
   text-align: center; }
 
 /* content article items */
-.pageContent {
-  border-bottom: 2px solid black; }
-  .pageContent article {
-    padding: 1em;
-    font-size: 1.5em;
-    background-color: #F3F4F5; }
-  .pageContent header {
-    text-align: center; }
-  .pageContent header h2 {
-    font-family: "Raleway";
-    font-size: 1.5em;
-    padding: 1em 0;
-    display: inline-block;
-    margin: auto; }
-  .pageContent article.cardA {
-    background: #e5e6e7;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #e5e6e7 1%, #8fa8b7 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #e5e6e7), color-stop(100%, #8fa8b7));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #e5e6e7 1%, #8fa8b7 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #e5e6e7 1%, #8fa8b7 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #e5e6e7 1%, #8fa8b7 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #e5e6e7 1%, #8fa8b7 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=0 );
-    /* IE6-9 */ }
-  .pageContent article.cardB {
-    color: white;
-    background: #006fb8;
-    /* Old browsers */
-    background: -moz-linear-gradient(45deg, #006fb8 1%, #004b96 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(1%, #006fb8), color-stop(100%, #004b96));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(45deg, #006fb8 1%, #004b96 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(45deg, #006fb8 1%, #004b96 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(45deg, #006fb8 1%, #004b96 100%);
-    /* IE10+ */
-    background: linear-gradient(45deg, #006fb8 1%, #004b96 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=0 );
-    /* IE6-9 */ }
-  .pageContent article.cardC {
-    background: #ff5949;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #ff5949 1%, #b73333 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ff5949), color-stop(100%, #b73333));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #ff5949 1%, #b73333 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #ff5949 1%, #b73333 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #ff5949 1%, #b73333 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #ff5949 1%, #b73333 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$start', endColorstr='$end',GradientType=0 );
-    /* IE6-9 */ }
-  .pageContent aside {
-    padding: 1em 0; }
+.pageContent article {
+  padding: 0 1em 1em 1em;
+  font-size: 1.5em;
+  background-color: #F3F4F5; }
+.pageContent header {
+  text-align: center; }
+.pageContent header h2 {
+  font-family: "Raleway";
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  display: inline-block;
+  margin: auto; }
+.pageContent article.cardA {
+  background-color: #5860ab; }
+.pageContent article.cardB {
+  background-color: #00a550; }
+.pageContent article.cardC {
+  color: white;
+  background-color: #494949; }
+.pageContent aside {
+  padding: 1em 0; }
 
 /* about page items */
 .machBrosBubbles {
@@ -250,7 +218,7 @@ section {
     background-image: url("bubble_portrait_kev.jpg"); }
 
 /* signup form items */
-input, button {
+input, button, textarea {
   display: inline-block;
   padding: .45em;
   font-size: 1em;
@@ -258,38 +226,27 @@ input, button {
   border: 2px solid rgba(0, 0, 0, 0);
   margin: .5em; }
 
-button.pageSplashButton {
-  font-family: Raleway;
-  font-variant: small-caps;
-  padding: .2em .4em;
-  margin: 0; }
-
-button.pageSplashButton .buttonSignUp {
-  display: inline-block; }
-
-input:focus, button:focus {
-  border: 2px solid black;
-  outline: none; }
-
-input[type=submit], button {
-  background-color: #006fb8;
-  color: #F3F4F5; }
-
-input[type=submit]:active, button:active {
-  background-color: #007FC8; }
-
-input[type=submit]:hover, button:hover {
-  border: 2px solid black;
-  cursor: pointer; }
-
 .signupForm fieldset {
   font-family: "Raleway", Georgia, Arial, Verdana;
   text-align: center; }
-  .signupForm fieldset label {
-    font-weight: bold;
-    display: inline-block; }
-  .signupForm fieldset #email {
-    max-width: 280px; }
+  .signupForm fieldset input, .signupForm fieldset button, .signupForm fieldset textarea {
+    font-family: "Raleway", Georgia, Arial, Verdana;
+    color: white;
+    background-color: #494949;
+    display: inline-block;
+    border: 2px solid white; }
+  .signupForm fieldset textarea {
+    outline: none;
+    resize: none;
+    overflow: auto;
+    height: 4em;
+    font-size: .75em;
+    width: 284px; }
+  .signupForm fieldset input:focus, .signupForm fieldset button:focus, .signupForm fieldset textarea:focus {
+    outline: none; }
+  .signupForm fieldset input[type=submit]:hover, .signupForm fieldset button:hover {
+    border: 2px solid black;
+    cursor: pointer; }
 
 .emailIcon {
   position: relative;
@@ -311,22 +268,21 @@ input[type=submit]:hover, button:hover {
 /* DESKTOP RESPONSIVE */
 @media only screen and (min-width: 680px) {
   .menuBar {
-    background-color: #e5e6e7;
-    height: 110px;
+    background-color: #494949;
+    height: 75px;
     z-index: 12;
     /*border-bottom: 2px solid black;*/
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.4);
-    -webkit-transition: all 0.35s ease-in;
-    -moz-transition: all 0.35s ease-in;
-    transition: all 0.35s ease-in; }
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in; }
     .menuBar .mbHeader {
       float: left; }
     .menuBar .mbBacking {
       display: none; }
     .menuBar header .mbLogo {
-      width: 228px;
-      height: 102px;
-      background-image: url("machlogo_desktop.png");
+      width: 150px;
+      height: 75px;
+      background-image: url("machlogo_bw_desktop.png");
       margin-left: .25em;
       background-size: auto; }
     .menuBar header .mbNavicon {
@@ -351,18 +307,27 @@ input[type=submit]:hover, button:hover {
     background-color: rgba(229, 230, 231, 0) !important; }
 
   .mbTranslucent {
-    background-color: rgba(229, 230, 231, 0.75);
-    /*		-webkit-transition: all 0.5s ease-in;
-    		-moz-transition: all 0.5s ease-in;
-    		transition: all 0.5s ease-in;*/ }
+    background-color: rgba(229, 230, 231, 0); }
 
   /* splash page */
   .pageSplash {
-    background-image: url("meeples_bg_desktop.jpg");
-    background-size: 200% cover;
-    background-attachment: fixed;
+    background-color: #9a9a9a;
+    background-size: auto;
     background-position-y: 100px;
     border-bottom: none; }
+    .pageSplash .pageSplashGameLogo {
+      position: absolute;
+      top: 15%;
+      width: 480px;
+      height: 300px;
+      margin: auto;
+      right: 2em;
+      background-image: url("dragon_title_desktop.png"); }
+    .pageSplash .pageSplashDragon {
+      bottom: 0;
+      max-width: 640px;
+      height: 548px;
+      background-image: url("dragon_bg_desktop.png"); }
     .pageSplash .pageSplashMonkeys {
       position: absolute;
       bottom: 0;
@@ -378,7 +343,6 @@ input[type=submit]:hover, button:hover {
       background: none;
       border: none;
       width: auto;
-      padding: 130px 0 1em 0;
       text-shadow: 2px 2px 2px black; }
       .pageSplash header h2 {
         font-size: 3.5em; }
@@ -410,10 +374,9 @@ input[type=submit]:hover, button:hover {
   .pageContent {
     z-index: 11;
     background-color: #e5e6e7;
-    border: none;
-    box-shadow: 0 -2px 3px 1px rgba(0, 0, 0, 0.5), 0 2px 3px 1px rgba(0, 0, 0, 0.5); }
+    border: none; }
     .pageContent article {
-      padding: 2em 0; }
+      padding: 0 0 2em 0; }
     .pageContent aside {
       padding: 1em 0; }
     .pageContent article {
@@ -442,5 +405,10 @@ input[type=submit]:hover, button:hover {
     background-image: url("bubble_kev.jpg"); }
 
   /* newsletter items */
-  .signupForm #email {
-    max-width: 400px; } }
+  .signupForm fieldset input {
+    width: 42%; }
+  .signupForm fieldset textarea {
+    display: block;
+    margin: auto;
+    width: 84%;
+    height: 4em; } }
