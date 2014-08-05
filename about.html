@@ -7,29 +7,37 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" type="text/css" href="css-reset.css" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="fontello.css" />
 </head>
 <body>
-	<section class="menuBar">
-	<header class="mbHeader">
-		<div class="mbLogo">
-		</div>
-		<div class="mbNavicon">
-		</div>
-	</header>
-	<header class="mbBacking">
-	</header>
+	<section class="menuBar mbTranslucent">
+		<header class="mbHeader">
+			<div class="mbLogo">
+			</div>
+			<div class="mbNavicon">
+			</div>
+		</header>
+		<header class="mbBacking">
+		</header>
 		<nav class="mbLinks">
-			<ul>
-				<li id="game" class="mbLinkButton" ><a href="index.html">game</a></li>
-				<li id="blog" class="mbLinkButton" ><a href="/blog/">blog</a></li>
-				<li id="about" class="mbLinkButton" ><a href="about.html">about</a></li>
-				<li id="contact" class="mbLinkButton" ><a href="contact.html">contact</a></li>
+			<ul class="textLinks">
+				<li id="game" class="mbTranslucent mbLinkButton" ><a href="index.html">game</a></li>
+				<li id="blog" class="mbTranslucent mbLinkButton" ><a href="/blog/">blog</a></li>
+				<li id="about" class="mbTranslucent mbLinkButton" ><a href="about.html">about</a></li>
+				<li id="contact" class="mbTranslucent mbLinkButton" ><a href="contact.html">contact</a></li>
+				<li id="icons">
+					<ul class="iconLinks">
+						<li id="fb" class="mbTranslucent mbLinkButton" ><a href=""><i class="icon-facebook-squared"></i></a></li>
+						<li id="twtr" class="mbTranslucent mbLinkButton" ><a href=""><i class="icon-twitter-squared"></i></a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 	</section>
-	<section class="pageSplash psSecondary" data-stellar-background-ratio=".25">
+	<section class="pageSplash psSecondary">
 	</section>
 	<section class="pageContent">
 		<article class="aboutCard cardA">
@@ -52,9 +60,27 @@
 			</aside>
 		</article>
 	</section>
-
-	<footer class="siteFooter">
-	</footer>
+	<section class="pageContent contactCard">
+		<article class="signUpCard cardC">
+			<header>
+				<h2>contact</h2>
+			</header>
+			<aside>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</aside>
+			<aside class="newsletter">
+                <form class="signupForm">
+                    <fieldset>
+                        <input placeholder="name" type="text" id="name" name="name" size=20 />
+                        <input placeholder="e-mail" type="email" id="email" name="email" size=20 />
+                        <textarea placeholder="message" type="text" id="message" name="message" size=80></textarea>
+                        <input id="submitDiv" type="submit" name="Submit" value="send" id="submit">
+                    </fieldset>
+                </form>
+			</aside>
+		</article>
+	</section>
+	©2014 MACH BROTHERS
 
 </body>
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->

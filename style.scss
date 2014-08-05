@@ -275,7 +275,7 @@ section{
 }
 
 .psSecondary{
-	height:150px;
+	height:50px;
 }
 
 /*page Splash media items */
@@ -312,14 +312,14 @@ section{
 	header h2{
 		font-family: $font_secondary;
 		font-size: 1.5em;
-		// padding: 1em 0;
-		padding-bottom:1em;
+		color:white;
+		// padding-bottom:1em;
 		display:inline-block;
 		margin:auto;
 	}
 
 	article.cardA{
-		background-color:$machblue1;
+		background-color:$machgrey1;
 		// @include gradient-bg($machgrey,#8fa8b7,0);
 	}
 
@@ -335,14 +335,15 @@ section{
 	}
 
 	aside{
-			padding: 1em 0;
+		padding: 1em 0;
+		color:white;
 	}
 }
 
 /* about page items */ 
 
 .machBrosBubbles{
-	margin: 1em auto 3em;
+	margin: 1em auto;
 	text-align:center;
 
 	.bubblePic{
@@ -359,7 +360,7 @@ section{
 		h3{
 			font-family: $font_secondary;
 			font-size:.9em;
-			color:$machblue;
+			color: white;
 			position:relative;
 			padding-top:.1em;
 			top:150px;
@@ -602,7 +603,7 @@ input, button, textarea{
 	}
 
 	.psSecondary{
-		height:250px;
+		height:100px;
 	}
 
 	.emailIcon{

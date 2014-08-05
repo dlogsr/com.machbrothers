@@ -32,17 +32,17 @@ function scrollAndStop(marker){
 	$('html,body').stop().animate({scrollTop : scrollOffset},400);
 }
 
-function adjustContentSpacing(currSection) {
+function adjustContentSpacing(currSection,offset) {
 	var windowHeight = $(window).height();
 	matchMedia("(min-width: 680px)").matches ? windowHeight -= 65 : windowHeight -= 45;
-	$(currSection).css({'min-height':windowHeight});
+	$(currSection).css({'min-height':windowHeight-offset});
 };
 
 
 $(document).ready(function(){
 	//page setup functions
-	adjustContentSpacing('.psPrimary');
-	adjustContentSpacing('article');
+	adjustContentSpacing('.psPrimary',0);
+	adjustContentSpacing('article',150);
 	if(!window.matchMedia("(min-width: 680px)").matches) $menuBar.removeClass('mbTranslucent');
 	if( !isMobile.any()){
 		if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
@@ -87,12 +87,12 @@ $(document).ready(function(){
 });
 
 $(window).resize(function(){
-	adjustContentSpacing('.psPrimary');
-	adjustContentSpacing('article');
+	adjustContentSpacing('.psPrimary',0);
+	adjustContentSpacing('article',0);
 	if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
 });
 
-$pageSplashGameLogo.waypoint(function(direction){
+function swapMenuStyle(direction){
 	if(window.matchMedia("(min-width:680px)").matches)
 	{
 		if(direction == 'down'){
@@ -104,10 +104,15 @@ $pageSplashGameLogo.waypoint(function(direction){
 			// $pageSplashMonkeys.show();
 		}
 	}
+}
 
+$pageSplashGameLogo.waypoint(function(direction){
+	swapMenuStyle(direction);
 },{
 	offset:-200
 });
+
+
 
 // $pageContent.waypoint(function(direction){
 // 	if(window.matchMedia("(min-width:680px)").matches)

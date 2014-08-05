@@ -176,7 +176,7 @@ section {
     color: #2bde73; }
 
 .psSecondary {
-  height: 150px; }
+  height: 50px; }
 
 /*page Splash media items */
 .pageSplashMedia {
@@ -202,22 +202,23 @@ section {
   .pageContent header h2 {
     font-family: "Raleway";
     font-size: 1.5em;
-    padding-bottom: 1em;
+    color: white;
     display: inline-block;
     margin: auto; }
   .pageContent article.cardA {
-    background-color: #5860ab; }
+    background-color: #9a9a9a; }
   .pageContent article.cardB {
     background-color: #00a550; }
   .pageContent article.cardC {
     color: white;
     background-color: #494949; }
   .pageContent aside {
-    padding: 1em 0; }
+    padding: 1em 0;
+    color: white; }
 
 /* about page items */
 .machBrosBubbles {
-  margin: 1em auto 3em;
+  margin: 1em auto;
   text-align: center; }
   .machBrosBubbles .bubblePic {
     position: relative;
@@ -232,7 +233,7 @@ section {
     .machBrosBubbles .bubblePic h3 {
       font-family: "Raleway";
       font-size: .9em;
-      color: #006fb8;
+      color: white;
       position: relative;
       padding-top: .1em;
       top: 150px; }
@@ -387,7 +388,7 @@ input, button, textarea {
         font-size: 1.25rem; }
 
   .psSecondary {
-    height: 250px; }
+    height: 100px; }
 
   .emailIcon {
     position: relative;
