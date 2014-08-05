@@ -12,6 +12,18 @@ $pageSplashGameLogo = $('.pageSplashGameLogo');
 
 var clickedLink;
 
+//device detection for disabling parallax (quick and dirty solution)
+var isMobile = {
+    Android: function() { return navigator.userAgent.match(/Android/i); },
+    BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
+    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
+    Windows: function() { return navigator.userAgent.match(/IEMobile/i); },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 function scrollAndStop(marker){
 	var scrollOffset;
 	console.log(marker);
@@ -21,7 +33,8 @@ function scrollAndStop(marker){
 
 function adjustContentSpacing(currSection) {
 	var windowHeight = $(window).height();
-	$(currSection).css({'min-height':windowHeight-110});
+	matchMedia("(min-width: 680px)").matches ? windowHeight -= 65 : windowHeight -= 45;
+	$(currSection).css({'min-height':windowHeight});
 };
 
 
@@ -62,7 +75,14 @@ $(document).ready(function(){
 	// 	clickedLink = '.' + clickedLink + 'Card';
 	// 	scrollAndStop(clickedLink);
 	// })
+	if( !isMobile.any()){
+		if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
+	}
+});
 
+$(window).resize(function(){
+	adjustContentSpacing('.psPrimary');
+	adjustContentSpacing('article');
 	if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
 });
 

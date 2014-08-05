@@ -15,6 +15,7 @@ $machgrey : #E5E6E7;
 $machblue1: #5860AB;
 $machgreen1: #00A550;
 $machgrey1 : #9A9A9A;
+$machgrey1-2: #696969;
 $machgrey2 : #494949;
 $bd_2pxblack: 2px solid black;
 $bd_2pxwhite: 2px solid white;
@@ -109,7 +110,7 @@ section{
 		width:75px;
 		height: 38px;
 		text-align:right;
-		background-image: url('machlogo_bw_mobile.png');
+		background-image: url('machlogo_bw_desktop.png');
 		background-repeat: no-repeat;
 		background-position:left;
 		background-size: 100%;
@@ -200,27 +201,34 @@ section{
 
 	.pageSplashGameLogo{
 		position:absolute;
-		// width:240px;
-		top:20%;
-		right:10%;
-		min-width:320px;
-		// width:100%;
+		top:10%;
+		right:0;
+		min-width:240px;
 		height:200px;
 		background-image: url('dragon_title_mobile.png');
+		background-size:100% auto;
 		background-repeat:no-repeat;
+		@media only screen and (max-width:680px) and (orientation:landscape){
+			min-width:240px;
+			right:10%;
+		}
 	}
 
 	.pageSplashDragon{
 		position:absolute;
-		top:25%;
+		top:15%;
 		width:100%;
 		max-width:480px;
 		height:411px;
 		margin:0 auto; left:0;	right:0;
+		padding: auto 1em;
 		background-image: url('dragon_bg_mobile.png');
-		background-size: 100% auto;
+		background-size: contain;
 		background-repeat: no-repeat;
 		z-index:10;
+		@media only screen and (max-width:680px) and (orientation:landscape){
+			max-height: 280px;
+		}
 	}
 
 	.pageSplashMonkeys{
@@ -237,7 +245,7 @@ section{
 }
 
 .psPrimary{
-	height:540px;
+	// min-height:540px;
 }
 
 .psSecondary{
@@ -263,6 +271,7 @@ section{
 
 .pageContent{
 	// border-bottom: $bd_2pxblack;
+	z-index:14;
 
 	article{
 		padding: 0 1em 1em 1em;
@@ -377,7 +386,9 @@ input, button, textarea{
 		font-family: $font_secondary, Georgia, Arial, Verdana;
 		color:white;
 		background-color:$machgrey2;
-		display:inline-block;
+		display:block;
+		margin:1em auto;
+		width:280px;
 		border: $bd_2pxwhite;
 	}
 
@@ -385,14 +396,18 @@ input, button, textarea{
 		outline:none;
 		resize:none;
 		overflow: auto;
-		height:4em;
+		height:6em;
 		font-size:.75em;
-		width:284px;
+		width:280px;
 	}
 
 	input:focus, button:focus, textarea:focus{
 		// border: $bd_2pxdarkgrey;
+		background-color: $machgrey1-2;
 		outline:none;
+		&::-webkit-input-placeholder{
+			color:$machgrey2;
+		}
 	}
 
 
@@ -402,6 +417,8 @@ input, button, textarea{
 
 	input[type=submit]:hover, button:hover{
 		border: $bd_2pxblack;
+		background-color: $machgrey1;
+		color: black;
 		cursor:pointer;
 	}
 }
@@ -420,7 +437,7 @@ input, button, textarea{
 .siteFooter{
 	position:relative;
 	height:100px;
-	background-image: url(meeples_bg_desktop.jpg);
+	background-image: url('meeples_bg_desktop.jpg');
 	background-position:bottom;
 	background-attachment: fixed;
 	background-size:cover;
@@ -500,11 +517,14 @@ input, button, textarea{
 
 		.pageSplashGameLogo{
 			position:absolute;
-			top: 15%;
+			// top: 15%;
 			width:480px;
 			height:300px;
 			margin:auto; right: 2em;
-			background-image: url('dragon_title_desktop.png')
+			background-image: url('dragon_title_desktop.png');
+			@media only screen and(max-height:720px){
+				max-width:420px;
+			}
 		}
 
 		.pageSplashDragon{
@@ -512,6 +532,9 @@ input, button, textarea{
 			max-width:640px;
 			height:548px;
 			background-image: url('dragon_bg_desktop.png');
+			@media only screen and(max-height:720px){
+				max-width:540px;
+			}
 		}
 
 		.pageSplashMonkeys{
@@ -549,7 +572,7 @@ input, button, textarea{
 	}
 
 	.psPrimary{
-		height:700px;
+		// min-height:700px;
 	}
 
 	.psSecondary{
@@ -625,15 +648,16 @@ input, button, textarea{
 
 	/* newsletter items */
 	.signupForm fieldset{
-		input{
-			width:42%;
+		input[type=text],input[type=email]{
+			width:480px;
 		}
+
 
 		textarea{
 			display:block;
 			margin:auto;
-			width:84%;
-			height:4em;
+			width:480px;
+			height:8em;
 		}
 	}
 
