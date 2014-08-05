@@ -17,6 +17,9 @@ $machgreen1: #00A550;
 $machgrey1 : #9A9A9A;
 $machgrey1-2: #696969;
 $machgrey2 : #494949;
+$ksgreen: #2bde73;
+
+
 $bd_2pxblack: 2px solid black;
 $bd_2pxwhite: 2px solid white;
 $bd_2pxlightgrey: 2px solid #8A8A8A;
@@ -48,6 +51,10 @@ $font_secondary: 'Raleway';
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 ); /* IE6-9 */
 }
 
+@font-face {
+  font-family: 'kickstarter';
+  src: url('BarutaBlack_Trimmed.ttf'); /*TTF*/
+}
 
 /* mobile first! */
 
@@ -83,7 +90,7 @@ section{
 .menuBar{
 	position:fixed;
 	width:100%;
-	z-index:12;
+	z-index:20;
 
 	div, header, nav{
 		background-color:$machgrey2;
@@ -126,13 +133,13 @@ section{
 	    height: 5px; 
 	    width:30px;
 	    margin: .5em;
-		// width:50px;
-		// height:42px;
-		// background-image: url('menu_bw_navicon.png');
-		// background-repeat: no-repeat;
-		// background-position:center;
 		cursor:pointer;
 		z-index:12;
+
+		&:active{
+	    border-bottom: 17px double $machgrey1; 
+	    border-top: 6px solid $machgrey1; 
+		}
 	}
 
 	.mbLinks{
@@ -152,12 +159,21 @@ section{
 		text-align:center;
 		padding: .15em 0;
 	}
-}
 
-.mbLinkButton:hover a{
-	color:$machblue !important;
-}
+	.mbLinks .iconLinks li{
+		display:inline-block;
+		padding:0;
+	}
 
+	ul .mbTranslucent:hover a{
+		color:$machgrey2 !important;
+	}
+
+	.mbLinkButton:hover a{
+		color:$machgrey1;
+	}
+
+}
 /* splash image items */
 
 .pageSplash{
@@ -241,6 +257,16 @@ section{
 		background-image: url('monkeys.png');
 		background-size: 100% auto;
 		z-index:10;
+	}
+
+	.ksBlack{
+		font-family:'kickstarter','Dosis',Georgia,Arial;
+		color: black;
+	}
+
+	.ksGreen{
+		font-family:'kickstarter','Dosis',Georgia,Arial;
+		color: $ksgreen;
 	}
 }
 
@@ -449,7 +475,7 @@ input, button, textarea{
 	.menuBar{
 		background-color:$machgrey2;
 		height:75px;
-		z-index:12;
+		z-index:20;
 		/*border-bottom: 2px solid black;*/
 		// box-shadow: 0 1px 2px 1px rgba(0,0,0,.4);
 		-webkit-transition: all 0.15s ease-in;
@@ -492,7 +518,7 @@ input, button, textarea{
 			height:100%;
 		}
 
-		.mbLinks li{
+		.mbLinks li, .mbLinks li ul{
 			display:inline-block;
 			text-align:right;
 			padding: 0 .5em;

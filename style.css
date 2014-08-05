@@ -4,6 +4,11 @@
 /* A SASS PREPROCESSOR TO GENERATE THE */
 /* PROPER CSS FILE.		 			   */
 /* !!!!!! DO NOT EDIT THE STYLE.CSS FILE !!!!!! */
+@font-face {
+  font-family: 'kickstarter';
+  src: url("BarutaBlack_Trimmed.ttf");
+  /*TTF*/ }
+
 /* mobile first! */
 body {
   font-family: "Dosis", Georgia, Arial, Verdana;
@@ -33,7 +38,7 @@ section {
 .menuBar {
   position: fixed;
   width: 100%;
-  z-index: 12; }
+  z-index: 20; }
   .menuBar div, .menuBar header, .menuBar nav {
     background-color: #494949;
     z-index: 10; }
@@ -68,6 +73,9 @@ section {
     margin: .5em;
     cursor: pointer;
     z-index: 12; }
+    .menuBar header .mbNavicon:active {
+      border-bottom: 17px double #9a9a9a;
+      border-top: 6px solid #9a9a9a; }
   .menuBar .mbLinks {
     position: relative;
     /*display:block;*/
@@ -81,9 +89,13 @@ section {
     display: block;
     text-align: center;
     padding: .15em 0; }
-
-.mbLinkButton:hover a {
-  color: #006fb8 !important; }
+  .menuBar .mbLinks .iconLinks li {
+    display: inline-block;
+    padding: 0; }
+  .menuBar ul .mbTranslucent:hover a {
+    color: #494949 !important; }
+  .menuBar .mbLinkButton:hover a {
+    color: #9a9a9a; }
 
 /* splash image items */
 .pageSplash {
@@ -156,6 +168,12 @@ section {
     background-image: url("monkeys.png");
     background-size: 100% auto;
     z-index: 10; }
+  .pageSplash .ksBlack {
+    font-family: 'kickstarter','Dosis',Georgia,Arial;
+    color: black; }
+  .pageSplash .ksGreen {
+    font-family: 'kickstarter','Dosis',Georgia,Arial;
+    color: #2bde73; }
 
 .psSecondary {
   height: 150px; }
@@ -285,7 +303,7 @@ input, button, textarea {
   .menuBar {
     background-color: #494949;
     height: 75px;
-    z-index: 12;
+    z-index: 20;
     /*border-bottom: 2px solid black;*/
     -webkit-transition: all 0.15s ease-in;
     -moz-transition: all 0.15s ease-in;
@@ -313,7 +331,7 @@ input, button, textarea {
       transform: translateY(-50%); }
     .menuBar .mbLinks ul {
       height: 100%; }
-    .menuBar .mbLinks li {
+    .menuBar .mbLinks li, .menuBar .mbLinks li ul {
       display: inline-block;
       text-align: right;
       padding: 0 .5em; }
