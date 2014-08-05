@@ -435,6 +435,9 @@ input, button, textarea {
     background-image: url("bubble_kev.jpg"); }
 
   /* newsletter items */
+  .signUpCard {
+    padding-bottom: 3em !important; }
+
   .signupForm fieldset input[type=text], .signupForm fieldset input[type=email] {
     width: 480px; }
   .signupForm fieldset textarea {

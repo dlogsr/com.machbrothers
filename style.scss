@@ -674,6 +674,10 @@ input, button, textarea{
 
 
 	/* newsletter items */
+
+	.signUpCard{
+		padding-bottom:3em !important; //add to make sure scrolling makes menuBar hit the contact card
+	}
 	.signupForm fieldset{
 		input[type=text],input[type=email]{
 			width:480px;

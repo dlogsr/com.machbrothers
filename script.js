@@ -6,6 +6,7 @@ $mbTranslucent = $('.mbTranslucent');
 $mbNavicon = $('.mbNavicon');
 $mbHeader = $('.mbHeader');
 $mbLinkButton = $('.mbLinkButton');
+$menuBarTrigger = $('.menuBarTrigger');
 $pageContent = $('.pageContent');
 $pageSplashButton = $('.pageSplashButton');
 $pageSplashMonkeys = $('.pageSplashMonkeys');
@@ -106,7 +107,7 @@ function swapMenuStyle(direction){
 	}
 }
 
-$pageSplashGameLogo.waypoint(function(direction){
+$menuBarTrigger.waypoint(function(direction){
 	swapMenuStyle(direction);
 },{
 	offset:-200
