@@ -134,7 +134,8 @@ section {
     height: 200px;
     background-image: url("dragon_title_mobile.png");
     background-size: 100% auto;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    z-index: 12; }
     @media only screen and (max-width: 680px) and (orientation: landscape) {
       .pageSplash .pageSplashGameLogo {
         min-width: 240px;
@@ -375,8 +376,10 @@ input, button, textarea {
     .pageSplash header {
       background: none;
       border: none;
+      left: 2em;
       width: auto;
-      text-shadow: 2px 2px 2px black; }
+      text-shadow: 2px 2px 2px black;
+      z-index: 11; }
       .pageSplash header h2 {
         font-size: 3.5em; }
       .pageSplash header h3 {

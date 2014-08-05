@@ -10,6 +10,7 @@ $menuBarTrigger = $('.menuBarTrigger');
 $pageContent = $('.pageContent');
 $pageSplashButton = $('.pageSplashButton');
 $pageSplashMonkeys = $('.pageSplashMonkeys');
+$pageSplashDragon = $('.pageSplashDragon');
 $pageSplashGameLogo = $('.pageSplashGameLogo');
 
 var clickedLink;
@@ -44,10 +45,15 @@ $(document).ready(function(){
 	//page setup functions
 	adjustContentSpacing('.psPrimary',0);
 	adjustContentSpacing('article',150);
-	if(!window.matchMedia("(min-width: 680px)").matches) $menuBar.removeClass('mbTranslucent');
+	if(!window.matchMedia("(min-width: 680px)").matches) $menuBar.add($mbLinkButton).removeClass('mbTranslucent');
 	if( !isMobile.any()){
 		if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
-	}	
+	}
+	else if (!isMobile.any()){
+		if(window.matchMedia("(min-width: 680px)").matches) $pageSplashDragon.stellar({
+			scrollProperty: 'transform'
+		});
+	}
 
 	//page interaction functions
 	$mbNavicon.click(function(){
