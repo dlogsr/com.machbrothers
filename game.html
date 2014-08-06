@@ -7,8 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Dosis:300' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" type="text/css" href="css-reset.css" />
 <link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="fontello.css" />
 </head>
 <body>
 	<section class="menuBar mbTranslucent">
@@ -20,50 +22,60 @@
 		</header>
 		<header class="mbBacking">
 		</header>
-			<nav class="mbLinks">
-				<ul>
-					<li id="game" class="mbLinkButton" ><a href="index.html">game</a></li>
-					<li id="blog" class="mbLinkButton" ><a href="/blog/">blog</a></li>
-					<li id="about" class="mbLinkButton" ><a href="about.html">about</a></li>
-					<li id="contact" class="mbLinkButton" ><a href="contact.html">contact</a></li>
-				</ul>
-			</nav>
-		</section>
-		<section class="pageSplash psPrimary" data-stellar-background-ratio=".25">
-			<header>
-				<h2 class="pageSplashHeadline">
-					Vikings of Dragonia
-				</h2>
-				<h3 class="pageSplashCaption">
-					Coming Soon to Kickstarter
-				</h3>
-			</header>
-			<div class="pageSplashMedia">
-				Media here
-			</div>
-			<!-- <div class="pageSplashMonkeys" data-stellar-ratio=".45">
-			</div> -->
+		<nav class="mbLinks">
+			<ul class="textLinks">
+				<li id="game" class="mbTranslucent mbLinkButton" ><a href="game.html">game</a></li>
+				<li id="blog" class="mbTranslucent mbLinkButton" ><a href="/blog/">blog</a></li>
+				<li id="about" class="mbTranslucent mbLinkButton" ><a href="about.html">about</a></li>
+				<li id="contact" class="mbTranslucent mbLinkButton" ><a href="contact.html">contact</a></li>
+				<li id="icons">
+					<ul class="iconLinks">
+						<li id="fb" class="mbTranslucent mbLinkButton" ><a href=""><i class="icon-facebook-squared"></i></a></li>
+						<li id="twtr" class="mbTranslucent mbLinkButton" ><a href=""><i class="icon-twitter-squared"></i></a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
 	</section>
-	<section class="pageContent">
-		<article class="cardA">
-			<header>
-				<h2>what is our game?</h2>
-			</header>
-			<aside>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</aside>
+	<section class="pageSplash psPrimary" >
+		<article class="gameSplash menuBarTrigger">
+			<div class="gameSplashContainer">
+				<div class="gameSplashDetail">
+					<h2>Vikings of Dragonia</h2>
+					<h3>A Game of Vikings and Dragons...</h3>
+				</div>
+				<div class="gameSplashMedia">
+				</div>
+				<div class="gameSplashClear">
+				</div>
+			</div>
 		</article>
-		<article class="cardB">
+		<aside class="gameSplashQuotes">
+			<h3>"testimonial quote ticker" - albert</h3>
+		</aside>
+	</section>
+	<section class="pageContent gameCards">
+		<article class="gamePicturesCard cardA menuColorTrigger">
 			<header>
-				<h2>how do you play?</h2>
+				<h2>pictures</h2>
 			</header>
-			<aside>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</aside>
+			<div class="pictureSlider">
+				<h3>media placeholder</h3>
+			</div>
 		</article>
+		<article class="gamePlayCard cardB menuColorTrigger">
+			<header>
+				<h2>how to play</h2>
+			</header>
+			<div class="gameplayMovie">
+				<h2>media placeholder</h2>
+			</div>
+		</article>
+	</section>
+	<section class="pageContent contactCard menuColorTrigger">
 		<article class="signUpCard cardC">
 			<header>
-				<h2>sign up for updates</h2>
+				<h2>contact</h2>
 			</header>
 			<aside>
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -71,16 +83,21 @@
 			<aside class="newsletter">
                 <form class="signupForm">
                     <fieldset>
-                        <label for="email">e-mail: </label><input type="email" id="email" name="email" size=40>
-                        <input id="submitDiv" type="submit" name="Submit" value="sign up" id="submit">
+                        <input placeholder="name" type="text" id="name" name="name" size=20 />
+                        <input placeholder="e-mail" type="email" id="email" name="email" size=20 />
+                        <textarea placeholder="message" type="text" id="message" name="message" size=80></textarea>
+                        <input id="submitDiv" type="submit" name="Submit" value="send" id="submit">
                     </fieldset>
                 </form>
 			</aside>
+			<footer class="psSecondary"></footer>
 		</article>
 	</section>
+	©2014 MACH BROTHERS
 
-	<footer class="siteFooter">
-	</footer>
+<!-- 	<footer class="siteFooter">
+	©2014 MACH BROTHERS
+	</footer> -->
 
 </body>
 <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->

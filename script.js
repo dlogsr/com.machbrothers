@@ -6,12 +6,15 @@ $mbTranslucent = $('.mbTranslucent');
 $mbNavicon = $('.mbNavicon');
 $mbHeader = $('.mbHeader');
 $mbLinkButton = $('.mbLinkButton');
+$mbContactLink = $('#contact');
 $menuBarTrigger = $('.menuBarTrigger');
+$menuColorTrigger = $('.menuColorTrigger');
 $pageContent = $('.pageContent');
 $pageSplashButton = $('.pageSplashButton');
 $pageSplashMonkeys = $('.pageSplashMonkeys');
 $pageSplashDragon = $('.pageSplashDragon');
 $pageSplashGameLogo = $('.pageSplashGameLogo');
+$contactCard = $('.contactCard');
 
 var clickedLink;
 
@@ -27,10 +30,10 @@ var isMobile = {
     }
 };
 
-function scrollAndStop(marker){
+function scrollAndStop(marker,offset){
 	var scrollOffset;
 	console.log(marker);
-	scrollOffset = $(marker).offset().top - $mbHeader.height();
+	scrollOffset = $(marker).offset().top - offset;
 	$('html,body').stop().animate({scrollTop : scrollOffset},400);
 }
 
@@ -62,16 +65,29 @@ $(document).ready(function(){
 
 	$mbLogo.click(function(e){
 		e.preventDefault();
-		var currentPage = (location.pathname.split('/').slice(-1)[0]);
-		console.log(currentPage);
-		if(currentPage == "index.html" || currentPage == ""){
-			if(!window.matchMedia("(min-width: 680px)").matches)	$mbLinks.slideUp();
-				scrollAndStop('body');	
+		if(document.body.scrollTop < 10){
+			console.log('top');
+			var currentPage = (location.pathname.split('/').slice(-1)[0]);
+			console.log(currentPage);
+			if(!(currentPage == "index.html" || currentPage == "")){
+				window.location = "./";
+			}
 		}
 		else{
-			window.location = "./";
+			if(!window.matchMedia("(min-width: 680px)").matches)	$mbLinks.slideUp();
+				scrollAndStop('body',$mbHeader.height());	
+		}		
+	});
+
+	$mbContactLink.click(function(e){
+		e.preventDefault();
+		var offset;
+		if(!window.matchMedia("(min-width: 680px)").matches){
+			offset = 42;
+			$mbLinks.slideUp();
 		}
-		
+		else offset = 75;
+		scrollAndStop($contactCard,offset);
 	});
 
 	// ******* REMOVED ELEMENT FROM HTML
@@ -95,11 +111,11 @@ $(document).ready(function(){
 
 $(window).resize(function(){
 	adjustContentSpacing('.psPrimary',0);
-	adjustContentSpacing('article',0);
+	adjustContentSpacing('article',150);
 	if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
 });
 
-function swapMenuStyle(direction){
+function swapMenuTranslucent(direction){
 	if(window.matchMedia("(min-width:680px)").matches)
 	{
 		if(direction == 'down'){
@@ -114,10 +130,17 @@ function swapMenuStyle(direction){
 }
 
 $menuBarTrigger.waypoint(function(direction){
-	swapMenuStyle(direction);
+	swapMenuTranslucent(direction);
 },{
 	offset:-200
 });
+
+$menuColorTrigger.waypoint(function(direction){
+
+},{
+	offset:-200
+});
+
 
 
 

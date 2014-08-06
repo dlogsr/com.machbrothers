@@ -34,6 +34,12 @@ section {
   position: relative;
   text-align: justify; }
 
+h2 {
+  font-family: "Raleway"; }
+
+h3 {
+  font-family: "Dosis"; }
+
 /*navigation and menu items */
 .menuBar {
   position: fixed;
@@ -81,7 +87,7 @@ section {
     /*display:block;*/
     display: none;
     right: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     z-index: 12; }
   .menuBar .mbLinks li {
@@ -196,8 +202,7 @@ section {
   z-index: 14; }
   .pageContent article {
     padding: 0 1em 1em 1em;
-    font-size: 1.5em;
-    background-color: #F3F4F5; }
+    font-size: 1.5em; }
   .pageContent header {
     text-align: center; }
   .pageContent header h2 {
@@ -206,16 +211,91 @@ section {
     color: white;
     display: inline-block;
     margin: auto; }
-  .pageContent article.cardA {
-    background-color: #9a9a9a; }
-  .pageContent article.cardB {
+  .pageContent .cardA {
+    background-color: #5860ab; }
+  .pageContent .cardB {
     background-color: #00a550; }
-  .pageContent article.cardC {
+  .pageContent .cardC {
     color: white;
     background-color: #494949; }
+  .pageContent .cardD {
+    color: white;
+    background-color: #9a9a9a; }
   .pageContent aside {
     padding: 1em 0;
     color: white; }
+
+/* game page items */
+.gameSplash {
+  position: relative;
+  padding: 1em;
+  font-size: 1.5em;
+  height: 200px; }
+  .gameSplash .gameSplashContainer {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center; }
+  .gameSplash .gameSplashMedia {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 480px;
+    min-height: 200px;
+    margin: auto;
+    background-image: url("meeples_temp.jpg");
+    background-size: cover; }
+  .gameSplash .gameSplashDetail {
+    position: relative;
+    display: inline-block;
+    margin: .5em;
+    text-align: center; }
+  .gameSplash h2 {
+    font-family: "Raleway";
+    font-size: 1.5em;
+    color: white;
+    display: inline-block;
+    margin: auto; }
+  .gameSplash h3 {
+    font-family: "Dosis";
+    font-size: 1em;
+    color: black; }
+
+.gameSplashQuotes {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto; }
+  .gameSplashQuotes h3 {
+    text-align: center;
+    font-size: 1.5em; }
+
+.gameCards article {
+  height: 480px; }
+.gameCards .gamePicturesCard .pictureSlider {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 1em auto;
+  max-width: 480px;
+  min-width: 240px;
+  height: 280px;
+  background-color: #494949; }
+.gameCards .gamePlayCard .gameplayMovie {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 1em auto;
+  max-width: 480px;
+  min-width: 240px;
+  height: 280px;
+  background-color: #494949; }
 
 /* about page items */
 .machBrosBubbles {
@@ -325,7 +405,7 @@ input, button, textarea {
     .menuBar .mbLinks {
       display: block;
       float: right;
-      font-size: 2em;
+      font-size: 1.5em;
       border-bottom: none;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -343,6 +423,12 @@ input, button, textarea {
 
   .mbTranslucent {
     background-color: rgba(229, 230, 231, 0); }
+
+  .mbTranslucent.machgreen {
+    background-color: #00a550; }
+
+  .mbTranslucent.machblue {
+    background-color: #5860ab; }
 
   /* splash page */
   .pageSplash {
@@ -419,7 +505,42 @@ input, button, textarea {
       max-width: 720px;
       margin: auto;
       box-shadow: none; }
+    .pageContent header h2 {
+      padding-top: .25em; }
 
+  /*game page*/
+  .gameSplash {
+    max-width: 720px;
+    margin: auto; }
+    .gameSplash .gameSplashMedia {
+      float: right;
+      display: inline;
+      width: calc(50% - 2.5em);
+      max-width: 640px;
+      min-height: 360px;
+      margin: auto;
+      background-image: url("meeples_temp.jpg");
+      background-size: cover; }
+    .gameSplash .gameSplashDetail {
+      float: right;
+      margin: 1em;
+      display: inline; }
+    .gameSplash .gameSplashClear {
+      clear: both; }
+
+  .gameSplashQuotes h3 {
+    font-size: 2em; }
+
+  .gameCards .gamePicturesCard .pictureSlider {
+    max-width: 720px;
+    min-width: 480px;
+    min-height: 360px; }
+  .gameCards .gamePlayCard .gameplayMovie {
+    max-width: 720px;
+    min-width: 480px;
+    min-height: 360px; }
+
+  /*about page */
   .machBrosBubbles .bubblePic {
     width: 150px;
     height: 150px;
