@@ -45,6 +45,7 @@ function adjustContentSpacing(currSection,offset) {
 
 
 $(document).ready(function(){
+	console.log(document.orientation);
 	//page setup functions
 	adjustContentSpacing('.psPrimary',0);
 	adjustContentSpacing('article',150);
@@ -109,10 +110,18 @@ $(document).ready(function(){
 
 });
 
+
 $(window).resize(function(){
+	if(window.matchMedia("(min-width: 680px)").matches){
+		adjustContentSpacing('.psPrimary',0);
+		adjustContentSpacing('article',150);
+		$(window).stellar();
+	} 
+});
+
+$(window).on("orientationchange",function(){
 	adjustContentSpacing('.psPrimary',0);
 	adjustContentSpacing('article',150);
-	if(window.matchMedia("(min-width: 680px)").matches) $(window).stellar();
 });
 
 function swapMenuTranslucent(direction){

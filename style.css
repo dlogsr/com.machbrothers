@@ -182,6 +182,10 @@ h3 {
     font-family: 'kickstarter','Dosis',Georgia,Arial;
     color: #2bde73; }
 
+@media only screen and (max-width: 680px) and (orientation: landscape) {
+  .psPrimary {
+    min-height: 360px !important; } }
+
 .psSecondary {
   height: 50px; }
 
@@ -231,6 +235,9 @@ h3 {
   padding: 1em;
   font-size: 1.5em;
   height: 200px; }
+  @media only screen and (max-width: 680px) and (orientation: landscape) {
+    .gameSplash {
+      padding-top: 2em; } }
   .gameSplash .gameSplashContainer {
     position: relative;
     top: 50%;
@@ -247,6 +254,9 @@ h3 {
     margin: auto;
     background-image: url("meeples_temp.jpg");
     background-size: cover; }
+    @media only screen and (max-width: 680px) and (orientation: landscape) {
+      .gameSplash .gameSplashMedia {
+        min-height: 150px; } }
   .gameSplash .gameSplashDetail {
     position: relative;
     display: inline-block;
@@ -260,7 +270,7 @@ h3 {
     margin: auto; }
   .gameSplash h3 {
     font-family: "Dosis";
-    font-size: 1em;
+    font-size: .75em;
     color: black; }
 
 .gameSplashQuotes {
@@ -273,7 +283,7 @@ h3 {
     font-size: 1.5em; }
 
 .gameCards article {
-  height: 480px; }
+  height: 420px; }
 .gameCards .gamePicturesCard .pictureSlider {
   position: relative;
   top: 50%;
@@ -528,8 +538,10 @@ input, button, textarea {
     .gameSplash .gameSplashClear {
       clear: both; }
 
-  .gameSplashQuotes h3 {
-    font-size: 2em; }
+  .gameSplashQuotes {
+    bottom: 1em; }
+    .gameSplashQuotes h3 {
+      font-size: 2em; }
 
   .gameCards .gamePicturesCard .pictureSlider {
     max-width: 720px;

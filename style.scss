@@ -288,7 +288,9 @@ h3{
 }
 
 .psPrimary{
-	// min-height:540px;
+	@media only screen and (max-width:680px) and (orientation:landscape){
+		min-height: 360px !important;
+	}
 }
 
 .psSecondary{
@@ -369,6 +371,10 @@ h3{
 	font-size:1.5em;
 	height:200px;
 
+	@media only screen and (max-width:680px) and (orientation:landscape){
+		padding-top:2em;
+	}
+
 	.gameSplashContainer{
 		@include vertical-align;
 		text-align:center;
@@ -383,6 +389,9 @@ h3{
 		margin:auto;
 		background-image: url('meeples_temp.jpg');
 		background-size:cover;
+		@media only screen and (max-width:680px) and (orientation:landscape){
+			min-height:150px;
+		}
 	}
 
 	.gameSplashDetail{
@@ -402,7 +411,7 @@ h3{
 
 	h3{
 		font-family: $font_primary;
-		font-size: 1em;
+		font-size: .75em;
 		color:black;
 	}
 }
@@ -422,7 +431,7 @@ h3{
 .gameCards{
 
 	article{
-		height:480px;
+		height:420px;
 	}
 
 	.gamePicturesCard{
@@ -795,6 +804,7 @@ input, button, textarea{
 	}
 
 	.gameSplashQuotes{
+		bottom:1em;
 		h3{
 			font-size:2em;
 		}
