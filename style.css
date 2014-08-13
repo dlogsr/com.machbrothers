@@ -119,7 +119,9 @@ h3 {
     color: #FFF;
     text-align: center;
     width: 100%;
-    margin: 1em auto; }
+    margin: .5em auto;
+    z-index: 13;
+    background-color: rgba(0, 0, 0, 0.2); }
   .pageSplash header h2 {
     font-size: 2em; }
   .pageSplash header h3 {
@@ -148,21 +150,16 @@ h3 {
         right: 10%; } }
   .pageSplash .pageSplashDragon {
     position: absolute;
-    top: 15%;
     width: 100%;
     max-width: 480px;
-    height: 411px;
+    height: 100%;
     margin: 0 auto;
     left: 0;
     right: 0;
     padding: auto 1em;
-    background-image: url("dragon_bg_mobile.png");
+    background: url("dragon_bg_mobile.png") center bottom 65px no-repeat;
     background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 10; }
-    @media only screen and (max-width: 680px) and (orientation: landscape) {
-      .pageSplash .pageSplashDragon {
-        max-height: 280px; } }
+    z-index: 13; }
   .pageSplash .pageSplashMonkeys {
     position: absolute;
     bottom: 0;
@@ -188,6 +185,20 @@ h3 {
 
 .psSecondary {
   height: 50px; }
+
+.psIndex {
+  background-image: url("skybg_mobile.gif");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  z-index: 11; }
+
+.pageSplashGroundBG {
+  position: absolute;
+  width: 100%;
+  min-height: 125px;
+  bottom: 0;
+  background: url("groundbg_mobile.png") top center no-repeat;
+  z-index: 12; }
 
 /*page Splash media items */
 .pageSplashMedia {
@@ -444,7 +455,7 @@ input, button, textarea {
   .pageSplash {
     background-color: #9a9a9a;
     background-size: auto;
-    background-position-y: 100px;
+    background-position-y: 75px;
     border-bottom: none; }
     .pageSplash .pageSplashGameLogo {
       position: absolute;
@@ -457,7 +468,7 @@ input, button, textarea {
       bottom: 0;
       max-width: 640px;
       height: 548px;
-      background-image: url("dragon_bg_desktop.png"); }
+      background: url("dragon_bg_desktop.png"); }
     .pageSplash .pageSplashMonkeys {
       position: absolute;
       bottom: 0;
@@ -475,7 +486,7 @@ input, button, textarea {
       left: 2em;
       width: auto;
       text-shadow: 2px 2px 2px black;
-      z-index: 11; }
+      z-index: 13; }
       .pageSplash header h2 {
         font-size: 3.5em; }
       .pageSplash header h3 {
@@ -498,6 +509,20 @@ input, button, textarea {
     height: 360px;
     float: right;
     right: 3em; }
+
+  .psIndex {
+    background-image: url("skybg_desktop.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 11; }
+
+  .pageSplashGroundBG {
+    position: absolute;
+    width: 100%;
+    min-height: 125px;
+    bottom: 0;
+    background: url("groundbg_desktop.png") top center no-repeat;
+    z-index: 12; }
 
   /* page content */
   .pageContent {

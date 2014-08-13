@@ -141,7 +141,7 @@ function swapMenuTranslucent(direction){
 $menuBarTrigger.waypoint(function(direction){
 	swapMenuTranslucent(direction);
 },{
-	offset:-200
+	offset:-1
 });
 
 $menuColorTrigger.waypoint(function(direction){
