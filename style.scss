@@ -182,7 +182,7 @@ h3{
 	}
 
 	ul .mbTranslucent:hover a{
-		color:$machgrey2 !important;
+		// color:$machgrey2 !important;
 	}
 
 	.mbLinkButton:hover a{
@@ -243,7 +243,7 @@ h3{
 		background-size:100% auto;
 		background-repeat:no-repeat;
 		z-index:12;
-		// @media only screen and (max-width:680px) and (orientation:landscape){
+		// @media only screen and (max-width:768px) and (orientation:landscape){
 		// 	min-width:240px;
 		// 	right:10%;
 		// }
@@ -260,7 +260,7 @@ h3{
 		background: url('dragon_bg_mobile.png') center bottom 65px no-repeat;
 		background-size: contain;
 		z-index:13;
-		@media only screen and (min-width:680px) and (orientation:landscape){
+		@media only screen and (min-width:768px) and (orientation:landscape){
 			max-width: 360px;
 		}
 	}
@@ -288,11 +288,12 @@ h3{
 	}
 }
 
-// .psPrimary{
-// 	@media only screen and (max-width:680px) and (orientation:landscape){
-// 		min-height: 360px !important;
-// 	}
-// }
+.psPrimary{
+	// // min-height: 360px !important;
+	// @media only screen and (max-width:768px) and (orientation:landscape){
+	// 	min-height: 360px !important;
+	// }
+}
 
 .psSecondary{
 	height:50px;
@@ -391,7 +392,7 @@ h3{
 	font-size:1.5em;
 	height:200px;
 
-	@media only screen and (max-width:680px) and (orientation:landscape){
+	@media only screen and (max-width:768px) and (orientation:landscape){
 		padding-top:2em;
 	}
 
@@ -409,7 +410,7 @@ h3{
 		margin:auto;
 		background-image: url('meeples_temp.jpg');
 		background-size:cover;
-		@media only screen and (max-width:680px) and (orientation:landscape){
+		@media only screen and (max-width:768px) and (orientation:landscape){
 			min-height:150px;
 		}
 	}
@@ -455,13 +456,42 @@ h3{
 	}
 
 	.gamePicturesCard{
+		.pictureSliderNav{
+			position:absolute;
+			// display:block;
+			.pictureSliderArrow{
+
+			}
+		}
+
 		.pictureSlider{
 			@include vertical-align;
-			margin:1em auto;
+			margin: 0 auto;
 			max-width:480px;
 			min-width:240px;
-			height:280px;
-			background-color:$machgrey2;
+
+
+			.pictureSliderArrow{
+				position:relative;
+				display:inline-block;
+				width: 30px;
+				height:0px;
+				font-size:2em;
+				text-shadow: 2px 2px 2px black;
+				color:white;
+				text-align:center;
+				cursor:pointer;
+				// background-color:rgba(255,255,255,.5);
+				z-index:20;
+			}
+			.psaLeft{
+				float:left;
+
+			}
+
+			.psaRight{
+				float:right;
+			}
 		}
 	}
 
@@ -471,7 +501,7 @@ h3{
 			margin:1em auto;
 			max-width:480px;
 			min-width:240px;
-			height:280px;
+			height:240px;
 			background-color:$machgrey2;
 		}
 	}
@@ -624,9 +654,9 @@ input, button, textarea{
 		z-index:20;
 		/*border-bottom: 2px solid black;*/
 		// box-shadow: 0 1px 2px 1px rgba(0,0,0,.4);
-		-webkit-transition: all 0.15s ease-in;
-		-moz-transition: all 0.15s ease-in;
-		transition: all 0.15s ease-in;
+		// -webkit-transition: all 0.15s ease-in;
+		// -moz-transition: all 0.15s ease-in;
+		// transition: all 0.15s ease-in;
 
 		.mbHeader{
 			float:left;
@@ -676,7 +706,7 @@ input, button, textarea{
 	}
 
 	.mbTranslucent{
-		background-color:rgba(229,230,231,0);
+		// background-color:rgba(229,230,231,0);
 	}
 
 	.mbTranslucent.machgreen{
@@ -702,7 +732,8 @@ input, button, textarea{
 			margin:auto; right: 2em;
 			background-image: url('dragon_title_desktop.png');
 			@media only screen and(max-height:720px){
-				max-width:420px;
+				max-width:360px;
+				background-size:contain;
 			}
 		}
 
@@ -710,9 +741,10 @@ input, button, textarea{
 			bottom:0;
 			max-width:640px;
 			height:548px;
-			background: url('dragon_bg_desktop.png');
+			background: url('dragon_bg_desktop.png') center bottom no-repeat;
 			@media only screen and(max-height:720px){
-				// max-width:540px;
+				max-width:420px;
+				background-size:contain;
 			}
 		}
 
@@ -753,7 +785,7 @@ input, button, textarea{
 	}
 
 	.psPrimary{
-		// min-height:700px;
+		min-height:480px;
 	}
 
 	.psSecondary{
@@ -809,6 +841,7 @@ input, button, textarea{
 		article{
 			margin:0;
 			border-radius:0;
+			overflow:hidden;
 		}
 		aside, header{
 			max-width: 720px;
@@ -862,7 +895,12 @@ input, button, textarea{
 			.pictureSlider{
 				max-width:720px;
 				min-width:480px;
-				min-height:360px;
+				min-height:420px;
+
+				.pictureSliderArrow{
+					width: 60px;
+					font-size:4em;
+				}
 			}
 		}
 
@@ -870,7 +908,7 @@ input, button, textarea{
 			.gameplayMovie{
 				max-width:720px;
 				min-width:480px;
-				min-height:360px;
+				min-height:420px;
 			}
 		}
 	}

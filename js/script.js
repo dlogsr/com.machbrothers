@@ -52,8 +52,8 @@ $(document).ready(function(){
 	var currentPage = (location.pathname.split('/').slice(-1)[0]);
 	adjustContentSpacing('.psPrimary',0);
 	adjustContentSpacing('article',150);
-	if(!window.matchMedia("(min-width: 768px)").matches) $menuBar.add($mbLinkButton).removeClass('mbTranslucent');
-	if( !isMobile.any()){
+	// if(!window.matchMedia("(min-width: 768px)").matches) $menuBar.add($mbLinkButton).removeClass('mbTranslucent');
+	if( !isMobile.any() && currentPage == 'index.html'){
 		if(window.matchMedia("(min-width: 768px)").matches) $(window).stellar();
 		// if(window.matchMedia("(min-width: 768px)").matches) $pageSplashDragon.stellar({
 		// 	scrollProperty: 'transform'
@@ -95,7 +95,21 @@ $(document).ready(function(){
 		console.log('games');
 		$pictureSlider.slidesjs({
 			width:720,
-			height:320
+			height:420,
+		    navigation: {
+		      active: false,
+		        // [boolean] Generates next and previous buttons.
+		        // You can set to false and use your own buttons.
+		        // User defined buttons must have the following:
+		        // previous button: class="slidesjs-previous slidesjs-navigation"
+		        // next button: class="slidesjs-next slidesjs-navigation"
+		      effect: "slide"
+		        // [string] Can be either "slide" or "fade".
+		    },
+		    pagination: {
+		    	active: false,
+		    	effect: "slide"
+		    }
 		});
 	};
 

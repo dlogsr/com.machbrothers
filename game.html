@@ -59,8 +59,15 @@
 			<header>
 				<h2>pictures</h2>
 			</header>
-			<div class="pictureSlider">
-				<h3>media placeholder</h3>
+			<div class="pictureSlider slidesjs-control">
+				<div class="pictureSliderArrow psaLeft slidesjs-previous slidesjs-navigation"><
+				</div>
+				<div class="pictureSliderArrow psaRight slidesjs-next slidesjs-navigation">>
+				</div>
+				<img src="slider/image1.jpg">
+				<img src="slider/image2.jpg">
+				<img src="slider/image3.jpg">
+				<img src="slider/image4.jpg">
 			</div>
 		</article>
 		<article class="gamePlayCard cardB menuColorTrigger">
@@ -100,10 +107,14 @@
 	</footer> -->
 
 </body>
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-<script type="text/javascript" src="jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="jquery.mobile.custom.min.js"></script>
-<script type="text/javascript" src="jquery.stellar.js"></script>
-<script type="text/javascript" src="waypoints.min.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+if (!window.jQuery) {
+    document.write('<script src="js/jquery-1.10.2.min.js"><\/script>');
+}
+</script>
+<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.slides.min.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </html>
