@@ -144,10 +144,6 @@ h3 {
     background-size: 100% auto;
     background-repeat: no-repeat;
     z-index: 12; }
-    @media only screen and (max-width: 680px) and (orientation: landscape) {
-      .pageSplash .pageSplashGameLogo {
-        min-width: 240px;
-        right: 10%; } }
   .pageSplash .pageSplashDragon {
     position: absolute;
     width: 100%;
@@ -160,6 +156,9 @@ h3 {
     background: url("dragon_bg_mobile.png") center bottom 65px no-repeat;
     background-size: contain;
     z-index: 13; }
+    @media only screen and (min-width: 680px) and (orientation: landscape) {
+      .pageSplash .pageSplashDragon {
+        max-width: 360px; } }
   .pageSplash .pageSplashMonkeys {
     position: absolute;
     bottom: 0;
@@ -178,10 +177,6 @@ h3 {
   .pageSplash .ksGreen {
     font-family: 'kickstarter','Dosis',Georgia,Arial;
     color: #2bde73; }
-
-@media only screen and (max-width: 680px) and (orientation: landscape) {
-  .psPrimary {
-    min-height: 360px !important; } }
 
 .psSecondary {
   height: 50px; }
@@ -402,7 +397,7 @@ input, button, textarea {
   background-size: cover; }
 
 /* DESKTOP RESPONSIVE */
-@media only screen and (min-width: 680px) {
+@media only screen and (min-width: 768px) {
   .menuBar {
     background-color: #494949;
     height: 75px;
@@ -498,7 +493,7 @@ input, button, textarea {
         font-size: 1.25rem; }
 
   .psSecondary {
-    height: 100px; }
+    height: 75px; }
 
   .emailIcon {
     position: relative;
@@ -527,7 +522,6 @@ input, button, textarea {
   /* page content */
   .pageContent {
     z-index: 11;
-    background-color: #e5e6e7;
     border: none; }
     .pageContent article {
       padding: 0 0 2em 0; }
@@ -606,9 +600,6 @@ input, button, textarea {
     margin: auto;
     width: 480px;
     height: 8em; } }
-    @media only screen and (min-width: 680px) and (max-height: 720px) {
+    @media only screen and (min-width: 768px) and (max-height: 720px) {
       .pageSplash .pageSplashGameLogo {
         max-width: 420px; } }
-    @media only screen and (min-width: 680px) and (max-height: 720px) {
-      .pageSplash .pageSplashDragon {
-        max-width: 540px; } }

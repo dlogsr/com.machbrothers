@@ -243,10 +243,10 @@ h3{
 		background-size:100% auto;
 		background-repeat:no-repeat;
 		z-index:12;
-		@media only screen and (max-width:680px) and (orientation:landscape){
-			min-width:240px;
-			right:10%;
-		}
+		// @media only screen and (max-width:680px) and (orientation:landscape){
+		// 	min-width:240px;
+		// 	right:10%;
+		// }
 	}
 
 	.pageSplashDragon{
@@ -260,9 +260,9 @@ h3{
 		background: url('dragon_bg_mobile.png') center bottom 65px no-repeat;
 		background-size: contain;
 		z-index:13;
-		// @media only screen and (max-width:680px) and (orientation:landscape){
-		// 	max-height: 280px;
-		// }
+		@media only screen and (min-width:680px) and (orientation:landscape){
+			max-width: 360px;
+		}
 	}
 
 	.pageSplashMonkeys{
@@ -288,11 +288,11 @@ h3{
 	}
 }
 
-.psPrimary{
-	@media only screen and (max-width:680px) and (orientation:landscape){
-		min-height: 360px !important;
-	}
-}
+// .psPrimary{
+// 	@media only screen and (max-width:680px) and (orientation:landscape){
+// 		min-height: 360px !important;
+// 	}
+// }
 
 .psSecondary{
 	height:50px;
@@ -479,6 +479,14 @@ h3{
 
 /* about page items */ 
 
+// .aboutSplash{
+// 	background-color: white;
+// 	header, h2, h3, aside{
+// 		color: black !important;	
+// 	}
+	
+// }
+
 .machBrosBubbles{
 	margin: 1em auto;
 	text-align:center;
@@ -609,7 +617,7 @@ input, button, textarea{
 
 /* DESKTOP RESPONSIVE */
 
-@media only screen and (min-width: 680px){
+@media only screen and (min-width: 768px){
 	.menuBar{
 		background-color:$machgrey2;
 		height:75px;
@@ -704,7 +712,7 @@ input, button, textarea{
 			height:548px;
 			background: url('dragon_bg_desktop.png');
 			@media only screen and(max-height:720px){
-				max-width:540px;
+				// max-width:540px;
 			}
 		}
 
@@ -749,7 +757,7 @@ input, button, textarea{
 	}
 
 	.psSecondary{
-		height:100px;
+		height:75px;
 	}
 
 	.emailIcon{
@@ -786,7 +794,7 @@ input, button, textarea{
 	/* page content */
 	.pageContent{
 		z-index:11;
-		background-color:$machgrey;
+		// background-color:$machgrey;
 		border:none;
 		// box-shadow: 0 -2px 3px 1px rgba(0,0,0,.5), 0 2px 3px 1px rgba(0,0,0,.5);
 

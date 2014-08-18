@@ -71,7 +71,7 @@ $(document).ready(function(){
 			var currentPage = (location.pathname.split('/').slice(-1)[0]);
 			console.log(currentPage);
 			if(!(currentPage == "index.html" || currentPage == "")){
-				window.location = "./";
+				window.location = "index.html";
 			}
 		}
 		else{
