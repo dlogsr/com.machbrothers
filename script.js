@@ -138,17 +138,17 @@ function swapMenuTranslucent(direction){
 	}
 }
 
-$menuBarTrigger.waypoint(function(direction){
-	swapMenuTranslucent(direction);
-},{
-	offset:-1
-});
+// $menuBarTrigger.waypoint(function(direction){
+// 	swapMenuTranslucent(direction);
+// },{
+// 	offset:-1
+// });
 
-$menuColorTrigger.waypoint(function(direction){
+// $menuColorTrigger.waypoint(function(direction){
 
-},{
-	offset:-200
-});
+// },{
+// 	offset:-200
+// });
 
 
 
