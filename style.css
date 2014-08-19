@@ -63,7 +63,7 @@ h3 {
     width: 75px;
     height: 38px;
     text-align: right;
-    background-image: url("machlogo_bw_desktop.png");
+    background-image: url("machlogo_yellow_desktop.png");
     background-repeat: no-repeat;
     background-position: left;
     background-size: 100%;
@@ -180,9 +180,13 @@ h3 {
   height: 50px; }
 
 .psIndex {
-  background-image: url("skybg_mobile.gif");
+  background: url("skybg1_mobile.gif") bottom center no-repeat fixed;
   background-size: auto 100%;
-  background-repeat: no-repeat;
+  z-index: 11; }
+
+.psGame {
+  background: url("skybg2_mobile.gif") bottom center no-repeat fixed;
+  background-size: auto 100%;
   z-index: 11; }
 
 .pageSplashGroundBG {
@@ -248,7 +252,8 @@ h3 {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    text-align: center; }
+    text-align: center;
+    display: block; }
   .gameSplash .gameSplashMedia {
     position: relative;
     display: inline-block;
@@ -256,11 +261,30 @@ h3 {
     max-width: 480px;
     min-height: 200px;
     margin: auto;
+    margin-top: 1em;
     background-image: url("meeples_temp.jpg");
     background-size: cover; }
     @media only screen and (max-width: 768px) and (orientation: landscape) {
       .gameSplash .gameSplashMedia {
         min-height: 150px; } }
+  .gameSplash .gameSplashMediaAside .gameSplashQuotes {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    bottom: 0;
+    width: calc(100% - 2em);
+    margin: auto;
+    padding: 1em; }
+    .gameSplash .gameSplashMediaAside .gameSplashQuotes h3 {
+      text-align: center;
+      font-size: 1em; }
+  .gameSplash .gameSplashMediaAside .pageSplashGameLogo {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 100px;
+    background-position: center;
+    background-size: 50%; }
   .gameSplash .gameSplashDetail {
     position: relative;
     display: inline-block;
@@ -276,15 +300,6 @@ h3 {
     font-family: "Dosis";
     font-size: .75em;
     color: black; }
-
-.gameSplashQuotes {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin: auto; }
-  .gameSplashQuotes h3 {
-    text-align: center;
-    font-size: 1.5em; }
 
 .gameCards article {
   height: 420px; }
@@ -423,8 +438,8 @@ input, button, textarea {
     .menuBar header .mbLogo {
       width: 150px;
       height: 75px;
-      background-image: url("machlogo_bw_desktop.png");
       margin-left: .25em;
+      top: 0;
       background-size: auto; }
     .menuBar header .mbNavicon {
       display: none; }
@@ -461,16 +476,17 @@ input, button, textarea {
     border-bottom: none; }
     .pageSplash .pageSplashGameLogo {
       position: absolute;
-      width: 480px;
+      width: 384px;
       height: 300px;
       margin: auto;
-      right: 2em;
+      right: 50%;
       background-image: url("dragon_title_desktop.png"); }
     .pageSplash .pageSplashDragon {
       bottom: 0;
-      max-width: 640px;
-      height: 548px;
-      background: url("dragon_bg_desktop.png") center bottom no-repeat; }
+      max-width: 480px;
+      height: 480px;
+      background: url("dragon_bg_desktop.png") center bottom no-repeat;
+      background-size: contain; }
     .pageSplash .pageSplashMonkeys {
       position: absolute;
       bottom: 0;
@@ -483,16 +499,30 @@ input, button, textarea {
       left: auto;
       right: auto; }
     .pageSplash header {
+      position: absolute;
+      left: 50%;
+      height: 300px;
+      width: 384px;
+      margin-left: 1em;
       background: none;
       border: none;
-      left: 2em;
-      width: auto;
+      bottom: auto;
       text-shadow: 2px 2px 2px black;
       z-index: 13; }
       .pageSplash header h2 {
-        font-size: 3.5em; }
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 3.25em; }
       .pageSplash header h3 {
-        font-size: 2.5em; }
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 2.25em; }
       .pageSplash header h4, .pageSplash header button {
         font-family: "Dosis";
         font-variant: normal;
@@ -516,10 +546,14 @@ input, button, textarea {
     right: 3em; }
 
   .psIndex {
-    background-image: url("skybg_desktop.gif");
+    background-image: url("skybg1_desktop.gif");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 11; }
+
+  .psGame {
+    background: url("skybg2_desktop.gif") bottom center no-repeat fixed;
+    background-size: cover; }
 
   .pageSplashGroundBG {
     position: absolute;
@@ -550,28 +584,34 @@ input, button, textarea {
 
   /*game page*/
   .gameSplash {
-    max-width: 720px;
-    margin: auto; }
-    .gameSplash .gameSplashMedia {
-      float: right;
-      display: inline;
-      width: calc(50% - 2.5em);
-      max-width: 640px;
-      min-height: 360px;
-      margin: auto;
-      background-image: url("meeples_temp.jpg");
-      background-size: cover; }
-    .gameSplash .gameSplashDetail {
-      float: right;
-      margin: 1em;
-      display: inline; }
+    margin: auto;
+    max-width: 768px; }
+    .gameSplash .gameSplashContainer {
+      top: 25%; }
+      .gameSplash .gameSplashContainer .gameSplashMedia {
+        position: absolute;
+        right: 50%;
+        width: calc(50% - 2.5em);
+        max-width: 640px;
+        min-height: 360px;
+        margin: auto 1em auto auto;
+        background-image: url("meeples_temp.jpg");
+        background-size: cover; }
+      .gameSplash .gameSplashContainer .gameSplashMediaAside {
+        position: absolute;
+        left: 50%;
+        margin-left: 1em; }
+        .gameSplash .gameSplashContainer .gameSplashMediaAside div {
+          padding: 1em; }
+        .gameSplash .gameSplashContainer .gameSplashMediaAside .gameSplashQuotes h3 {
+          font-size: 1em; }
+        .gameSplash .gameSplashContainer .gameSplashMediaAside .pageSplashGameLogo {
+          position: relative;
+          height: 180px;
+          background-size: contain;
+          right: 0; }
     .gameSplash .gameSplashClear {
       clear: both; }
-
-  .gameSplashQuotes {
-    bottom: 1em; }
-    .gameSplashQuotes h3 {
-      font-size: 2em; }
 
   .gameCards .gamePicturesCard .pictureSlider {
     max-width: 720px;
@@ -620,5 +660,4 @@ input, button, textarea {
         background-size: contain; } }
     @media only screen and (min-width: 768px) and (max-height: 720px) {
       .pageSplash .pageSplashDragon {
-        max-width: 420px;
-        background-size: contain; } }
+        max-width: 420px; } }

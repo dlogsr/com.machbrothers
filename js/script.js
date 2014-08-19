@@ -16,6 +16,7 @@ $pageSplashDragon = $('.pageSplashDragon');
 $pageSplashGameLogo = $('.pageSplashGameLogo');
 $contactCard = $('.contactCard');
 $pictureSlider = $('.pictureSlider');
+$stellarHoriz = $('.stellarHoriz');
 
 var clickedLink;
 
@@ -53,12 +54,16 @@ $(document).ready(function(){
 	adjustContentSpacing('.psPrimary',0);
 	adjustContentSpacing('article',150);
 	// if(!window.matchMedia("(min-width: 768px)").matches) $menuBar.add($mbLinkButton).removeClass('mbTranslucent');
-	if( !isMobile.any() && currentPage == 'index.html'){
-		if(window.matchMedia("(min-width: 768px)").matches) $(window).stellar();
+	if( !isMobile.any() && (currentPage == 'index.html' || currentPage == '')){
+		if(window.matchMedia("(min-width: 768px)").matches) {
+			$(window).stellar({
+				scrollPropert: 'transform'
+			});
+		};
 		// if(window.matchMedia("(min-width: 768px)").matches) $pageSplashDragon.stellar({
 		// 	scrollProperty: 'transform'
 		// });
-	}
+	};
 
 	//page interaction functions
 	$mbNavicon.click(function(){
