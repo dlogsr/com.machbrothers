@@ -64,6 +64,16 @@ $font_secondary: 'Raleway';
   src: url('BarutaBlack_Trimmed.ttf'); /*TTF*/
 }
 
+@font-face {
+	font-family: 'Raleway';
+	src: url('raleway-webfont.ttf');
+}
+
+@font-face {
+	font-family: 'Dosis';
+	src: url('Dosis-Light.otf');
+}
+
 /* mobile first! */
 
 body{
@@ -209,8 +219,16 @@ h3{
 		text-align:center;
 		width:100%;
 		margin:.5em auto;
-		z-index:13;
+		z-index:14;
 		background-color:rgba(0,0,0,.2);
+		@media only screen and (max-width:768px) and (orientation:landscape){
+			width:240px;
+			bottom:auto;
+			top: 15%;
+			left:50%;
+			background-color:rgba(0,0,0,.4);
+			border-radius: 10px;
+		}
 	}
 
 	header h2{
@@ -241,10 +259,10 @@ h3{
 		background-size:100% auto;
 		background-repeat:no-repeat;
 		z-index:12;
-		// @media only screen and (max-width:768px) and (orientation:landscape){
-		// 	min-width:240px;
-		// 	right:10%;
-		// }
+		@media only screen and (max-width:768px) and (orientation:landscape){
+			min-width:240px;
+			right:50%;
+		}
 	}
 
 	.pageSplashDragon{
@@ -253,27 +271,43 @@ h3{
 		width:100%;
 		max-width:480px;
 		height:100%;
-		margin:0 auto; left:0;	right:0;
+		margin: auto; left:0;	right:0;
 		padding: auto 1em;
 		background: url('dragon_bg_mobile.png') center bottom 65px no-repeat;
 		background-size: contain;
 		z-index:13;
-		@media only screen and (min-width:768px) and (orientation:landscape){
-			max-width: 360px;
+		@media only screen and (max-width:768px) and (orientation:landscape){
+			max-width: 240px;
+			background-position: center bottom 0px;
 		}
 	}
 
-	.pageSplashMonkeys{
+	.pageSplashGroundBG{
 		position:absolute;
-		bottom:0;
 		width:100%;
-		max-width:360px;
-		height:150px;
-		margin:0 auto; left:0;	right:0;
-		background-image: url('monkeys.png');
-		background-size: 100% auto;
-		z-index:10;
+		min-height:125px;
+		bottom:0;
+		background:url('groundbg_mobile.png') top center no-repeat;
+		@media only screen and (max-width:768px) and (orientation:landscape){
+			min-height:50px;
+		}
+		// background-size: 100% auto;
+		// background-repeat: no-repeat;
+		// background-position: center;
+		z-index:12;
 	}
+
+	// .pageSplashMonkeys{
+	// 	position:absolute;
+	// 	bottom:0;
+	// 	width:100%;
+	// 	max-width:360px;
+	// 	height:150px;
+	// 	margin:0 auto; left:0;	right:0;
+	// 	background-image: url('monkeys.png');
+	// 	background-size: 100% auto;
+	// 	z-index:10;
+	// }
 
 	.ksBlack{
 		font-family:'kickstarter','Dosis',Georgia,Arial;
@@ -299,26 +333,14 @@ h3{
 
 .psIndex{
 	background:url('skybg1_mobile.gif') bottom center no-repeat fixed;
-	background-size:auto 100%;
+	background-size: cover;
 	z-index:11;
 }
 
 .psGame{
 	background:url('skybg2_mobile.gif') bottom center no-repeat fixed;
-	background-size:auto 100%;
+	background-size:cover;
 	z-index:11;
-}
-
-.pageSplashGroundBG{
-	position:absolute;
-	width:100%;
-	min-height:125px;
-	bottom:0;
-	background:url('groundbg_mobile.png') top center no-repeat;
-	// background-size: 100% auto;
-	// background-repeat: no-repeat;
-	// background-position: center;
-	z-index:12;
 }
 
 /*page Splash media items */
@@ -771,6 +793,18 @@ input, button, textarea{
 			}
 		}
 
+		.pageSplashGroundBG{
+			position:absolute;
+			width:100%;
+			min-height:125px;
+			bottom:0;
+			background:url('groundbg_desktop.png') top center no-repeat;
+			background-size: 100% auto;
+			// background-repeat: no-repeat;
+			// background-position: center;
+			z-index:12;
+		}
+
 		.pageSplashMonkeys{
 			position:absolute;
 			bottom:0;
@@ -834,7 +868,7 @@ input, button, textarea{
 	}
 
 	.psIndex{
-		background-image:url('skybg1_desktop.gif');
+		background:url('skybg1_desktop.gif') center bottom;
 		background-size: cover;
 		background-repeat: no-repeat;
 		z-index:11;
@@ -843,18 +877,6 @@ input, button, textarea{
 	.psGame{
 		background:url('skybg2_desktop.gif') bottom center no-repeat fixed;
 		background-size:cover;
-	}
-
-	.pageSplashGroundBG{
-		position:absolute;
-		width:100%;
-		min-height:125px;
-		bottom:0;
-		background:url('groundbg_desktop.png') top center no-repeat;
-		// background-size: 100% auto;
-		// background-repeat: no-repeat;
-		// background-position: center;
-		z-index:12;
 	}
 
 	/* page content */
