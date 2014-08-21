@@ -196,12 +196,20 @@ h3 {
   height: 50px; }
 
 .psIndex {
+  position: absolute;
   background: url("skybg1_mobile.gif") bottom center no-repeat fixed;
   background-size: cover;
+  width: 100%;
+  height: 100%;
   z-index: 11; }
 
 .psGame {
-  background: url("skybg2_mobile.gif") bottom center no-repeat fixed;
+  background: url("skybg2_mobile2.gif") bottom center no-repeat fixed;
+  background-size: cover;
+  z-index: 11; }
+
+.psAbout {
+  background: url("skybg3_mobile.gif") bottom center no-repeat fixed;
   background-size: cover;
   z-index: 11; }
 
@@ -571,18 +579,20 @@ input, button, textarea {
     right: 3em; }
 
   .psIndex {
-    background: url("skybg1_desktop.gif") center bottom;
+    background: url("skybg1_desktop2.gif") center bottom;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 11; }
 
   .psGame {
-    background: url("skybg2_desktop.gif") bottom center no-repeat fixed;
+    background: url("skybg2_desktop2.gif") bottom center no-repeat fixed;
     background-size: cover; }
+
+  .psAbout {
+    background: url("skybg3_desktop.gif") bottom center no-repeat fixed; }
 
   /* page content */
   .pageContent {
-    z-index: 11;
     border: none; }
     .pageContent article {
       padding: 0 0 2em 0; }
