@@ -100,7 +100,7 @@ $(document).ready(function(){
 		console.log('games');
 		$pictureSlider.slidesjs({
 			width:720,
-			height:420,
+			height:480,
 		    navigation: {
 		      active: false,
 		        // [boolean] Generates next and previous buttons.
@@ -124,11 +124,11 @@ var resizeTimer;
 $(window).resize(function(){	
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout(function(){
-		// if(window.matchMedia("(min-width: 768px)").matches){
+		 if(window.matchMedia("(min-width: 768px)").matches){
 			adjustContentSpacing('.psPrimary',0);
 			adjustContentSpacing('article',150);
 			// $(window).stellar();
-		// } 
+		 } 
 	})
 });
 

@@ -8,12 +8,15 @@
   font-family: 'kickstarter';
   src: url("BarutaBlack_Trimmed.ttf");
   /*TTF*/ }
+
 @font-face {
   font-family: 'Raleway';
   src: url("raleway-webfont.ttf"); }
+
 @font-face {
   font-family: 'Dosis';
   src: url("Dosis-Light.otf"); }
+
 /* mobile first! */
 body {
   font-family: "Dosis", Georgia, Arial, Verdana;
@@ -105,6 +108,11 @@ h3 {
     padding: 0; }
   .menuBar .mbLinkButton:hover a {
     color: #9a9a9a; }
+  .menuBar .hiliteButton {
+    background-color: #9a9a9a;
+    border-radius: 15px; }
+  .menuBar .hiliteButton:hover a {
+    color: #494949; }
 
 /* splash image items */
 .pageSplash {
@@ -262,20 +270,35 @@ h3 {
   @media only screen and (max-width: 768px) and (orientation: landscape) {
     .gameSplash {
       padding-top: 2em; } }
-  .gameSplash .gameSplashContainer {
+  .gameSplash .gameSplashGameLogo {
     position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    top: 10%;
+    right: 0;
+    max-width: 180px;
+    height: 150px;
+    background: url("dragon_title_mobile.png") center bottom no-repeat;
+    background-size: 100% auto;
+    margin: auto;
+    z-index: 12; }
+    @media only screen and (max-width: 768px) and (orientation: landscape) {
+      .gameSplash .gameSplashGameLogo {
+        min-width: 240px; } }
+  .gameSplash .gameSplashContainer {
     text-align: center;
     display: block; }
+    @media only screen and (min-width: 768px) and (orientation: portrait) {
+      .gameSplash .gameSplashContainer {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%); } }
   .gameSplash .gameSplashMedia {
     position: relative;
     display: inline-block;
     width: 100%;
     max-width: 480px;
-    min-height: 200px;
+    min-height: 150px;
     margin: auto;
     margin-top: 1em;
     background-image: url("meeples_temp.jpg");
@@ -289,10 +312,13 @@ h3 {
     bottom: 0;
     width: calc(100% - 2em);
     margin: auto;
-    padding: 1em; }
+    padding: .5em; }
     .gameSplash .gameSplashMediaAside .gameSplashQuotes h3 {
       text-align: center;
-      font-size: 1em; }
+      font-size: .75em; }
+      @media only screen and (max-width: 768px) and (orientation: landscape) {
+        .gameSplash .gameSplashMediaAside .gameSplashQuotes h3 {
+          font-size: 1em; } }
   .gameSplash .gameSplashMediaAside .pageSplashGameLogo {
     position: relative;
     display: block;
@@ -301,6 +327,28 @@ h3 {
     height: 100px;
     background-position: center;
     background-size: 50%; }
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    .gameSplash .gameSplashMedia {
+      position: absolute;
+      top: 35%;
+      right: 50%;
+      width: calc(50% - 2.5em);
+      min-height: 180px;
+      margin: auto 1em auto auto;
+      background-image: url("meeples_temp.jpg");
+      background-size: cover; }
+    .gameSplash .gameSplashMediaAside {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      margin-left: .5em; }
+      .gameSplash .gameSplashMediaAside .gameSplashQuotes h3 {
+        font-size: .75em; }
+      .gameSplash .gameSplashMediaAside .gameSplashGameLogo {
+        position: relative;
+        height: 80px;
+        background-size: contain;
+        right: 0; } }
   .gameSplash .gameSplashDetail {
     position: relative;
     display: inline-block;
@@ -328,8 +376,12 @@ h3 {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   margin: 0 auto;
-  max-width: 480px;
-  min-width: 240px; }
+  max-width: 360px;
+  max-height: 240px; }
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    .gameCards .gamePicturesCard .pictureSlider {
+      max-width: 480px;
+      min-height: 320px; } }
   .gameCards .gamePicturesCard .pictureSlider .pictureSliderArrow {
     position: relative;
     display: inline-block;
@@ -358,6 +410,9 @@ h3 {
   background-color: #494949; }
 
 /* about page items */
+.aboutSplash header, .aboutSplash h2, .aboutSplash h3, .aboutSplash aside {
+  color: black !important; }
+
 .machBrosBubbles {
   margin: 1em auto;
   text-align: center; }
@@ -391,7 +446,7 @@ input, button, textarea {
   padding: .45em;
   font-size: 1em;
   border-radius: 15px;
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   margin: .5em; }
 
 .signupForm fieldset {
@@ -413,7 +468,7 @@ input, button, textarea {
     font-size: .75em;
     width: 280px; }
   .signupForm fieldset input:focus, .signupForm fieldset button:focus, .signupForm fieldset textarea:focus {
-    background-color: dimgray;
+    background-color: dimgrey;
     outline: none; }
     .signupForm fieldset input:focus::-webkit-input-placeholder, .signupForm fieldset button:focus::-webkit-input-placeholder, .signupForm fieldset textarea:focus::-webkit-input-placeholder {
       color: #494949; }
@@ -475,9 +530,6 @@ input, button, textarea {
       text-align: right;
       padding: 0 .5em; }
 
-  .menuBar *, .mbLogo, .mbLinks {
-    background-color: rgba(229, 230, 231, 0) !important; }
-
   .mbTranslucent.machgreen {
     background-color: #00a550; }
 
@@ -496,22 +548,13 @@ input, button, textarea {
       height: 300px;
       margin: auto;
       right: 50%;
-      background-image: url("dragon_title_desktop.png"); } }
-    @media only screen and (min-width: 768px) and (max-height: 720px) {
-      .pageSplash .pageSplashGameLogo {
-        max-width: 360px;
-        background-size: contain; } }
-@media only screen and (min-width: 768px) {
+      background-image: url("dragon_title_desktop.png"); }
     .pageSplash .pageSplashDragon {
       bottom: 0;
       max-width: 480px;
       height: 480px;
       background: url("dragon_bg_desktop.png") center bottom no-repeat;
-      background-size: contain; } }
-    @media only screen and (min-width: 768px) and (max-height: 720px) {
-      .pageSplash .pageSplashDragon {
-        max-width: 420px; } }
-@media only screen and (min-width: 768px) {
+      background-size: contain; }
     .pageSplash .pageSplashGroundBG {
       position: absolute;
       width: 100%;
@@ -589,7 +632,8 @@ input, button, textarea {
     background-size: cover; }
 
   .psAbout {
-    background: url("skybg3_desktop.gif") bottom center no-repeat fixed; }
+    background: url("skybg3_desktop.gif") bottom center no-repeat fixed;
+    background-size: cover; }
 
   /* page content */
   .pageContent {
@@ -613,7 +657,15 @@ input, button, textarea {
   .gameSplash {
     margin: auto;
     max-width: 768px; }
+    .gameSplash .gameSplashGameLogo {
+      background: url("dragon_title_desktop.png") center top no-repeat;
+      background-size: contain; }
     .gameSplash .gameSplashContainer {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
       top: 25%; }
       .gameSplash .gameSplashContainer .gameSplashMedia {
         position: absolute;
@@ -643,7 +695,7 @@ input, button, textarea {
   .gameCards .gamePicturesCard .pictureSlider {
     max-width: 720px;
     min-width: 480px;
-    min-height: 420px; }
+    min-height: 480px; }
     .gameCards .gamePicturesCard .pictureSlider .pictureSliderArrow {
       width: 60px;
       font-size: 4em; }
@@ -681,3 +733,10 @@ input, button, textarea {
     margin: auto;
     width: 480px;
     height: 8em; } }
+    @media only screen and (min-width: 768px) and (max-height: 720px) {
+      .pageSplash .pageSplashGameLogo {
+        max-width: 360px;
+        background-size: contain; } }
+    @media only screen and (min-width: 768px) and (max-height: 720px) {
+      .pageSplash .pageSplashDragon {
+        max-width: 420px; } }
