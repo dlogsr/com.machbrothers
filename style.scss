@@ -1001,7 +1001,7 @@ input, button, textarea{
 
 		.gameSplashContainer{
 			@include vertical-align;
-			top:25%;
+			// top:25%;
 			.gameSplashMedia{
 				position: absolute;
 				right:50%;
@@ -1044,30 +1044,17 @@ input, button, textarea{
 	.gameCards{
 
 		.gamePicturesCard{
-			.pictureWrapper{
-				max-width:calc(100% - 4em);
-				display:inline-block;
-				position:relative;
-				&:after {
-					padding-top: 56.25%;
-					display:block;
-					content: '';
-				}
-			}
-
 			.pictureSlider{
-				
-				// max-height:720px;
+				max-width:calc(100%-4em);
 				// max-width:720px;
 				min-width:480px;
-				// min-height:320px;
+				min-height:480px;
 
 				.pictureSliderArrow{
 					width: 60px;
 					font-size:4em;
 				}
 			}
-
 		}
 
 		.gamePlayCard{

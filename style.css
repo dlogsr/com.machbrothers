@@ -657,8 +657,7 @@ input, button, textarea {
       top: 50%;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      transform: translateY(-50%);
-      top: 25%; }
+      transform: translateY(-50%); }
       .gameSplash .gameSplashContainer .gameSplashMedia {
         position: absolute;
         right: 50%;
@@ -684,16 +683,10 @@ input, button, textarea {
     .gameSplash .gameSplashClear {
       clear: both; }
 
-  .gameCards .gamePicturesCard .pictureWrapper {
-    max-width: calc(100% - 4em);
-    display: inline-block;
-    position: relative; }
-    .gameCards .gamePicturesCard .pictureWrapper:after {
-      padding-top: 56.25%;
-      display: block;
-      content: ''; }
   .gameCards .gamePicturesCard .pictureSlider {
-    min-width: 480px; }
+    max-width: calc(100%-4em);
+    min-width: 480px;
+    min-height: 480px; }
     .gameCards .gamePicturesCard .pictureSlider .pictureSliderArrow {
       width: 60px;
       font-size: 4em; }
