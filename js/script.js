@@ -52,12 +52,12 @@ $(document).ready(function(){
 	//page setup functions
 	var currentPage = (location.pathname.split('/').slice(-1)[0]);
 	adjustContentSpacing('.psPrimary',0);
-	adjustContentSpacing('article',150);
+	adjustContentSpacing('article',0);
 	// if(!window.matchMedia("(min-width: 768px)").matches) $menuBar.add($mbLinkButton).removeClass('mbTranslucent');
 	if( !isMobile.any() && (currentPage == 'index.html' || currentPage == '')){
 		if(window.matchMedia("(min-width: 768px)").matches) {
 			$(window).stellar({
-				scrollPropert: 'transform'
+				horizontalScrolling: false
 			});
 		};
 		// if(window.matchMedia("(min-width: 768px)").matches) $pageSplashDragon.stellar({
