@@ -1,0 +1,2 @@
+8/28/14
+fixed nav arrows for slider. need to fix game media sizing

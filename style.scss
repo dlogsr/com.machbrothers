@@ -567,19 +567,12 @@ h3{
 	}
 
 	.gamePicturesCard{
-		.pictureSliderNav{
-			position:absolute;
-			// display:block;
-			.pictureSliderArrow{
-
-			}
-		}
 
 		.pictureSlider{
 			@include vertical-align;
 			margin: 0 auto;
-			max-width:360px;
-			max-height:240px;
+			max-width:640px;
+			max-height:480px;
 
 			@media only screen and (max-width:768px) and (orientation:landscape){
 				max-width:480px;
@@ -588,25 +581,26 @@ h3{
 
 
 			.pictureSliderArrow{
-				position:relative;
+				position:absolute;
 				display:inline-block;
 				width: 30px;
-				height:0px;
+				height:320px;
 				font-size:2em;
 				text-shadow: 2px 2px 2px black;
 				color:white;
 				text-align:center;
 				cursor:pointer;
-				// background-color:rgba(255,255,255,.5);
 				z-index:20;
+				&:hover{
+					background-color:rgba(255,255,255,.5);
+				}
 			}
 			.psaLeft{
-				float:left;
-
+				left:0;
 			}
 
 			.psaRight{
-				float:right;
+				right:0;
 			}
 		}
 	}
@@ -1048,7 +1042,7 @@ input, button, textarea{
 				max-width:calc(100%-4em);
 				// max-width:720px;
 				min-width:480px;
-				min-height:480px;
+				min-height:320px;
 
 				.pictureSliderArrow{
 					width: 60px;
