@@ -187,6 +187,7 @@ h3 {
     min-height: 125px;
     bottom: 0;
     background: url("groundbg_mobile.png") top center no-repeat;
+    background-size: cover;
     z-index: 12; }
     @media only screen and (max-width: 768px) and (orientation: landscape) {
       .pageSplash .pageSplashGroundBG {
@@ -212,10 +213,14 @@ h3 {
 .psGame {
   background: url("skybg2_mobile2.gif") bottom center no-repeat fixed;
   background-size: cover;
+  min-height: 500px;
   z-index: 11; }
+  @media only screen and (max-width: 768px) and (orientation: landscape) {
+    .psGame {
+      min-height: 360px !important; } }
 
 .psAbout {
-  background: url("skybg3_mobile.gif") bottom center no-repeat fixed;
+  background: url("skybg3_mobile.gif") top 40px center no-repeat fixed;
   background-size: cover;
   z-index: 11; }
 
@@ -256,7 +261,8 @@ h3 {
     color: white;
     background-color: #9a9a9a; }
   .pageContent aside {
-    padding: 1em 0;
+    font-size: 1.5rem;
+    padding: 1em;
     color: white; }
 
 /* game page items */
@@ -358,13 +364,11 @@ h3 {
     color: black; }
 
 .gameCards article {
-  height: 420px; }
+  min-height: 420px; }
+.gameCards aside {
+  position: relative; }
 .gameCards .gamePicturesCard .pictureSlider {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   margin: 0 auto;
   max-width: 640px;
   max-height: 480px; }
@@ -375,7 +379,7 @@ h3 {
   .gameCards .gamePicturesCard .pictureSlider .pictureSliderArrow {
     position: absolute;
     display: inline-block;
-    width: 30px;
+    width: 40px;
     height: 100%;
     font-size: 2em;
     text-shadow: 2px 2px 2px black;
@@ -397,11 +401,6 @@ h3 {
   .gameCards .gamePicturesCard .pictureSlider .psaRight {
     right: 0; }
 .gameCards .gamePlayCard .gameplayMovie {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   margin: 1em auto;
   max-width: 480px;
   min-width: 240px;
@@ -640,7 +639,7 @@ input, button, textarea {
     background-size: cover; }
 
   .psAbout {
-    background: url("skybg3_desktop.gif") bottom center no-repeat fixed;
+    background: url("skybg3_desktop.gif") top 70px center no-repeat fixed;
     background-size: cover; }
 
   /* page content */

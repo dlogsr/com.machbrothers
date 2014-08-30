@@ -124,17 +124,23 @@ var resizeTimer;
 $(window).resize(function(){	
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout(function(){
-		 if(window.matchMedia("(min-width: 768px)").matches){
+		if(window.matchMedia("(min-width: 768px)").matches){
 			adjustContentSpacing('.psPrimary',0);
-			adjustContentSpacing('article',150);
+			adjustContentSpacing('article',0);
 			// $(window).stellar();
-		 } 
+		} 
+		else if(window.matchMedia("(max-width: 768px)").matches){
+			//there is a way to iterate this instead. disbale stellar when going form desktop to mobile
+			document.getElementById('stellarDragon').removeAttribute('data-stellar-ratio').removeAttribute('style');
+			document.getElementById('stellarBG').removeAttribute('data-stellar-ratio').removeAttribute('style');
+			document.getElementById('stellarGround').removeAttribute('data-stellar-ratio').removeAttribute('style');
+		}
 	})
 });
 
 $(window).on("orientationchange",function(){
 	adjustContentSpacing('.psPrimary',0);
-	adjustContentSpacing('article',150);
+	adjustContentSpacing('article',0);
 });
 
 function swapMenuTranslucent(direction){
