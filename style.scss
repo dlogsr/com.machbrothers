@@ -584,7 +584,7 @@ h3{
 				position:absolute;
 				display:inline-block;
 				width: 30px;
-				height:320px;
+				height:100%;
 				font-size:2em;
 				text-shadow: 2px 2px 2px black;
 				color:white;
@@ -593,6 +593,11 @@ h3{
 				z-index:20;
 				&:hover{
 					background-color:rgba(255,255,255,.5);
+				}
+
+				span{
+					@include vertical-align;
+					top:35%;
 				}
 			}
 			.psaLeft{
@@ -1037,12 +1042,16 @@ input, button, textarea{
 
 	.gameCards{
 
+		article{
+			padding-bottom:1em;
+		}
+
 		.gamePicturesCard{
 			.pictureSlider{
-				max-width:calc(100%-4em);
-				// max-width:720px;
+				width:calc(100%-4em);
 				min-width:480px;
-				min-height:320px;
+				min-height:480px;
+				max-width: 720px;
 
 				.pictureSliderArrow{
 					width: 60px;

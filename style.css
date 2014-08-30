@@ -376,7 +376,7 @@ h3 {
     position: absolute;
     display: inline-block;
     width: 30px;
-    height: 320px;
+    height: 100%;
     font-size: 2em;
     text-shadow: 2px 2px 2px black;
     color: white;
@@ -385,6 +385,13 @@ h3 {
     z-index: 20; }
     .gameCards .gamePicturesCard .pictureSlider .pictureSliderArrow:hover {
       background-color: rgba(255, 255, 255, 0.5); }
+    .gameCards .gamePicturesCard .pictureSlider .pictureSliderArrow span {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      top: 35%; }
   .gameCards .gamePicturesCard .pictureSlider .psaLeft {
     left: 0; }
   .gameCards .gamePicturesCard .pictureSlider .psaRight {
@@ -689,10 +696,13 @@ input, button, textarea {
     .gameSplash .gameSplashClear {
       clear: both; }
 
+  .gameCards article {
+    padding-bottom: 1em; }
   .gameCards .gamePicturesCard .pictureSlider {
-    max-width: calc(100%-4em);
+    width: calc(100%-4em);
     min-width: 480px;
-    min-height: 320px; }
+    min-height: 480px;
+    max-width: 720px; }
     .gameCards .gamePicturesCard .pictureSlider .pictureSliderArrow {
       width: 60px;
       font-size: 4em; }
