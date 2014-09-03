@@ -332,7 +332,7 @@ h3 {
       right: 50%;
       width: calc(50% - 2.5em);
       min-height: calc(100% - 2.5em);
-      margin: auto 1em auto auto;
+      margin: auto;
       background-image: url("meeples_temp.jpg");
       background-size: cover; }
     .gameSplash .gameSplashMediaAside {
