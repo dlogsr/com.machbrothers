@@ -564,6 +564,7 @@ input, button, textarea {
       min-height: 125px;
       bottom: 0;
       background: url("groundbg_desktop.png") top center no-repeat;
+      background-attachment: scroll;
       background-size: 100% auto;
       z-index: 12; }
     .pageSplash .pageSplashMonkeys {
