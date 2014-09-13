@@ -76,6 +76,10 @@ $font_secondary: 'Raleway';
 
 /* mobile first! */
 
+*{
+	overflow-x:hidden;
+}
+
 body{
 	font-family: $font_primary, Georgia, Arial, Verdana;
 	-webkit-font-smoothing: subpixel-antialiased;
