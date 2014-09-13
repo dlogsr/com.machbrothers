@@ -556,7 +556,8 @@ input, button, textarea {
       max-width: 480px;
       height: 480px;
       background: url("dragon_bg_desktop.png") center bottom no-repeat;
-      background-size: contain; }
+      background-size: contain;
+      background-color: black; }
     .pageSplash .pageSplashGroundBG {
       position: absolute;
       width: 100%;
