@@ -217,6 +217,7 @@ h3{
 
 .pageSplash{
 	position:relative;
+	overflow-x:hidden;
 	background-color:$machgrey1;
 	background-size:200%;
 	background-attachment:fixed;
@@ -358,7 +359,6 @@ h3{
 	background:url('skybg2_mobile2.gif') bottom center no-repeat fixed;
 	background-size:cover;
 	min-height:500px;
-	width:100%;
 	@media only screen and (max-width:768px) and (orientation:landscape) {
 		min-height:360px !important;
 	}
