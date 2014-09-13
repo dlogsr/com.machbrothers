@@ -879,7 +879,6 @@ input, button, textarea{
 			min-height:125px;
 			bottom:0;
 			background:url('groundbg_desktop.png') top center no-repeat;
-			background-attachment:scroll;
 			background-size: 100% auto;
 			// background-repeat: no-repeat;
 			// background-position: center;
@@ -951,6 +950,7 @@ input, button, textarea{
 	.psIndex{
 		background:url('skybg1_desktop2_large.gif') center bottom -40px;
 		background-size: cover;
+		background-attachment:scroll;
 		background-repeat: no-repeat;
 		z-index:11;
 	}
