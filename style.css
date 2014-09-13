@@ -119,6 +119,7 @@ h3 {
 .pageSplash {
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
   background-color: #9a9a9a;
   background-size: 200%;
   background-attachment: fixed;
@@ -627,17 +628,17 @@ input, button, textarea {
   .psIndex {
     background: url("skybg1_desktop2_large.gif") center bottom -40px;
     background-size: cover;
-    background-attachment: scroll;
     background-repeat: no-repeat;
     z-index: 11; }
 
   .psGame {
     background: url("skybg2_desktop2_large.gif") bottom center no-repeat fixed;
-    background-size: cover; }
+    background-attachment: scroll;
+    background-size: cover, 100%; }
 
   .psAbout {
     background: url("skybg3_desktop_large.gif") top 70px center no-repeat fixed;
-    background-size: cover; }
+    background-size: cover, 100%; }
 
   /* page content */
   .pageContent {
