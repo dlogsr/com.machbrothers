@@ -633,7 +633,6 @@ input, button, textarea {
 
   .psGame {
     background: url("skybg2_desktop2_large.gif") bottom center no-repeat fixed;
-    background-attachment: scroll;
     background-size: cover, 100%; }
 
   .psAbout {
