@@ -623,7 +623,7 @@ input, button, textarea {
     right: 3em; }
 
   .psIndex {
-    background: url("skybg1_desktop2.gif") center bottom -40px;
+    background: url("skybg1_desktop2_large.gif") center bottom -40px;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 11; }
