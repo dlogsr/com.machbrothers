@@ -18,9 +18,6 @@
   src: url("Dosis-Light.otf"); }
 
 /* mobile first! */
-* {
-  overflow-x: hidden; }
-
 body {
   font-family: "Dosis", Georgia, Arial, Verdana;
   -webkit-font-smoothing: subpixel-antialiased;
