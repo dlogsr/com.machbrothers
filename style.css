@@ -332,7 +332,7 @@ h3 {
     .gameSplash .gameSplashMedia {
       position: absolute;
       top: 35%;
-      right: 50%;
+      right: 49%;
       width: calc(50% - 2.5em);
       min-height: calc(100% - 2.5em);
       margin: auto;
@@ -545,7 +545,7 @@ input, button, textarea {
       width: 384px;
       height: 300px;
       margin: auto;
-      right: 50%;
+      right: 49%;
       background-image: url("dragon_title_desktop.png"); } }
     @media only screen and (min-width: 768px) and (max-height: 720px) {
       .pageSplash .pageSplashGameLogo {
@@ -585,7 +585,7 @@ input, button, textarea {
       right: auto; }
     .pageSplash header {
       position: absolute;
-      left: 50%;
+      left: 49%;
       height: 300px;
       width: 384px;
       margin-left: 1em;

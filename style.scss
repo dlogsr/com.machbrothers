@@ -522,7 +522,7 @@ h3{
 		.gameSplashMedia{
 			position: absolute;
 			top:35%;
-			right:50%;
+			right:49%;
 			width:calc(50% - 2.5em);
 			min-height:calc(100% - 2.5em);
 			margin:auto;
@@ -853,7 +853,7 @@ input, button, textarea{
 			width:384px;
 			height:300px;
 			margin:auto; 
-			right: 50%;
+			right: 49%;
 			// right:auto;
 			background-image: url('dragon_title_desktop.png');
 			@media only screen and(max-height:720px){
@@ -901,7 +901,7 @@ input, button, textarea{
 
 		header{
 			position:absolute;
-			left: 50%;
+			left: 49%;
 			height:300px;
 			width:384px;
 			margin-left:1em;
