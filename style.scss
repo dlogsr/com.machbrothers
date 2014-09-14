@@ -288,7 +288,8 @@ h3{
 		height:100%;
 		margin: auto; left:0;	right:0;
 		padding: auto 1em;
-		background: url('dragon_bg_mobile.png') center bottom 65px no-repeat;
+		background: url('dragon_bg_mobile.png') no-repeat;
+		background-position: center bottom 65px;
 		background-size: contain;
 		z-index:13;
 		@media only screen and (max-width:768px) and (orientation:landscape){
@@ -720,7 +721,7 @@ input, button, textarea{
 		background-color:$machgrey2;
 		display:block;
 		margin:1em auto;
-		width:280px;
+		// width:280px;
 		border: $bd_2pxwhite;
 	}
 
@@ -729,8 +730,8 @@ input, button, textarea{
 		resize:none;
 		overflow: auto;
 		height:6em;
-		font-size:.75em;
-		width:280px;
+		// font-size:.75em;
+		// width:280px;
 	}
 
 	input:focus, button:focus, textarea:focus{
@@ -870,6 +871,9 @@ input, button, textarea{
 			background-color:black;
 			@media only screen and(max-height:720px){
 				max-width:420px;
+				background-color:red;
+				background-position-y: bottom;
+				background-position:bottom;
 				// background-size:contain;
 			}
 		}

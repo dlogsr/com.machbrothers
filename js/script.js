@@ -59,7 +59,6 @@ $(document).ready(function(){
 			$(window).stellar({
 				horizontalScrolling: false
 			});
-			$('#debug').html('test');
 		};
 		// if(window.matchMedia("(min-width: 768px)").matches) $pageSplashDragon.stellar({
 		// 	scrollProperty: 'transform'
