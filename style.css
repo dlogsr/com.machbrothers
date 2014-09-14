@@ -557,14 +557,11 @@ input, button, textarea {
       max-width: 480px;
       height: 480px;
       background: url("dragon_bg_desktop.png") center bottom no-repeat;
-      background-size: contain;
-      background-color: black; } }
+      background-size: contain; } }
     @media only screen and (min-width: 768px) and (max-height: 720px) {
       .pageSplash .pageSplashDragon {
         max-width: 420px;
         max-height: 360px;
-        background-color: red;
-        background-position-y: bottom;
         background-position: bottom; } }
 @media only screen and (min-width: 768px) {
     .pageSplash .pageSplashGroundBG {

@@ -868,12 +868,9 @@ input, button, textarea{
 			height:480px;
 			background: url('dragon_bg_desktop.png') center bottom no-repeat;
 			background-size:contain;
-			background-color:black;
 			@media only screen and(max-height:720px){
 				max-width:420px;
 				max-height:360px;
-				background-color:red;
-				background-position-y: bottom;
 				background-position:bottom;
 				// background-size:contain;
 			}
