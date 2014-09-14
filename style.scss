@@ -871,6 +871,7 @@ input, button, textarea{
 			background-color:black;
 			@media only screen and(max-height:720px){
 				max-width:420px;
+				max-height:360px;
 				background-color:red;
 				background-position-y: bottom;
 				background-position:bottom;
