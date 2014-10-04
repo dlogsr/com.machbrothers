@@ -646,6 +646,14 @@ h3{
 	header, h2, h3, aside{
 		color: black !important;	
 	}
+
+	.aboutContent{
+		h3 {
+			text-align:center;
+		}
+		// width:75%;
+		// margin:auto;
+	}
 }
 
 .machBrosBubbles{
@@ -655,22 +663,30 @@ h3{
 	.bubblePic{
 		position:relative;
 		display:inline-block;
-		width:30%;
+		width:150px;
 		height:150px;
 		margin: auto;
 		background-color:#FFFFFF;
 		background-size:cover;
 		background-position:center;
-		border-radius:20px;
+		border-radius:75px;
 
-		h3{
+		h3, figcaption{
 			font-family: $font_secondary;
 			font-size:.9em;
-			color: white;
+			// color: white;
 			position:relative;
 			padding-top:.1em;
 			top:150px;
 		}
+
+	}
+
+	figcaption{
+		position:relative;
+		text-align:justify;
+		font-family: $font_primary;
+		margin:1em auto;
 	}
 
 	.bpEdwin{

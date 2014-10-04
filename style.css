@@ -413,6 +413,8 @@ h3 {
 /* about page items */
 .aboutSplash header, .aboutSplash h2, .aboutSplash h3, .aboutSplash aside {
   color: black !important; }
+.aboutSplash .aboutContent h3 {
+  text-align: center; }
 
 .machBrosBubbles {
   margin: 1em auto;
@@ -420,20 +422,24 @@ h3 {
   .machBrosBubbles .bubblePic {
     position: relative;
     display: inline-block;
-    width: 30%;
+    width: 150px;
     height: 150px;
     margin: auto;
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
-    border-radius: 20px; }
-    .machBrosBubbles .bubblePic h3 {
+    border-radius: 75px; }
+    .machBrosBubbles .bubblePic h3, .machBrosBubbles .bubblePic figcaption {
       font-family: "Raleway";
       font-size: .9em;
-      color: white;
       position: relative;
       padding-top: .1em;
       top: 150px; }
+  .machBrosBubbles figcaption {
+    position: relative;
+    text-align: justify;
+    font-family: "Dosis";
+    margin: 1em auto; }
   .machBrosBubbles .bpEdwin {
     background-image: url("bubble_portrait_ed.jpg"); }
   .machBrosBubbles .bpAlbert {
