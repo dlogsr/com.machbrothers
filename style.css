@@ -8,12 +8,15 @@
   font-family: 'kickstarter';
   src: url("BarutaBlack_Trimmed.ttf");
   /*TTF*/ }
+
 @font-face {
   font-family: 'Raleway';
   src: url("raleway-webfont.ttf"); }
+
 @font-face {
   font-family: 'Dosis';
   src: url("Dosis-Light.otf"); }
+
 /* mobile first! */
 body {
   font-family: "Dosis", Georgia, Arial, Verdana;
@@ -319,7 +322,8 @@ h3 {
     padding: .5em; }
     .gameSplash .gameSplashMediaAside .gameSplashQuotes h3 {
       text-align: center;
-      font-size: .75em; }
+      font-size: .75em;
+      padding-top: .5em; }
   .gameSplash .gameSplashMediaAside .pageSplashGameLogo {
     position: relative;
     display: block;
@@ -453,7 +457,7 @@ input, button, textarea {
   padding: .45em;
   font-size: 1em;
   border-radius: 15px;
-  border: 2px solid transparent;
+  border: 2px solid rgba(0, 0, 0, 0);
   margin: .5em; }
 
 .signupForm fieldset {
@@ -472,7 +476,7 @@ input, button, textarea {
     overflow: auto;
     height: 6em; }
   .signupForm fieldset input:focus, .signupForm fieldset button:focus, .signupForm fieldset textarea:focus {
-    background-color: dimgray;
+    background-color: dimgrey;
     outline: none; }
     .signupForm fieldset input:focus::-webkit-input-placeholder, .signupForm fieldset button:focus::-webkit-input-placeholder, .signupForm fieldset textarea:focus::-webkit-input-placeholder {
       color: #494949; }
@@ -552,24 +556,13 @@ input, button, textarea {
       height: 300px;
       margin: auto;
       right: 49%;
-      background-image: url("dragon_title_desktop.png"); } }
-    @media only screen and (min-width: 768px) and (max-height: 720px) {
-      .pageSplash .pageSplashGameLogo {
-        max-width: 360px;
-        background-size: contain; } }
-@media only screen and (min-width: 768px) {
+      background-image: url("dragon_title_desktop.png"); }
     .pageSplash .pageSplashDragon {
       bottom: 0;
       max-width: 480px;
       height: 411px;
       background: url("dragon_bg_desktop.png") center bottom no-repeat;
-      background-size: contain; } }
-    @media only screen and (min-width: 768px) and (max-height: 720px) {
-      .pageSplash .pageSplashDragon {
-        max-width: 420px;
-        max-height: 360px;
-        background-position: bottom; } }
-@media only screen and (min-width: 768px) {
+      background-size: contain; }
     .pageSplash .pageSplashGroundBG {
       position: absolute;
       width: 100%;
@@ -694,8 +687,6 @@ input, button, textarea {
         margin-left: 1em; }
         .gameSplash .gameSplashContainer .gameSplashMediaAside div {
           padding: 1em; }
-        .gameSplash .gameSplashContainer .gameSplashMediaAside .gameSplashQuotes h3 {
-          font-size: 1em; }
         .gameSplash .gameSplashContainer .gameSplashMediaAside .pageSplashGameLogo {
           position: relative;
           height: 180px;
@@ -748,3 +739,12 @@ input, button, textarea {
     margin: auto;
     width: 480px;
     height: 8em; } }
+    @media only screen and (min-width: 768px) and (max-height: 720px) {
+      .pageSplash .pageSplashGameLogo {
+        max-width: 360px;
+        background-size: contain; } }
+    @media only screen and (min-width: 768px) and (max-height: 720px) {
+      .pageSplash .pageSplashDragon {
+        max-width: 420px;
+        max-height: 360px;
+        background-position: bottom; } }
