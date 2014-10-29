@@ -311,8 +311,10 @@ h3 {
     min-height: 180px;
     margin: auto;
     margin-top: 1em;
-    background-image: url("meeples_temp.jpg");
-    background-size: cover; }
+    background-image: url("game_box.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
   .gameSplash .gameSplashMediaAside .gameSplashQuotes {
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -339,9 +341,7 @@ h3 {
       right: 49%;
       width: calc(50% - 2.5em);
       min-height: calc(100% - 2.5em);
-      margin: auto;
-      background-image: url("meeples_temp.jpg");
-      background-size: cover; }
+      margin: auto; }
     .gameSplash .gameSplashMediaAside {
       position: absolute;
       top: 30%;
@@ -502,6 +502,29 @@ input, button, textarea {
   background-position: bottom;
   background-attachment: fixed;
   background-size: cover; }
+
+/* slideshow items */
+.caption {
+  z-index: 500;
+  display: block !important;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5em;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  line-height: 1.33;
+  color: #fff;
+  border-top: 1px solid #000;
+  text-shadow: none; }
+
+.slide {
+  height: 100%; }
+  .slide img {
+    position: absolute;
+    max-width: 100%; }
 
 /* DESKTOP RESPONSIVE */
 @media only screen and (min-width: 768px) {
@@ -679,8 +702,10 @@ input, button, textarea {
         max-width: 640px;
         min-height: 360px;
         margin: auto 1em auto auto;
-        background-image: url("meeples_temp.jpg");
-        background-size: cover; }
+        background-image: url("game_box.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
       .gameSplash .gameSplashContainer .gameSplashMediaAside {
         position: absolute;
         left: 50%;
