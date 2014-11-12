@@ -409,7 +409,7 @@ h3{
 
 	header h2{
 		font-family: $font_secondary;
-		font-size: 1.5em;
+		font-size: 1em;
 		color:white;
 		// padding-bottom:1em;
 		display:inline-block;
@@ -478,24 +478,25 @@ h3{
 		}
 		text-align:center;
 		display:block;
+
+		.gameSplashMedia{
+			position:relative;
+			display:inline-block;
+			width:100%;
+			max-width:320px;
+			min-height:180px;
+			margin:auto;
+			margin-top:1em;
+			background-image: url('game_box_sh.png');
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-position:center;
+		}
 	}
 
-	.gameSplashMedia{
-		position:relative;
-		display:inline-block;
-		width:100%;
-		max-width:320px;
-		min-height:180px;
-		margin:auto;
-		margin-top:1em;
-		background-image: url('game_box.png');
-		background-size:contain;
-		background-repeat:no-repeat;
-		background-position:center;
-	}
 
 	.gameSplashMediaAside{	
-		.gameSplashQuotes{
+		.gameSplashPoints{
 			// position:absolute;
 			background-color:rgba(0,0,0,.25);
 			border-radius: 15px;
@@ -537,7 +538,7 @@ h3{
 			left:50%;
 			margin-left:.5em;
 
-			.gameSplashQuotes{
+			.gameSplashPoints{
 				h3{
 					font-size:.75em;
 				}
@@ -571,6 +572,18 @@ h3{
 		font-family: $font_primary;
 		font-size: .75em;
 		color:black;
+	}
+}
+
+.indexCards{
+	.gameQuotes{
+		p{
+			margin:2em auto 0;
+			h4{
+				font-weight:bold;
+				margin:0;
+			}
+		}
 	}
 }
 
@@ -833,6 +846,10 @@ input, button, textarea{
 	}
 }
 
+.copyright{
+	font-size:.8em;
+}
+
 /* DESKTOP RESPONSIVE */
 
 @media only screen and (min-width: 768px){
@@ -1057,6 +1074,7 @@ input, button, textarea{
 		}
 
 		header h2{
+			font-size:1.5em;
 			padding-top:.25em;
 		}
 	}
@@ -1090,10 +1108,6 @@ input, button, textarea{
 				max-width:640px;
 				min-height:360px;
 				margin:auto 1em auto auto;
-				background-image: url('game_box.png');
-				background-size:contain;
-				background-repeat:no-repeat;
-				background-position:center;
 			}
 
 			.gameSplashMediaAside{
@@ -1206,5 +1220,7 @@ input, button, textarea{
 		}
 	}
 
-
+	.copyright{
+		font-size:1em;
+	}
 }
