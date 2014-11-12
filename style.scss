@@ -658,19 +658,41 @@ h3{
 }
 
 .machBrosBubbles{
-	margin: 1em auto;
+	// margin: 1em auto;
 	text-align:center;
 
 	.bubblePic{
 		position:relative;
 		display:inline-block;
-		width:150px;
-		height:150px;
-		margin: auto;
-		background-color:#FFFFFF;
-		background-size:cover;
-		background-position:center;
-		border-radius:75px;
+		background-color:none;
+		// margin-bottom:1em;
+
+		*{
+			margin:1em auto;
+		}
+
+		aside{
+			padding:0;
+			width: 100%;
+			max-width:150px;
+			height:150px;
+			background-size: cover;
+			background-position:center;
+			background-repeat:no-repeat;
+			border-radius:75px;
+
+			&.bpEdwin{
+				background-image: url('bubble_portrait_ed.jpg');
+			}
+
+			&.bpAlbert{
+				background-image: url('bubble_portrait_al.jpg');
+			}
+
+			&.bpKevin{
+				background-image: url('bubble_portrait_kev.jpg');
+			}
+		}
 
 		h3{
 			font-family: $font_secondary;
@@ -678,28 +700,14 @@ h3{
 			// color: white;
 			position:relative;
 			padding-top:.1em;
-			top:150px;
 		}
 
-	}
+		figcaption{
+			position:relative;
+			text-align:justify;
+			font-family: $font_primary;
+		}
 
-	figcaption{
-		position:relative;
-		text-align:justify;
-		font-family: $font_primary;
-		margin:1em auto;
-	}
-
-	.bpEdwin{
-		background-image: url('bubble_portrait_ed.jpg');
-	}
-
-	.bpAlbert{
-		background-image: url('bubble_portrait_al.jpg');
-	}
-
-	.bpKevin{
-		background-image: url('bubble_portrait_kev.jpg');
 	}
 
 }
@@ -1142,13 +1150,22 @@ input, button, textarea{
 
 	/*about page */
 	.machBrosBubbles{
+		padding:0 !important;
+		margin:auto;
 		.bubblePic{
-			width:150px;
+			float:left;
+			top:-1em;
+			width:30%;
 			height:150px;
-			margin: 1em;
+			margin: auto .5em;
 			border-radius:75px;
 			-webkit-transition: all 0.1s ease;
 			transition: all 0.1s ease;
+
+			figcaption{
+				font-size:.8em;
+				margin-bottom:2em;
+			}
 		}
 
 		.bubblePic:hover{

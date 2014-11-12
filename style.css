@@ -421,35 +421,37 @@ h3 {
   text-align: center; }
 
 .machBrosBubbles {
-  margin: 1em auto;
   text-align: center; }
   .machBrosBubbles .bubblePic {
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 150px;
-    margin: auto;
-    background-color: #FFFFFF;
-    background-size: cover;
-    background-position: center;
-    border-radius: 75px; }
+    background-color: none; }
+    .machBrosBubbles .bubblePic * {
+      margin: 1em auto; }
+    .machBrosBubbles .bubblePic aside {
+      padding: 0;
+      width: 100%;
+      max-width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 75px; }
+      .machBrosBubbles .bubblePic aside.bpEdwin {
+        background-image: url("bubble_portrait_ed.jpg"); }
+      .machBrosBubbles .bubblePic aside.bpAlbert {
+        background-image: url("bubble_portrait_al.jpg"); }
+      .machBrosBubbles .bubblePic aside.bpKevin {
+        background-image: url("bubble_portrait_kev.jpg"); }
     .machBrosBubbles .bubblePic h3 {
       font-family: "Raleway";
       font-size: .9em;
       position: relative;
-      padding-top: .1em;
-      top: 150px; }
-  .machBrosBubbles figcaption {
-    position: relative;
-    text-align: justify;
-    font-family: "Dosis";
-    margin: 1em auto; }
-  .machBrosBubbles .bpEdwin {
-    background-image: url("bubble_portrait_ed.jpg"); }
-  .machBrosBubbles .bpAlbert {
-    background-image: url("bubble_portrait_al.jpg"); }
-  .machBrosBubbles .bpKevin {
-    background-image: url("bubble_portrait_kev.jpg"); }
+      padding-top: .1em; }
+    .machBrosBubbles .bubblePic figcaption {
+      position: relative;
+      text-align: justify;
+      font-family: "Dosis"; }
 
 /* general form items */
 input, button, textarea {
@@ -740,22 +742,30 @@ input, button, textarea {
     min-height: 420px; }
 
   /*about page */
-  .machBrosBubbles .bubblePic {
-    width: 150px;
-    height: 150px;
-    margin: 1em;
-    border-radius: 75px;
-    -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease; }
-  .machBrosBubbles .bubblePic:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
-  .machBrosBubbles .bpEdwin {
-    background-image: url("bubble_ed.jpg"); }
-  .machBrosBubbles .bpAlbert {
-    background-image: url("bubble_al.jpg"); }
-  .machBrosBubbles .bpKevin {
-    background-image: url("bubble_kev.jpg"); }
+  .machBrosBubbles {
+    padding: 0 !important;
+    margin: auto; }
+    .machBrosBubbles .bubblePic {
+      float: left;
+      top: -1em;
+      width: 30%;
+      height: 150px;
+      margin: auto .5em;
+      border-radius: 75px;
+      -webkit-transition: all 0.1s ease;
+      transition: all 0.1s ease; }
+      .machBrosBubbles .bubblePic figcaption {
+        font-size: .8em;
+        margin-bottom: 2em; }
+    .machBrosBubbles .bubblePic:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+    .machBrosBubbles .bpEdwin {
+      background-image: url("bubble_ed.jpg"); }
+    .machBrosBubbles .bpAlbert {
+      background-image: url("bubble_al.jpg"); }
+    .machBrosBubbles .bpKevin {
+      background-image: url("bubble_kev.jpg"); }
 
   /* newsletter items */
   .signUpCard {
