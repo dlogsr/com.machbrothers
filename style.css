@@ -144,18 +144,18 @@ h3 {
         left: 50%;
         background-color: rgba(0, 0, 0, 0.4);
         border-radius: 10px; } }
-  .pageSplash header h2 {
-    font-size: 2em; }
-  .pageSplash header h3 {
-    font-family: "Dosis";
-    font-variant: normal;
-    font-size: 1.5em; }
-  .pageSplash header h4, .pageSplash header button {
-    margin-top: .2em;
-    font-family: "Dosis";
-    font-variant: normal;
-    font-weight: normal;
-    font-size: 1rem; }
+    .pageSplash header h2 {
+      font-size: 2em; }
+    .pageSplash header h3 {
+      font-family: "Dosis";
+      font-variant: normal;
+      font-size: 1.5em; }
+    .pageSplash header h4, .pageSplash header button {
+      margin-top: .2em;
+      font-family: "Dosis";
+      font-variant: normal;
+      font-weight: normal;
+      font-size: 1rem; }
   .pageSplash .pageSplashGameLogo {
     position: absolute;
     top: 10%;
@@ -433,7 +433,7 @@ h3 {
     background-size: cover;
     background-position: center;
     border-radius: 75px; }
-    .machBrosBubbles .bubblePic h3, .machBrosBubbles .bubblePic figcaption {
+    .machBrosBubbles .bubblePic h3 {
       font-family: "Raleway";
       font-size: .9em;
       position: relative;
@@ -451,7 +451,7 @@ h3 {
   .machBrosBubbles .bpKevin {
     background-image: url("bubble_portrait_kev.jpg"); }
 
-/* signup form items */
+/* general form items */
 input, button, textarea {
   display: inline-block;
   padding: .45em;
@@ -462,13 +462,17 @@ input, button, textarea {
 
 .signupForm fieldset {
   font-family: "Raleway", Georgia, Arial, Verdana;
-  text-align: center; }
+  text-align: center;
+  min-width: 0;
+  max-width: 100%; }
   .signupForm fieldset input, .signupForm fieldset button, .signupForm fieldset textarea {
     font-family: "Raleway", Georgia, Arial, Verdana;
     color: white;
     background-color: #494949;
     display: block;
     margin: 1em auto;
+    min-width: 0;
+    max-width: 90%;
     border: 2px solid white; }
   .signupForm fieldset textarea {
     outline: none;

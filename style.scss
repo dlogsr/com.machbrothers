@@ -244,24 +244,24 @@ h3{
 			background-color:rgba(0,0,0,.4);
 			border-radius: 10px;
 		}
-	}
 
-	header h2{
-		font-size:2em;
-	}
+		h2{
+			font-size:2em;
+		}
 
-	header h3{
-		font-family: $font_primary;
-		font-variant:normal;
-		font-size:1.5em;
-	}
+		h3{
+			font-family: $font_primary;
+			font-variant:normal;
+			font-size:1.5em;
+		}
 
-	header h4, header button{
-		margin-top:.2em;
-		font-family: $font_primary;
-		font-variant: normal;
-		font-weight: normal;
-		font-size: 1rem;
+		h4, button{
+			margin-top:.2em;
+			font-family: $font_primary;
+			font-variant: normal;
+			font-weight: normal;
+			font-size: 1rem;
+		}
 	}
 
 	.pageSplashGameLogo{
@@ -672,7 +672,7 @@ h3{
 		background-position:center;
 		border-radius:75px;
 
-		h3, figcaption{
+		h3{
 			font-family: $font_secondary;
 			font-size:.9em;
 			// color: white;
@@ -704,7 +704,7 @@ h3{
 
 }
 
-/* signup form items */
+/* general form items */
 
 input, button, textarea{
 	display:inline-block;
@@ -731,6 +731,8 @@ input, button, textarea{
 .signupForm fieldset{
 	font-family: $font_secondary, Georgia, Arial, Verdana;
 	text-align: center;
+	min-width:0;
+	max-width:100%;
 
 	input, button, textarea{
 		font-family: $font_secondary, Georgia, Arial, Verdana;
@@ -738,7 +740,8 @@ input, button, textarea{
 		background-color:$machgrey2;
 		display:block;
 		margin:1em auto;
-		// width:280px;
+		min-width:0;
+		max-width:90%;
 		border: $bd_2pxwhite;
 	}
 
