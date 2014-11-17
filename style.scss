@@ -646,6 +646,7 @@ h3{
 		.quote{
 			-webkit-transition: all 0.1s ease-in;
 			transition: all 0.1s ease-in;
+			cursor:default;
 		}
 	}
 
@@ -786,6 +787,7 @@ h3{
 			position:relative;
 			text-align:justify;
 			font-family: $font_primary;
+			cursor:default;
 		}
 
 	}

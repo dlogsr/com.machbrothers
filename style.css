@@ -419,7 +419,8 @@ h3 {
     margin: 0; }
 .indexCards .gameQuotes .quote {
   -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in; }
+  transition: all 0.1s ease-in;
+  cursor: default; }
 .indexCards .quoteLogo {
   display: none; }
 
@@ -504,7 +505,8 @@ h3 {
     .machBrosBubbles .bubblePic figcaption {
       position: relative;
       text-align: justify;
-      font-family: "Dosis"; }
+      font-family: "Dosis";
+      cursor: default; }
 
 /* general form items */
 input, button, textarea {
