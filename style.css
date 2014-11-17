@@ -352,8 +352,7 @@ h3 {
     padding: .5em; }
     .gameSplash .gameSplashMediaAside .gameSplashPoints h3 {
       text-align: center;
-      font-size: .75em;
-      padding-top: .5em; }
+      font-size: .65em; }
   .gameSplash .gameSplashMediaAside .pageSplashGameLogo {
     position: relative;
     display: block;
@@ -405,9 +404,6 @@ h3 {
 .indexCards .gameQuotes .quote {
   -webkit-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in; }
-  .indexCards .gameQuotes .quote:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1); }
 .indexCards .quoteLogo {
   display: none; }
 
@@ -741,6 +737,9 @@ input, button, textarea {
     padding: .5em; }
     .indexCards .gameQuotes p span, .indexCards .gameQuotes .quoteLogo span {
       width: 100%; }
+  .indexCards .gameQuotes .quote:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
   .indexCards .gameQuotes .quoteLogo {
     display: block;
     height: 100%; }
@@ -774,6 +773,8 @@ input, button, textarea {
         margin-left: 1em; }
         .gameSplash .gameSplashContainer .gameSplashMediaAside div {
           padding: 1em; }
+        .gameSplash .gameSplashContainer .gameSplashMediaAside .gameSplashPoints h3 {
+          font-size: .75em; }
         .gameSplash .gameSplashContainer .gameSplashMediaAside .pageSplashGameLogo {
           position: relative;
           height: 180px;
