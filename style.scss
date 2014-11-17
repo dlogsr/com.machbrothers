@@ -74,6 +74,43 @@ $font_secondary: 'Raleway';
 	src: url('Dosis-Light.otf');
 }
 
+@keyframes 'wiggle' {
+	0%{
+		transform:rotate(-5deg);
+	}
+	25%{
+		transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(5deg);
+	}
+	75%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(-5deg);
+	}
+ }
+
+ @-webkit-keyframes 'wiggle' {
+	0%{
+		-webkit-transform:rotate(-5deg);
+	}
+	25%{
+		-webkit-transform:rotate(0deg);
+	}
+	50%{
+		-webkit-transform:rotate(5deg);
+		// -webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform:rotate(0deg);
+	}
+	100%{
+		-webkit-transform:rotate(-5deg);
+	}
+ }
+
 /* mobile first! */
 
 *{
@@ -362,7 +399,7 @@ h3{
 	background-size:cover;
 	min-height:500px;
 	@media only screen and (max-width:768px) and (orientation:landscape) {
-		min-height:360px !important;
+		// min-height:360px !important;
 	}
 	z-index:11;
 }
@@ -480,7 +517,7 @@ h3{
 		display:block;
 
 		.gameSplashMedia{
-			position:relative;
+			// position:relative;
 			display:inline-block;
 			width:100%;
 			max-width:320px;
@@ -523,13 +560,15 @@ h3{
 	}
 
 	@media only screen and (max-width:768px) and (orientation:landscape){
-		.gameSplashMedia{
-			position: absolute;
-			top:35%;
-			right:49%;
-			width:calc(50% - 2.5em);
-			min-height:calc(100% - 2.5em);
-			margin:auto;
+		.gameSplashContainer{
+			.gameSplashMedia{
+				position: absolute;
+				// top:35%;
+				right:49%;
+				left:0;
+				width:calc(50% - 2.5em);
+				min-height:calc(100% - 2.5em);
+			}
 		}
 
 		.gameSplashMediaAside{
@@ -579,11 +618,24 @@ h3{
 	.gameQuotes{
 		p{
 			margin:2em auto 0;
-			h4{
+			span{
 				font-weight:bold;
 				margin:0;
 			}
 		}
+
+		.quote{
+			-webkit-transition: all 0.1s ease-in;
+			transition: all 0.1s ease-in;
+			&:hover{
+				-webkit-transform:scale(1.1);
+				transform:scale(1.1);
+			}
+		}
+	}
+
+	.quoteLogo{
+		display:none;
 	}
 }
 
@@ -1079,6 +1131,30 @@ input, button, textarea{
 		}
 	}
 
+	/*index page */
+
+	.indexCards{
+		.gameQuotes{
+			p, .quoteLogo{
+				position:relative;
+				width:calc(240px - 1em);
+				float:left;
+				padding:.5em;
+				span{
+					width:100%;
+				}
+			}
+
+			.quoteLogo{
+				display:block;
+				height:100%;
+				img{
+					width:calc(240px - 1em);
+				}
+			}
+		}
+	}
+
 	/*game page*/
 
 	.gameSplash{
@@ -1108,6 +1184,7 @@ input, button, textarea{
 				max-width:640px;
 				min-height:360px;
 				margin:auto 1em auto auto;
+				-webkit-animation: wiggle 20s linear infinite;
 			}
 
 			.gameSplashMediaAside{
@@ -1170,7 +1247,7 @@ input, button, textarea{
 			float:left;
 			top:-1em;
 			width:30%;
-			height:150px;
+			// height:150px;
 			margin: auto .5em;
 			border-radius:75px;
 			-webkit-transition: all 0.1s ease;

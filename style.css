@@ -17,6 +17,38 @@
   font-family: 'Dosis';
   src: url("Dosis-Light.otf"); }
 
+@keyframes 'wiggle' {
+  0% {
+    transform: rotate(-5deg); }
+
+  25% {
+    transform: rotate(0deg); }
+
+  50% {
+    transform: rotate(5deg); }
+
+  75% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(-5deg); } }
+
+@-webkit-keyframes 'wiggle' {
+  0% {
+    -webkit-transform: rotate(-5deg); }
+
+  25% {
+    -webkit-transform: rotate(0deg); }
+
+  50% {
+    -webkit-transform: rotate(5deg); }
+
+  75% {
+    -webkit-transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(-5deg); } }
+
 /* mobile first! */
 body {
   font-family: "Dosis", Georgia, Arial, Verdana;
@@ -221,9 +253,6 @@ h3 {
   background-size: cover;
   min-height: 500px;
   z-index: 11; }
-  @media only screen and (max-width: 768px) and (orientation: landscape) {
-    .psGame {
-      min-height: 360px !important; } }
 
 .psAbout {
   background: url("skybg3_mobile.gif") top 40px center no-repeat fixed;
@@ -304,7 +333,6 @@ h3 {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%); } }
     .gameSplash .gameSplashContainer .gameSplashMedia {
-      position: relative;
       display: inline-block;
       width: 100%;
       max-width: 320px;
@@ -335,13 +363,12 @@ h3 {
     background-position: center;
     background-size: 50%; }
   @media only screen and (max-width: 768px) and (orientation: landscape) {
-    .gameSplash .gameSplashMedia {
+    .gameSplash .gameSplashContainer .gameSplashMedia {
       position: absolute;
-      top: 35%;
       right: 49%;
+      left: 0;
       width: calc(50% - 2.5em);
-      min-height: calc(100% - 2.5em);
-      margin: auto; }
+      min-height: calc(100% - 2.5em); }
     .gameSplash .gameSplashMediaAside {
       position: absolute;
       top: 30%;
@@ -372,9 +399,17 @@ h3 {
 
 .indexCards .gameQuotes p {
   margin: 2em auto 0; }
-  .indexCards .gameQuotes p h4 {
+  .indexCards .gameQuotes p span {
     font-weight: bold;
     margin: 0; }
+.indexCards .gameQuotes .quote {
+  -webkit-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in; }
+  .indexCards .gameQuotes .quote:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+.indexCards .quoteLogo {
+  display: none; }
 
 .gameCards article {
   min-height: 420px; }
@@ -698,6 +733,20 @@ input, button, textarea {
       font-size: 1.5em;
       padding-top: .25em; }
 
+  /*index page */
+  .indexCards .gameQuotes p, .indexCards .gameQuotes .quoteLogo {
+    position: relative;
+    width: calc(240px - 1em);
+    float: left;
+    padding: .5em; }
+    .indexCards .gameQuotes p span, .indexCards .gameQuotes .quoteLogo span {
+      width: 100%; }
+  .indexCards .gameQuotes .quoteLogo {
+    display: block;
+    height: 100%; }
+    .indexCards .gameQuotes .quoteLogo img {
+      width: calc(240px - 1em); }
+
   /*game page*/
   .gameSplash {
     margin: auto;
@@ -717,7 +766,8 @@ input, button, textarea {
         width: calc(50% - 2.5em);
         max-width: 640px;
         min-height: 360px;
-        margin: auto 1em auto auto; }
+        margin: auto 1em auto auto;
+        -webkit-animation: wiggle 20s linear infinite; }
       .gameSplash .gameSplashContainer .gameSplashMediaAside {
         position: absolute;
         left: 50%;
@@ -755,7 +805,6 @@ input, button, textarea {
       float: left;
       top: -1em;
       width: 30%;
-      height: 150px;
       margin: auto .5em;
       border-radius: 75px;
       -webkit-transition: all 0.1s ease;
