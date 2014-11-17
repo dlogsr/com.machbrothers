@@ -784,9 +784,9 @@ input, button, textarea {
         max-width: 640px;
         min-height: 360px;
         margin: auto 1em auto auto;
-        -webkit-animation: wiggle 20s linear infinite;
-        -moz-animation: wiggle 20s linear infinite;
-        animation: wiggle 20s linear infinite; }
+        -webkit-animation: wiggle 30s linear infinite;
+        -moz-animation: wiggle 30s linear infinite;
+        animation: wiggle 30s linear infinite; }
       .gameSplash .gameSplashContainer .gameSplashMediaAside {
         position: absolute;
         left: 50%;
