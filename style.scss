@@ -74,7 +74,7 @@ $font_secondary: 'Raleway';
 	src: url('Dosis-Light.otf');
 }
 
-@keyframes 'wiggle' {
+@keyframes wiggle {
 	0%{
 		transform:rotate(-5deg);
 	}
@@ -92,7 +92,7 @@ $font_secondary: 'Raleway';
 	}
  }
 
- @-webkit-keyframes 'wiggle' {
+ @-webkit-keyframes wiggle {
 	0%{
 		-webkit-transform:rotate(-5deg);
 	}
@@ -108,6 +108,25 @@ $font_secondary: 'Raleway';
 	}
 	100%{
 		-webkit-transform:rotate(-5deg);
+	}
+ }
+
+ @-moz-keyframes wiggle {
+	0%{
+		transform:rotate(-5deg);
+	}
+	25%{
+		transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(5deg);
+		// animation-timing-function: ease-out;
+	}
+	75%{
+		transform:rotate(0deg);
+	}
+	100%{
+		transform:rotate(-5deg);
 	}
  }
 
@@ -1188,6 +1207,8 @@ input, button, textarea{
 				min-height:360px;
 				margin:auto 1em auto auto;
 				-webkit-animation: wiggle 20s linear infinite;
+				-moz-animation: wiggle 20s linear infinite;
+				animation: wiggle 20s linear infinite;
 			}
 
 			.gameSplashMediaAside{
