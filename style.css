@@ -577,6 +577,7 @@ input, button, textarea {
   background: rgba(0, 0, 0, 0.5);
   text-align: center;
   line-height: 1.33;
+  font-size: .75em;
   color: #fff;
   border-top: 1px solid #000;
   text-shadow: none; }
@@ -592,6 +593,9 @@ input, button, textarea {
 
 /* DESKTOP RESPONSIVE */
 @media only screen and (min-width: 768px) {
+  .caption {
+    font-size: 1em; }
+
   .menuBar {
     background-color: #494949;
     height: 75px;
