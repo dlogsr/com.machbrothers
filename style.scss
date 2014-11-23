@@ -13,6 +13,7 @@ $machblue : #006FB8;
 $machgrey : #E5E6E7;
 
 $machblue1: #5860AB;
+$machblue2: #858CC9;
 $machgreen1: #00A550;
 $machgrey1 : #9A9A9A;
 $machgrey1-2: #696969;
@@ -416,7 +417,7 @@ h3{
 .psGame{
 	background:url('skybg2_mobile2.gif') bottom center no-repeat fixed;
 	background-size:cover;
-	min-height:500px;
+	height:500px;
 	@media only screen and (max-width:768px) and (orientation:landscape) {
 		// min-height:360px !important;
 	}
@@ -643,7 +644,7 @@ h3{
 			}
 		}
 
-		.quote{
+		div, p{
 			-webkit-transition: all 0.1s ease-in;
 			transition: all 0.1s ease-in;
 			cursor:default;
@@ -1152,29 +1153,94 @@ input, button, textarea{
 	/*index page */
 
 	.indexCards{
+		.quotesCard{
+			padding-bottom:1em;
+		}
+
 		.gameQuotes{
+
+			margin-top:1em;
+			
 			p, .quoteLogo{
 				position:relative;
-				width:calc(240px - 1em);
+				width:calc(240px - 5.5em);
 				float:left;
-				padding:.5em;
+				padding:2em;
+				margin: .5em;
+				height:calc(240px - 5.5em);
+				text-align:center;
+				font-size:.7em;			
+
+				&:hover{
+					-webkit-transform:scale(1.1);
+					transform:scale(1.1);
+				}
+
 				span{
+					position:absolute;
+					bottom:.5em;
+					left:0;
+					text-align:center;
 					width:100%;
 				}
 			}
 
 			.quote{
-				&:hover{
-					-webkit-transform:scale(1.1);
-					transform:scale(1.1);
-				}
+				background-color: $machblue2;
+				border-radius: 50%;
+			}
+
+			.topLeft{
+				left:2em;
+				top:2em;
+			}
+
+			.topCenter{
+				top:-2em;
+			}
+
+			.topRight{
+				right:2em;
+				top:2em;
+			}
+
+			.midLeft{
+				left: -2em;
+			}
+
+			.midRight{
+				right: -2em;
+			}
+
+			.botLeft{
+				left:2em;
+				bottom:2em;
+			}
+
+			.botCenter{
+				bottom: -2em;
+			}
+
+			.botRight{
+				right:2em;
+				bottom:2em;
 			}
 
 			.quoteLogo{
 				display:block;
 				height:100%;
-				img{
-					width:calc(240px - 1em);
+				text-align:center;
+				.quoteLogoContainer{
+					height:100%;
+					position:absolute;
+					top: -100%;
+					bottom:-100%;
+					left:-100%;
+					right:-100%;
+					margin:auto;
+					img{
+						width: 320px;
+					}
 				}
 			}
 		}
