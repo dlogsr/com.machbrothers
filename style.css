@@ -412,8 +412,8 @@ h3 {
     font-weight: bold;
     margin: 0; }
 .indexCards .gameQuotes div, .indexCards .gameQuotes p {
-  -webkit-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
   cursor: default; }
 .indexCards .quoteLogo {
   display: none; }
@@ -760,6 +760,7 @@ input, button, textarea {
   .indexCards .quotesCard {
     padding-bottom: 1em; }
   .indexCards .gameQuotes {
+    font-size: 1em;
     margin-top: 1em; }
     .indexCards .gameQuotes p, .indexCards .gameQuotes .quoteLogo {
       position: relative;
@@ -771,17 +772,22 @@ input, button, textarea {
       text-align: center;
       font-size: .7em; }
       .indexCards .gameQuotes p:hover, .indexCards .gameQuotes .quoteLogo:hover {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1); }
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3); }
       .indexCards .gameQuotes p span, .indexCards .gameQuotes .quoteLogo span {
         position: absolute;
         bottom: .5em;
         left: 0;
         text-align: center;
         width: 100%; }
+    .indexCards .gameQuotes .quoteLogo {
+      z-index: 40; }
     .indexCards .gameQuotes .quote {
       background-color: #858cc9;
       border-radius: 50%; }
+      .indexCards .gameQuotes .quote:hover {
+        z-index: 999;
+        background-color: #373e80; }
     .indexCards .gameQuotes .topLeft {
       left: 2em;
       top: 2em; }
@@ -884,7 +890,7 @@ input, button, textarea {
       -webkit-transition: all 0.1s ease;
       transition: all 0.1s ease; }
       .machBrosBubbles .bubblePic figcaption {
-        font-size: .8em;
+        font-size: .9em;
         margin-bottom: 2em; }
     .machBrosBubbles .bubblePic:hover {
       -webkit-transform: scale(1.1);

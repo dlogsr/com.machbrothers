@@ -14,6 +14,7 @@ $machgrey : #E5E6E7;
 
 $machblue1: #5860AB;
 $machblue2: #858CC9;
+$machblue3: #373E80;
 $machgreen1: #00A550;
 $machgrey1 : #9A9A9A;
 $machgrey1-2: #696969;
@@ -645,8 +646,8 @@ h3{
 		}
 
 		div, p{
-			-webkit-transition: all 0.1s ease-in;
-			transition: all 0.1s ease-in;
+			-webkit-transition: all 0.2s ease-in;
+			transition: all 0.2s ease-in;
 			cursor:default;
 		}
 	}
@@ -1158,7 +1159,7 @@ input, button, textarea{
 		}
 
 		.gameQuotes{
-
+			font-size:1em;
 			margin-top:1em;
 
 			p, .quoteLogo{
@@ -1172,8 +1173,9 @@ input, button, textarea{
 				font-size:.7em;			
 
 				&:hover{
-					-webkit-transform:scale(1.1);
-					transform:scale(1.1);
+					-webkit-transform:scale(1.3);
+					transform:scale(1.3);
+					// box-shadow: 0px 0px 10px rgba(0,0,0,.5);
 				}
 
 				span{
@@ -1185,9 +1187,17 @@ input, button, textarea{
 				}
 			}
 
+			.quoteLogo{
+				z-index:40;
+			}
+
 			.quote{
 				background-color: $machblue2;
 				border-radius: 50%;
+				&:hover{
+					z-index:999;
+					background-color: $machblue3;
+				}
 			}
 
 			.topLeft{
@@ -1351,7 +1361,7 @@ input, button, textarea{
 			transition: all 0.1s ease;
 
 			figcaption{
-				font-size:.8em;
+				font-size:.9em;
 				margin-bottom:2em;
 			}
 		}
