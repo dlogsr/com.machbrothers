@@ -76,6 +76,9 @@ $(document).ready(function(){
 			console.log('top');
 			console.log(currentPage);
 			if(!(currentPage == "index.html" || currentPage == "")){
+				if(location.hostname == "blog.machbrothers.com"){
+					window.location="http://www.machbrothers.com";
+				}
 				window.location = "index.html";
 			}
 		}
